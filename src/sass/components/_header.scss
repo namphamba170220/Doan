@@ -32,13 +32,15 @@
     }
 
     &__logo {
+        cursor: pointer;
         @include flex(center, center);
         position: absolute;
         inset: 0;
         pointer-events: none;
+        
 
         img {
-            height: 28px;
+            height: 100px;
         }
     }
 

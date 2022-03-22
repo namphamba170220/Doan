@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import logo from '../assets/images/Logo-2.png'
+import logo from '../assets/images/logo1.png'
 
 const mainNav = [
     {
@@ -86,7 +86,9 @@ const Header = () => {
                             </Link>
                         </div>
                         <div className="header__menu__item header__menu__right__item">
+                            <Link to="/login">
                             <i className="bx bx-user"></i>
+                            </Link>
                         </div>
                     </div>
                 </div>
