@@ -6,7 +6,8 @@ import Section, { SectionTitle, SectionBody } from "../components/Section";
 import PolicyCard from "../components/PolicyCard";
 import Grid from "../components/Grid";
 import ProductCard from "../components/ProductCard";
-import banner from "../assets/images/banner.png";
+import banner from "../assets/images/banner.jpg";
+import banner2 from "../assets/images/banner2.jpg";
 import productApi from "../Api/productApi";
 import heroSliderApi from "../Api/heroSliderApi";
 import policyApi from "../Api/policyApi";
@@ -19,6 +20,7 @@ const Home = () => {
     productApi.getAll().then( res => {
       if(res.statusText === 'OK'){
         setProductData(res.data);
+
       }
     })
     heroSliderApi.getAll().then(res =>{
@@ -33,10 +35,10 @@ const Home = () => {
     })
   
   },[])
-
     
   return (
     <Helmet title="Trang chủ">
+      
       {/* hero slider */}
       <HeroSlider
         data={heroSliderData}
@@ -52,7 +54,7 @@ const Home = () => {
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {policyData.map((item, index) => (
-              <Link key={index} to="/policy">
+              <Link key={index} to="/contact">
                 <PolicyCard
                   name={item.name}
                   description={item.description}
@@ -65,12 +67,20 @@ const Home = () => {
       </Section>
       {/* end policy section */}
 
+      <Section>
+        <SectionBody>
+          <Link to="/catalog">
+            <img src={banner2} alt="" />
+          </Link>
+        </SectionBody>
+      </Section>
+
       {/* best selling section */}
       <Section>
-        <SectionTitle>top sản phẩm bán chạy trong tuần</SectionTitle>
+        <SectionTitle>Top sản phẩm bán chạy trong tuần</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(0,4).map((item, index) => (
+            {productData.slice(4,8).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
@@ -90,7 +100,7 @@ const Home = () => {
         <SectionTitle>sản phẩm mới</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(0,12).map((item, index) => (
+            {productData.slice(0,6).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
@@ -117,10 +127,10 @@ const Home = () => {
 
       {/* popular product section */}
       <Section>
-        <SectionTitle>phổ biến</SectionTitle>
+        <SectionTitle>Phổ biến</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(0,8).map((item, index) => (
+            {productData.slice(6,14).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}

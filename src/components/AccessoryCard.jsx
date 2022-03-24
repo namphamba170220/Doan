@@ -6,13 +6,13 @@ import { set } from '../redux/product-modal/productModalSlice'
 import numberWithCommas from '../utils/numberWithCommas'
 import Button from './Button'
 
-const ProductCard = props => {
+const AccessoryCard = props => {
 
     const dispatch = useDispatch()
 
     return (
         <div className="product-card">
-            <Link to={`/catalog/${props.slug}`}>
+            <Link to={`/accessory/${props.slug}`}>
                 <div className="product-card__image">
                     <img src={props.img01} alt="NEW" />
                     <img src={props.img02} alt="" />
@@ -21,7 +21,7 @@ const ProductCard = props => {
                 <div className="product-card__price">
                     {numberWithCommas(props.price)}
                     <span className="product-card__price__old">
-                        <del>{numberWithCommas(25000000)}</del>
+                        <del>{numberWithCommas(5000000)}</del>
                     </span>
                 </div>
             </Link>
@@ -39,7 +39,7 @@ const ProductCard = props => {
     )
 }
 
-ProductCard.propTypes = {
+AccessoryCard.propTypes = {
     img01: PropTypes.string.isRequired,
     img02: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ ProductCard.propTypes = {
     slug: PropTypes.string.isRequired,
 }
 
-export default ProductCard
+export default AccessoryCard
