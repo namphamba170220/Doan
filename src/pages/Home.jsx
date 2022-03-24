@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import Helmet from "../components/Helmet";
 import HeroSlider from "../components/HeroSlider";
@@ -6,51 +6,52 @@ import Section, { SectionTitle, SectionBody } from "../components/Section";
 import PolicyCard from "../components/PolicyCard";
 import Grid from "../components/Grid";
 import ProductCard from "../components/ProductCard";
-// import heroSliderData from "../assets/fake-data/hero-slider";
-import policy from "../assets/fake-data/policy";
-import productData from "../assets/fake-data/products";
 import banner from "../assets/images/banner.png";
-import axios from "axios";
+import productApi from "../Api/productApi";
+import heroSliderApi from "../Api/heroSliderApi";
+import policyApi from "../Api/policyApi";
 
 const Home = () => {
+  const [productData, setProductData] = useState([]);
+  const [heroSliderData,setHeroSliderData] = useState([]);
+  const [policyData, setPolicyData] = useState([]);
+  useEffect(()=>{
+    productApi.getAll().then( res => {
+      if(res.statusText === 'OK'){
+        setProductData(res.data);
+      }
+    })
+    heroSliderApi.getAll().then(res =>{
+      if(res.statusText=== 'OK') {
+        setHeroSliderData(res.data);
+      }
+    })
+    policyApi.getAll().then(res => {
+      if(res.statusText === 'OK'){
+        setPolicyData(res.data);
+      }
+    })
+  
+  },[])
 
-    const [dataProduct, setDataProduct] = useState();
-    const [dataCategory, setDataCategory] = useState();
-    const [dataHeroSlider,setDataHeroSlider] = useState([]);
-  useEffect(() => {
-    const getData = async () => {
-        //  await axios.get( "http://localhost:3004/products").then((res) => {
-            // setDataHeroSlider(res.data)
-        //  await axios.get( "http://localhost:3004/category").then((res) => {
-            // setDataHeroSlider(res.data)
-       
-        await axios.get( "http://localhost:3004/heroSliderData").then((res) => {
-            setDataHeroSlider(res.data)
-        });
-
-        // setDataProduct(fetchDataProducts);
-        // setDataCategory(fetchDataCategory);
-        // setDataHeroSlider(fetchHeroSliderData);
-
-    }
-    getData()
-  },[]);
+    
   return (
     <Helmet title="Trang chủ">
       {/* hero slider */}
       <HeroSlider
-        data={dataHeroSlider}
+        data={heroSliderData}
         control={true}
         auto={false}
         timeOut={5000}
       />
       {/* end hero slider */}
 
+
       {/* policy section */}
       <Section>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {policy.map((item, index) => (
+            {policyData.map((item, index) => (
               <Link key={index} to="/policy">
                 <PolicyCard
                   name={item.name}
@@ -69,7 +70,7 @@ const Home = () => {
         <SectionTitle>top sản phẩm bán chạy trong tuần</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getProducts(4).map((item, index) => (
+            {productData.slice(0,4).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
@@ -89,7 +90,7 @@ const Home = () => {
         <SectionTitle>sản phẩm mới</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getProducts(8).map((item, index) => (
+            {productData.slice(0,12).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
@@ -119,7 +120,7 @@ const Home = () => {
         <SectionTitle>phổ biến</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getProducts(12).map((item, index) => (
+            {productData.slice(0,8).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}

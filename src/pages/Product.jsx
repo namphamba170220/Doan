@@ -1,18 +1,30 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 
 import Helmet from '../components/Helmet'
 import Section, {SectionBody, SectionTitle} from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
 import ProductView from '../components/ProductView'
+import productApi from '../Api/productApi'
 
-import productData from '../assets/fake-data/products'
+
 
 const Product = props => {
 
-    const product = productData.getProductBySlug(props.match.params.slug)
+    const [productData, setProductData] = useState([]);
 
-    const relatedProducts = productData.getProducts(8)
+    const product = productData.getProductBySlug(props.match.params.slug);
+
+    const relatedProducts = productData.getProducts(8);
+
+    useEffect(()=>{
+        productApi.getAll().then( res => {
+          if(res.statusText === 'OK'){
+            setProductData(res.data);
+          }
+        })
+      
+      },[])
 
     React.useEffect(() => {
         window.scrollTo(0,0)

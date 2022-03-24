@@ -1,31 +1,26 @@
-import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-
-import { withRouter } from 'react-router'
-
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-
-import { addItem } from '../redux/shopping-cart/cartItemsSlide'
+import { withRouter } from 'react-router'
 import { remove } from '../redux/product-modal/productModalSlice'
-
-import Button from './Button'
+import { addItem } from '../redux/shopping-cart/cartItemsSlide'
 import numberWithCommas from '../utils/numberWithCommas'
+import Button from './Button'
 
-const ProductView = props => {
+const ProductView = (product) => {
 
     const dispatch = useDispatch()
 
-    let product = props.product
 
     if (product === undefined) product = {
         title: "",
         price: '',
         image01: null,
         image02: null,
-        categorySlug: "",
+        categoryslug: "",
         colors: [],
         slug: "",
-        size: [],
+        version: [],
         description: ""
     }
 
@@ -35,7 +30,7 @@ const ProductView = props => {
 
     const [color, setColor] = useState(undefined)
 
-    const [size, setSize] = useState(undefined)
+    const [version, setVersion] = useState(undefined)
 
     const [quantity, setQuantity] = useState(1)
 
@@ -51,7 +46,7 @@ const ProductView = props => {
         setPreviewImg(product.image01)
         setQuantity(1)
         setColor(undefined)
-        setSize(undefined)
+        setVersion(undefined)
     }, [product])
 
     const check = () => {
@@ -60,8 +55,8 @@ const ProductView = props => {
             return false
         }
 
-        if (size === undefined) {
-            alert('Vui lòng chọn kích cỡ!')
+        if (version === undefined) {
+            alert('Vui lòng chọn phiên bản!')
             return false
         }
 
@@ -73,7 +68,7 @@ const ProductView = props => {
             let newItem = {
                 slug: product.slug,
                 color: color,
-                size: size,
+                version: version,
                 price: product.price,
                 quantity: quantity
             }
@@ -90,13 +85,13 @@ const ProductView = props => {
             let newItem = {
                 slug: product.slug,
                 color: color,
-                size: size,
+                version: version,
                 price: product.price,
                 quantity: quantity
             }
             if (dispatch(addItem(newItem))) {
                 dispatch(remove())
-                props.history.push('/cart')
+                product.history.push('/cart')
             } else {
                 alert('Fail')
             }
@@ -154,12 +149,12 @@ const ProductView = props => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Kích cỡ
+                        Phiên bản
                     </div>
                     <div className="product__info__item__list">
                         {
-                            product.size.map((item, index) => (
-                                <div key={index} className={`product__info__item__list__item ${size === item ? 'active' : ''}`} onClick={() => setSize(item)}>
+                            product.version.map((item, index) => (
+                                <div key={index} className={`product__info__item__list__item ${version === item ? 'active' : ''}`} onClick={() => setVersion(item)}>
                                     <span className="product__info__item__list__item__size">
                                         {item}
                                     </span>
@@ -185,8 +180,8 @@ const ProductView = props => {
                     </div>
                 </div>
                 <div className="product__info__item">
-                    <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
-                    <Button onClick={() => goToCart()}>mua ngay</Button>
+                    <Button onClick={() => addToCart()}>Thêm vào giỏ</Button>
+                    <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
             <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>

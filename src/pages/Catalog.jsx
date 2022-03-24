@@ -2,23 +2,53 @@ import React, { useCallback, useState, useEffect, useRef } from 'react'
 
 import Helmet from '../components/Helmet'
 import CheckBox from '../components/CheckBox'
-
-import productData from '../assets/fake-data/products'
-import category from '../assets/fake-data/category'
-import colors from '../assets/fake-data/product-color'
-import size from '../assets/fake-data/product-size'
 import Button from '../components/Button'
 import InfinityList from '../components/InfinityList'
-
+import productApi from '../Api/productApi'
+import categoryApi from '../Api/categoryApi'
+import colorsApi from '../Api/colorsApi'
+import versionApi from '../Api/versionApi'
+ 
 const Catalog = () => {
+    const [productData, setProductData] = useState([]);
+    const [categoryData, setCategoryData] = useState([]);
+    const [colorData,setColorData] = useState([]);
+    const [versionData,setVersionData] = useState([]);
+    useEffect(()=>{
+        productApi.getAll().then( res => {
+          if(res.statusText === 'OK') {
+            setProductData(res.data);
+          }
+        })
+        categoryApi.getAll().then(res => {
+            if(res.statusText === 'OK') {
+                setCategoryData(res.data);
+            }
+        })
+        colorsApi.getAll().then(res => {
+            if(res.statusText ==='OK') {
+                setColorData(res.data);
+            }
+        })
+        versionApi.getAll().then(res => {
+            if(res.statusText === 'OK') {
+                setVersionData(res.data);
+            }
+        })
+        
+        
+
+
+      },[])
+
 
     const initFilter = {
         category: [],
         color: [],
-        size: []
+        version: []
     }
 
-    const productList = productData.getAllProducts()
+    const productList = productData;
 
     const [products, setProducts] = useState(productList)
 
@@ -28,29 +58,29 @@ const Catalog = () => {
         if (checked) {
             switch(type) {
                 case "CATEGORY":
-                    setFilter({...filter, category: [...filter.category, item.categorySlug]})
+                    setFilter({...filter, category: [...filter.category, item.categoryslug]})
                     break
                 case "COLOR":
                     setFilter({...filter, color: [...filter.color, item.color]})
                     break
-                case "SIZE":
-                    setFilter({...filter, size: [...filter.size, item.size]})
+                case "VERSION":
+                    setFilter({...filter, version: [...filter.version, item.version]})
                     break
                 default:
             }
         } else {
             switch(type) {
                 case "CATEGORY":
-                    const newCategory = filter.category.filter(e => e !== item.categorySlug)
+                    const newCategory = filter.category.filter(e => e !== item.categoryslug)
                     setFilter({...filter, category: newCategory})
                     break
                 case "COLOR":
                     const newColor = filter.color.filter(e => e !== item.color)
                     setFilter({...filter, color: newColor})
                     break
-                case "SIZE":
-                    const newSize = filter.size.filter(e => e !== item.size)
-                    setFilter({...filter, size: newSize})
+                case "VERSION":
+                    const newVersion = filter.version.filter(e => e !== item.version)
+                    setFilter({...filter, version: newVersion})
                     break
                 default:
             }
@@ -64,7 +94,7 @@ const Catalog = () => {
             let temp = productList
 
             if (filter.category.length > 0) {
-                temp = temp.filter(e => filter.category.includes(e.categorySlug))
+                temp = temp.filter(e => filter.category.includes(e.categoryslug))
             }
 
             if (filter.color.length > 0) {
@@ -74,9 +104,9 @@ const Catalog = () => {
                 })
             }
 
-            if (filter.size.length > 0) {
+            if (filter.version.length > 0) {
                 temp = temp.filter(e => {
-                    const check = e.size.find(size => filter.size.includes(size))
+                    const check = e.version.find(version => filter.version.includes(version))
                     return check !== undefined
                 })
             }
@@ -103,16 +133,16 @@ const Catalog = () => {
                     </div>
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
-                            danh mục sản phẩm
+                            Danh mục sản phẩm
                         </div>
                         <div className="catalog__filter__widget__content">
                             {
-                                category.map((item, index) => (
+                                categoryData.map((item, index) => (
                                     <div key={index} className="catalog__filter__widget__content__item">
                                         <CheckBox
                                             label={item.display}
                                             onChange={(input) => filterSelect("CATEGORY", input.checked, item)}
-                                            checked={filter.category.includes(item.categorySlug)}
+                                            checked={filter.category.includes(item.categoryslug)}
                                         />
                                     </div>
                                 ))
@@ -122,11 +152,11 @@ const Catalog = () => {
 
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
-                            màu sắc
+                            Màu sắc
                         </div>
                         <div className="catalog__filter__widget__content">
                             {
-                                colors.map((item, index) => (
+                                colorData.map((item, index) => (
                                     <div key={index} className="catalog__filter__widget__content__item">
                                         <CheckBox
                                             label={item.display}
@@ -141,16 +171,16 @@ const Catalog = () => {
 
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
-                            kích cỡ
+                            Phiên bản
                         </div>
                         <div className="catalog__filter__widget__content">
                             {
-                                size.map((item, index) => (
+                                versionData.map((item, index) => (
                                     <div key={index} className="catalog__filter__widget__content__item">
                                         <CheckBox
                                             label={item.display}
-                                            onChange={(input) => filterSelect("SIZE", input.checked, item)}
-                                            checked={filter.size.includes(item.size)}
+                                            onChange={(input) => filterSelect("VERSION", input.checked, item)}
+                                            checked={filter.version.includes(item.version)}
                                         />
                                     </div>
                                 ))
@@ -160,12 +190,12 @@ const Catalog = () => {
 
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__content">
-                            <Button size="sm" onClick={clearFilter}>xóa bộ lọc</Button>
+                            <Button size="sm" onClick={clearFilter}>Xóa bộ lọc</Button>
                         </div>
                     </div>
                 </div>
                 <div className="catalog__filter__toggle">
-                    <Button size="sm" onClick={() => showHideFilter()}>bộ lọc</Button>
+                    <Button size="sm" onClick={() => showHideFilter()}>Bộ lọc</Button>
                 </div>
                 <div className="catalog__content">
                     <InfinityList
