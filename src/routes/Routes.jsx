@@ -1,13 +1,14 @@
 import React from 'react'
-
 import { Route, Switch } from 'react-router-dom'
-
 import Home from '../pages/Home'
 import Catalog from '../pages/Catalog'
 import Cart from '../pages/Cart'
 import Product from '../pages/Product'
 import Accessories from '../pages/Accessories'
 import Contact from '../pages/Contact'
+import Login from '../pages/Authentication/Login'
+
+
 const Routes = () => {
     return (
         <Switch>
@@ -17,6 +18,7 @@ const Routes = () => {
             <Route path='/cart' component={Cart}/> 
             <Route path='/accessories' component={Accessories}/>
             <Route path='/contact' component={Contact}/>
+            <Route path='/login' component={Login}/>
         </Switch>
     )
 }

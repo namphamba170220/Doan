@@ -1,4 +1,16 @@
 {
+  "user":[
+    {
+      "email":"nam@gmail.com",
+      "password": "nam123",
+      "role":1 
+    },
+    {
+      "email":"admin@gmail.com",
+      "password": "admin123",
+      "role":0 
+    }
+  ],
   "category": [
     {
       "id": 1,
@@ -14,6 +26,23 @@
       "id": 3,
       "display": "Hãng khác",
       "categoryslug": "hang_khac"
+    }
+  ],
+  "categoryAccessory":[
+    {
+      "id": 1,
+      "display": "Mic",
+      "categoryslug": "mic"
+    },
+    {
+      "id": 2,
+      "display": "Cáp chuyển đổi",
+      "categoryslug": "capchuyendoi"
+    },
+    {
+      "id": 3,
+      "display": "Khác",
+      "categoryslug": "khac"
     }
   ],
   "heroSliderData": [
@@ -455,8 +484,8 @@
       "id": 12,
       "title": "Micro máy ảnh định hướng Sennheiser MKE 200",
       "price": 2690000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/a/samsung-galaxy-a71-thumblo_n-tra_ng-600x600_1_2_1.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/x/a/xanh_78l4-a2_1_2_1.jpg",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/p/r/product_detail_x2_desktop_mke_20.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/p/r/product_detail_x2_desktop_mke_20_4_.jpg",
       "categoryslug": "mic",
       "colors": ["black"],
       "slug": "mic-04",

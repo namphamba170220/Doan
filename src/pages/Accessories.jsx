@@ -1,42 +1,32 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react'
-import categoryApi from '../Api/categoryApi';
 import colorsApi from '../Api/colorsApi';
-import productApi from '../Api/productApi';
-import versionApi from '../Api/versionApi';
 import Helmet from '../components/Helmet';
 import CheckBox from '../components/CheckBox';
 import Button from '../components/Button';
-import InfinityList from '../components/InfinityList';
+import categoryAccessoryApi from '../Api/categoryAccessoryApi';
+import accessoryApi from '../Api/accessoryApi';
+import AccessoryList from '../components/accessoryList';
 
 const Accessories = () => {
-    const [productData, setProductData] = useState([]);
-    const [categoryData, setCategoryData] = useState([]);
+    const [productAccessoryData, setProductAccessoryData] = useState([]);
+    const [categoryAccessoryData, setCategoryAccessoryData] = useState([]);
     const [colorData,setColorData] = useState([]);
-    const [versionData,setVersionData] = useState([]);
     useEffect(()=>{
-        productApi.getAll().then( res => {
+        accessoryApi.getAll().then( res => {
           if(res.statusText === 'OK') {
-            setProductData(res.data);
+            setProductAccessoryData(res.data);
           }
-        })
-        categoryApi.getAll().then(res => {
-            if(res.statusText === 'OK') {
-                setCategoryData(res.data);
-            }
         })
         colorsApi.getAll().then(res => {
             if(res.statusText ==='OK') {
                 setColorData(res.data);
             }
         })
-        versionApi.getAll().then(res => {
+        categoryAccessoryApi.getAll().then(res => {
             if(res.statusText === 'OK') {
-                setVersionData(res.data);
+                setCategoryAccessoryData(res.data);
             }
         })
-        
-        
-
 
       },[])
 
@@ -44,10 +34,9 @@ const Accessories = () => {
     const initFilter = {
         category: [],
         color: [],
-        version: []
     }
 
-    const productList = productData;
+    const productList = productAccessoryData;
 
     const [products, setProducts] = useState(productList)
 
@@ -62,9 +51,6 @@ const Accessories = () => {
                 case "COLOR":
                     setFilter({...filter, color: [...filter.color, item.color]})
                     break
-                case "VERSION":
-                    setFilter({...filter, version: [...filter.version, item.version]})
-                    break
                 default:
             }
         } else {
@@ -76,10 +62,6 @@ const Accessories = () => {
                 case "COLOR":
                     const newColor = filter.color.filter(e => e !== item.color)
                     setFilter({...filter, color: newColor})
-                    break
-                case "VERSION":
-                    const newVersion = filter.version.filter(e => e !== item.version)
-                    setFilter({...filter, version: newVersion})
                     break
                 default:
             }
@@ -99,13 +81,6 @@ const Accessories = () => {
             if (filter.color.length > 0) {
                 temp = temp.filter(e => {
                     const check = e.colors.find(color => filter.color.includes(color))
-                    return check !== undefined
-                })
-            }
-
-            if (filter.version.length > 0) {
-                temp = temp.filter(e => {
-                    const check = e.version.find(version => filter.version.includes(version))
                     return check !== undefined
                 })
             }
@@ -136,7 +111,7 @@ const Accessories = () => {
                         </div>
                         <div className="catalog__filter__widget__content">
                             {
-                                categoryData.map((item, index) => (
+                                categoryAccessoryData.map((item, index) => (
                                     <div key={index} className="catalog__filter__widget__content__item">
                                         <CheckBox
                                             label={item.display}
@@ -167,26 +142,6 @@ const Accessories = () => {
                             }
                         </div>
                     </div>
-
-                    <div className="catalog__filter__widget">
-                        <div className="catalog__filter__widget__title">
-                            Phiên bản
-                        </div>
-                        <div className="catalog__filter__widget__content">
-                            {
-                                versionData.map((item, index) => (
-                                    <div key={index} className="catalog__filter__widget__content__item">
-                                        <CheckBox
-                                            label={item.display}
-                                            onChange={(input) => filterSelect("VERSION", input.checked, item)}
-                                            checked={filter.version.includes(item.version)}
-                                        />
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__content">
                             <Button size="sm" onClick={clearFilter}>Xóa bộ lọc</Button>
@@ -197,7 +152,7 @@ const Accessories = () => {
                     <Button size="sm" onClick={() => showHideFilter()}>Bộ lọc</Button>
                 </div>
                 <div className="catalog__content">
-                    <InfinityList
+                    <AccessoryList
                         data={products}
                     />
                 </div>

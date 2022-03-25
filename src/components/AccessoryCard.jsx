@@ -11,21 +11,21 @@ const AccessoryCard = props => {
     const dispatch = useDispatch()
 
     return (
-        <div className="product-card">
-            <Link to={`/accessory/${props.slug}`}>
-                <div className="product-card__image">
+        <div className="accessory-card">
+            <Link to={`/accessories/${props.slug}`}>
+                <div className="accessory-card__image">
                     <img src={props.img01} alt="NEW" />
                     <img src={props.img02} alt="" />
                 </div>
-                <h3 className="product-card__name">{props.name}</h3>
-                <div className="product-card__price">
+                <h3 className="accessory-card__name">{props.name}</h3>
+                <div className="accessory-card__price">
                     {numberWithCommas(props.price)}
-                    <span className="product-card__price__old">
+                    <span className="accessory-card__price__old">
                         <del>{numberWithCommas(5000000)}</del>
                     </span>
                 </div>
             </Link>
-            <div className="product-card__btn">
+            <div className="accessory-card__btn">
                 <Button
                     size="sm"    
                     icon="bx bx-cart"
