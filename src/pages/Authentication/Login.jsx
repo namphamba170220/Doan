@@ -1,37 +1,62 @@
-import React,{useRef} from "react";
-import { Card, Form, Button } from "react-bootstrap";
+import React, {useState} from "react"
+import { Link, useNavigate } from "react-router-dom"
+import {signInWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
+import { auth } from "../../firebase";
+import { useAuthValue } from "../../contexts/AuthContext";
 
 const Login = () => {
 
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('') 
+  const [error, setError] = useState('')
+  const {setTimeActive} = useAuthValue()
+  const navigate = useNavigate()
+  const login = e => {
+    e.preventDefault()
+    signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      if(!auth.currentUser.emailVerified) {
+        sendEmailVerification(auth.currentUser)
+        .then(() => {
+          setTimeActive(true)
+          navigate('/verify-email')
+        })
+      .catch(err => alert(err.message))
+    }else{
+      navigate('/')
+    }
+    })
+    .catch(err => setError(err.message))
+  }
   return (
-    <>
-      <Card>
-          <Card.Body>
-              <h2 className="text-center mb-4"> Sign Up</h2>
-              <Form>
-                  <Form.Group id="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" ref={emailRef} required/>
-                  </Form.Group>
-                  <Form.Group id="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="email" ref={passwordRef} required/>
-                  </Form.Group>
-                  <Form.Group id="password-confirm">
-                    <Form.Label>Password Confirmation</Form.Label>
-                    <Form.Control type="password" ref={passwordConfirmRef} required/>
-                  </Form.Group>
-                  <Button className="w-100" type="submit">Sign In</Button>
-              </Form>
-          </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-          Already have an account? Log In
+    <div className='center'>
+      <div className='auth'>
+        <h1>Log in</h1>
+        {error && <div className='auth__error'>{error}</div>}
+        <form onSubmit={login} name='login_form'>
+          <input 
+            type='email' 
+            value={email}
+            required
+            placeholder="Enter your email"
+            onChange={e => setEmail(e.target.value)}/>
+
+          <input 
+            type='password'
+            value={password}
+            required
+            placeholder='Enter your password'
+            onChange={e => setPassword(e.target.value)}/>
+
+          <button type='submit'>Login</button>
+        </form>
+        <p>
+          Don't have and account? 
+          <Link to='/resgister'>Create one here</Link>
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
