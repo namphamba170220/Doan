@@ -1,14 +1,18 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { AuthProvider } from "../contexts/AuthContext";
+import { AuthProvider } from '../contexts/AuthContext';
 import { auth } from '../firebase';
 import Accessories from '../pages/Accessories';
 import Login from '../pages/Authentication/Login';
 import Resgister from '../pages/Authentication/Resgister';
 import Catalog from '../pages/Catalog';
 import Contact from '../pages/Contact';
-import Header from "./Header";
+import PrivateRoute from '../privateRoute';
+import Home from '../pages/Home'
+import VerifyEmail from '../pages/Authentication/verifyEmail/verifyEmail';
+
+// import Header from "./Header";
 // import ProductViewModal from "./ProductViewModal";
 
 const Layout = () => {
@@ -24,11 +28,12 @@ const Layout = () => {
   return (
     <Router>
       <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
-        <Routes>
-          <Route exact path='/' element = {
-              <Header/>
-          }
-          />
+      <Routes>
+          <Route exact path='/' element={
+            <PrivateRoute>
+              <Home/>
+            </PrivateRoute>
+          }/>
          
           {/* <Route path="/catalog/:slug" element={<Product/>} /> */}
           <Route path="/catalog" element={<Catalog />} />
@@ -36,7 +41,8 @@ const Layout = () => {
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/resgister" element={<Resgister />} />
+          <Route path="/register" element={<Resgister />} />
+          <Route path='/verify-email' element={<VerifyEmail/>} /> 
         </Routes>
       </AuthProvider>
     </Router>

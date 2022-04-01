@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link ,useNavigate} from "react-router-dom"
 import {useAuthValue} from '../../contexts/AuthContext'
 import {createUserWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
 import { auth } from "../../firebase";
@@ -7,6 +7,7 @@ import { auth } from "../../firebase";
 
 
 const Resgister = () => {
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -34,6 +35,7 @@ const Resgister = () => {
             sendEmailVerification(auth.currentUser)   
             .then(() => {
               setTimeActive(true)
+              navigate('/verify-email')
             }).catch((err) => alert(err.message))
           })
           .catch(err => setError(err.message))
@@ -76,7 +78,7 @@ const Resgister = () => {
         </form>
         <span>
           Already have an account?
-          <Link to="/login">login</Link>
+          <Link to="/login">Login</Link>
         </span>
       </div>
     </div>
