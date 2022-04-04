@@ -3,28 +3,39 @@ import { Link, useNavigate } from "react-router-dom"
 import {signInWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
 import { auth } from "../../firebase";
 import { useAuthValue } from "../../contexts/AuthContext";
+import {useSnackbar} from 'notistack';
+
 
 const Login = () => {
-
+  const adminUser = {
+    email:"phambanamhaui@gmail.com",
+    password:"12345678"
+  }
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('') 
   const [error, setError] = useState('')
   const {setTimeActive} = useAuthValue()
   const navigate = useNavigate()
+  const {enqueueSnackbar} = useSnackbar()
+
+
   const login = e => {
     e.preventDefault()
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      if(!auth.currentUser.emailVerified) {
+      console.log(auth.currentUser);
+      if(auth.currentUser.email !== adminUser.email)  {
         sendEmailVerification(auth.currentUser)
         .then(() => {
           setTimeActive(true)
-          navigate('/verify-email')
+          navigate('/')
+          enqueueSnackbar("Sign Up Success");
         })
       .catch(err => alert(err.message))
-    }else{
-      navigate('/')
+    } else{
+      navigate('/admin')
+      enqueueSnackbar("Sign Up Success");
     }
     })
     .catch(err => setError(err.message))

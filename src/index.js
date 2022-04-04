@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { store } from './redux/store'
-import { Provider } from 'react-redux'
-import './assets/boxicons-2.0.7/css/boxicons.min.css'
-import './sass/index.scss'
-import Layout from './components/Layout'
-
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
+import './assets/boxicons-2.0.7/css/boxicons.min.css';
+import './sass/index.scss';
+import Layout from './components/Layout';
+import {SnackbarProvider} from 'notistack';
 
 ReactDOM.render(
   <React.StrictMode>
+    <SnackbarProvider maxSnack={4}>
     <Provider store={store}>
       <Layout />
     </Provider>
+    </SnackbarProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react'
-
 import Helmet from '../components/Helmet'
 import Section, {SectionBody, SectionTitle} from '../components/Section'
 import Grid from '../components/Grid'
@@ -13,9 +12,8 @@ const Product = props => {
 
     const [productData, setProductData] = useState([]);
 
-    const product = productData.getProductBySlug(props.match.params.slug);
 
-    const relatedProducts = productData.getProducts(8);
+    const relatedProducts = productData.slice(0,8);
 
     useEffect(()=>{
         productApi.getAll().then( res => {
@@ -25,16 +23,17 @@ const Product = props => {
         })
       
       },[])
+      localStorage.setItem("add item",productData )
 
     React.useEffect(() => {
         window.scrollTo(0,0)
-    }, [product])
+    }, [])
 
     return (
-        <Helmet title={product.title}>
+        <Helmet title={productData.title}>
             <Section>
                 <SectionBody>
-                    <ProductView product={product}/>
+                    <ProductView product={productData}/>
                 </SectionBody>
             </Section>
             <Section>

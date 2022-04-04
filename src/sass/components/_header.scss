@@ -7,6 +7,7 @@
     z-index: 99;
     height: $header-height;
     transition: height 0.3s ease;
+    margin-bottom: 100px;
 
     @include tablet {
         height: $header-tablet-height;
@@ -40,7 +41,7 @@
         
 
         img {
-            height: 100px;
+            height: 70px;
         }
     }
 

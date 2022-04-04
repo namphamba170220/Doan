@@ -70,7 +70,7 @@ const Home = () => {
       <Section>
         <SectionBody>
           <Link to="/catalog">
-            <img src={banner2} alt="" />
+            <img src={banner2} alt="" style={{width:"100%", height:"500px"}} />
           </Link>
         </SectionBody>
       </Section>
@@ -119,7 +119,7 @@ const Home = () => {
       <Section>
         <SectionBody>
           <Link to="/catalog">
-            <img src={banner} alt="" />
+            <img src={banner} alt="" style={{width:"100%"}}/>
           </Link>
         </SectionBody>
       </Section>

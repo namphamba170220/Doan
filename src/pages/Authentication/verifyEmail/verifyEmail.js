@@ -1,11 +1,11 @@
-import './verifyEmail.css'
-import {useState, useEffect} from 'react'
-import {sendEmailVerification} from 'firebase/auth'
-import {useNavigate} from 'react-router-dom'
+import { sendEmailVerification } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuthValue } from '../../../contexts/AuthContext';
+import { auth } from '../../../firebase';
+import './verifyEmail.css';
+import {useSnackbar} from 'notistack';
 
-
-import { useAuthValue } from '../../../contexts/AuthContext'
-import { auth } from '../../../firebase'
 
 function VerifyEmail() {
 
@@ -13,6 +13,7 @@ function VerifyEmail() {
   const [time, setTime] = useState(60)
   const {timeActive, setTimeActive} = useAuthValue()
   const navigate = useNavigate()
+  const {enqueueSnackbar} = useSnackbar()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,13 +22,14 @@ function VerifyEmail() {
         if(currentUser?.emailVerified){
           clearInterval(interval)
           navigate('/')
+          enqueueSnackbar("Sign Up Success");
         }
       })
       .catch((err) => {
         alert(err.message)
       })
     }, 1000)
-  }, [navigate, currentUser])
+  },[navigate,currentUser,enqueueSnackbar])
 
   useEffect(() => {
     let interval = null

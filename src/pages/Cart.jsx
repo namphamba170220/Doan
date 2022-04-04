@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Helmet from '../components/Helmet'
-import CartItem from '../components/CartItem'
+// import CartItem from '../components/CartItem'
 import Button from '../components/Button'
 import numberWithCommas from '../utils/numberWithCommas'
-import productApi from '../Api/productApi'
 
 const Cart = () => {
 
-    const [productData, setProductData] = useState([]);
-
-    useEffect(()=>{
-        productApi.getAll().then( res => {
-          if(res.statusText === 'OK'){
-            setProductData(res.data);
-          }
-        })
-      
-      },[])
 
 
     return (
@@ -44,13 +33,13 @@ const Cart = () => {
                         
                     </div>
                 </div>
-                <div className="cart__list">
+                {/* <div className="cart__list">
                     {
                         productData.map((item, index) => (
                             <CartItem item={item} key={index}/>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
         </Helmet>
     )
