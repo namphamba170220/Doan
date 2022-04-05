@@ -1,37 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch } from 'react-redux'
-import { addItem } from '../redux/shopping-cart/cartItemsSlide'
-import { remove } from '../redux/product-modal/productModalSlice'
 import Button from './Button'
-import numberWithCommas from '../utils/numberWithCommas'
-const ProductView = (props) => {
-    const dispatch = useDispatch()
+// import numberWithCommas from '../utils/numberWithCommas'
+import productApi from '../Api/productApi'
+const ProductView = () => { 
+
     
-    let product = props.product
 
-    if (product === undefined) product = {
-        title: "",
-        price: '',
-        image01: null,
-        image02: null,
-        categorySlug: "",
-        colors: [],
-        slug: "",
-        size: [],
-        description: ""
-    }
-
-    const [previewImg, setPreviewImg] = useState(product.image01)
-
+    const [productData, setProductData] = useState([]);
+    const [previewImg, setPreviewImg] = useState(productData.image01)
     const [descriptionExpand, setDescriptionExpand] = useState(false)
-
     const [color, setColor] = useState(undefined)
-
-    const [size, setSize] = useState(undefined)
-
+    const [version, setVersion] = useState(undefined)
     const [quantity, setQuantity] = useState(1)
 
+    
     const updateQuantity = (type) => {
         if (type === 'plus') {
             setQuantity(quantity + 1)
@@ -41,11 +24,20 @@ const ProductView = (props) => {
     }
 
     useEffect(() => {
-        setPreviewImg(product.image01)
+        productApi.getAll().then(res => {
+            if(res.statusText === 'OK'){
+                setProductData(res.data);
+              }
+        })
+    },[])
+    console.log(productData);
+
+    useEffect(() => {
+        setPreviewImg(productData.image01)
         setQuantity(1)
         setColor(undefined)
-        setSize(undefined)
-    }, [product])
+        setVersion(undefined)
+    }, [productData])
 
     const check = () => {
         if (color === undefined) {
@@ -53,8 +45,8 @@ const ProductView = (props) => {
             return false
         }
 
-        if (size === undefined) {
-            alert('Vui lòng chọn kích cỡ!')
+        if (version === undefined) {
+            alert('Vui lòng chọn phiên bản!')
             return false
         }
 
@@ -64,16 +56,11 @@ const ProductView = (props) => {
     const addToCart = () => {
         if (check()) {
             let newItem = {
-                slug: product.slug,
+                slug: productData.slug,
                 color: color,
-                size: size,
-                price: product.price,
+                version: version,
+                price: productData.price,
                 quantity: quantity
-            }
-            if (dispatch(addItem(newItem))) {
-                alert('Success')
-            } else {
-                alert('Fail')
             }
         }
     }
@@ -81,17 +68,11 @@ const ProductView = (props) => {
     const goToCart = () => {
         if (check()) {
             let newItem = {
-                slug: product.slug,
+                slug: productData.slug,
                 color: color,
-                size: size,
-                price: product.price,
+                version: version,
+                price: productData.price,
                 quantity: quantity
-            }
-            if (dispatch(addItem(newItem))) {
-                dispatch(remove())
-                props.history.push('/cart')
-            } else {
-                alert('Fail')
             }
         }
     }
@@ -100,11 +81,11 @@ const ProductView = (props) => {
         <div className="product">
             <div className="product__images">
                 <div className="product__images__list">
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image01)}>
-                        <img src={product.image01} alt="" />
+                    <div className="product__images__list__item" onClick={() => setPreviewImg(productData.image01)}>
+                        <img src={productData.image01} alt="" />
                     </div>
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
-                        <img src={product.image02} alt="" />
+                    <div className="product__images__list__item" onClick={() => setPreviewImg(productData.image02)}>
+                        <img src={productData.image02} alt="" />
                     </div>
                 </div>
                 <div className="product__images__main">
@@ -114,7 +95,7 @@ const ProductView = (props) => {
                     <div className="product-description__title">
                         Chi tiết sản phẩm
                     </div>
-                    <div className="product-description__content" dangerouslySetInnerHTML={{__html: product.description}}></div>
+                    <div className="product-description__content" dangerouslySetInnerHTML={{__html: productData.description}}></div>
                     <div className="product-description__toggle">
                         <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
                             {
@@ -125,10 +106,10 @@ const ProductView = (props) => {
                 </div>
             </div>
             <div className="product__info">
-                <h1 className="product__info__title">{product.title}</h1>
+                <h1 className="product__info__title">{productData.title}</h1>
                 <div className="product__info__item">
                     <span className="product__info__item__price">
-                        {numberWithCommas(product.price)}
+                        {/* {numberWithCommas(productData.price)} */}
                     </span>
                 </div>
                 <div className="product__info__item">
@@ -137,7 +118,7 @@ const ProductView = (props) => {
                     </div>
                     <div className="product__info__item__list">
                         {
-                            product.colors.map((item, index) => (
+                            productData.colors.map((item, index) => (
                                 <div key={index} className={`product__info__item__list__item ${color === item ? 'active' : ''}`} onClick={() => setColor(item)}>
                                     <div className={`circle bg-${item}`}></div>
                                 </div>
@@ -147,12 +128,12 @@ const ProductView = (props) => {
                 </div>
                 <div className="product__info__item">
                     <div className="product__info__item__title">
-                        Kích cỡ
+                        Phiên bản
                     </div>
                     <div className="product__info__item__list">
                         {
-                            product.size.map((item, index) => (
-                                <div key={index} className={`product__info__item__list__item ${size === item ? 'active' : ''}`} onClick={() => setSize(item)}>
+                            productData.version.map((item, index) => (
+                                <div key={index} className={`product__info__item__list__item ${version === item ? 'active' : ''}`} onClick={() => setVersion(item)}>
                                     <span className="product__info__item__list__item__size">
                                         {item}
                                     </span>
@@ -186,7 +167,7 @@ const ProductView = (props) => {
                 <div className="product-description__title">
                     Chi tiết sản phẩm
                 </div>
-                <div className="product-description__content" dangerouslySetInnerHTML={{__html: product.description}}></div>
+                <div className="product-description__content" dangerouslySetInnerHTML={{__html: productData.description}}></div>
                 <div className="product-description__toggle">
                     <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
                         {
