@@ -118,9 +118,10 @@ const Header = () => {
           </div>
           <div className="header__menu__right">
             <div className="header__menu__item header__menu__right__item">
-              <Link to="/cart">
+            {account === adminUser ? <div></div>  : <Link to="/cart">
                 <i className="bx bx-shopping-bag"></i>
-              </Link>
+              </Link>}
+              
             </div>
             <div className="header__menu__item header__menu__right__item">
               {account ? (
