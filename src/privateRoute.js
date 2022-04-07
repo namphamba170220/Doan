@@ -1,5 +1,5 @@
 import {Navigate} from 'react-router-dom'
-import { useAuthValue } from './contexts/AuthContext'
+import {useAuthValue} from './contexts/AuthContext';
 
 
 export default function PrivateRoute({children}) {
