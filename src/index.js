@@ -7,11 +7,9 @@ import Layout from "./layout/Layout";
 import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
-  <React.StrictMode>
     <SnackbarProvider maxSnack={4}>
       <Layout />
-    </SnackbarProvider>
-  </React.StrictMode>,
+    </SnackbarProvider>,
   document.getElementById("root")
 );
 

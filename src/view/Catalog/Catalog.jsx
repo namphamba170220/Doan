@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import categoryApi from "../../Api/categoryApi";
-import colorsApi from "../../Api/colorsApi";
-import productApi from "../../Api/productApi";
-import versionApi from "../../Api/versionApi";
 import Button from "../../components/Button/Button";
 import Helmet from "../../components/Helmet/Helmet";
 import InfinityList from "../../components/infinity/InfinityList";
 import CheckBox from "../../components/Checkbox/CheckBox";
+import categoryApi from "../../Api/categoryApi";
+import productApi from "../../Api/productApi";
+import colorsApi from "../../Api/colorsApi";
+import versionApi from "../../Api/versionApi";
 const Catalog = () => {
   const [productData, setProductData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);

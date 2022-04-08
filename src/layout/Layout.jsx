@@ -1,3 +1,4 @@
+import "antd/dist/antd.css";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";

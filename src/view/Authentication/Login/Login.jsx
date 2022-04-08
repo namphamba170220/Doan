@@ -25,7 +25,6 @@ const Login = () => {
     e.preventDefault()
     signInWithEmailAndPassword(auth, email, password)
     .then(() => {
-      console.log(auth.currentUser);
       if(auth.currentUser.email !== adminUser.email)  {
         sendEmailVerification(auth.currentUser)
         .then(() => {

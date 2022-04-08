@@ -37,7 +37,6 @@ const Header = () => {
   const headerRef = useRef(null);
   const [account, setAccount] = useState("");
   const adminUser = "phambanamhaui@gmail.com";
-
   const ModelUser = mainNav.slice(0, 4);
   const ModelPublic = () => {
     return ModelUser.map((item, index) => (
@@ -73,7 +72,7 @@ const Header = () => {
 
   useEffect(() => {
     setAccount(auth?.currentUser?.email);
-  }, []);
+  }, [auth?.currentUser?.email]);
 
   useEffect(() => {
     const srollWeb = () => {
@@ -120,7 +119,7 @@ const Header = () => {
                 <div></div>
               ) : (
                 <Link to="/cart">
-                  <i className="bx bx-shopping-bag"></i>
+                  <i style={{color:"black"}} className="bx bx-shopping-bag"></i>
                 </Link>
               )}
             </div>

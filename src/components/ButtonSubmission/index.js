@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button } from 'antd';
 import PropTypes from 'prop-types';
-import './style.scss';
+import './index.scss';
 
 
-function ButtonSubmission({ isEdit, onSubmit }) {
+export const ButtonSubmission= ({ isEdit, onSubmit }) => {
   return (
   <>
     <div className='btn__submit'>
@@ -12,10 +12,8 @@ function ButtonSubmission({ isEdit, onSubmit }) {
         onClick={() => {
             onSubmit && typeof onSubmit === 'function' && onSubmit();
         }}
-        htmlType="submit"
-        type='primary'
         >
-            {isEdit ? '_.update' : '_.submit'}
+            {isEdit ? 'update' : 'submit'}
         </Button>
     </div>
   </>
@@ -25,4 +23,3 @@ ButtonSubmission.propTypes = {
     isEdit: PropTypes.string,
     onSubmit: PropTypes.func,
 };
-export default ButtonSubmission;

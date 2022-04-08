@@ -26,7 +26,6 @@ const ProductView = () => {
       }
     });
   }, []);
-  console.log(productData);
 
   useEffect(() => {
     setPreviewImg(productData.image01);

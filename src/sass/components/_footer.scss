@@ -22,6 +22,9 @@
     &__content {
         p {
             margin-bottom: 1.25rem;
+            &>a {
+                color: #000;
+            }
         }
     }
 }

@@ -1,0 +1,30 @@
+.page--sub-title {
+    margin: 0;
+    height: 48px;
+    background: linear-gradient(97.56deg, #669ee9 3.96%, #37cde6 56.42%, #32dbdf 128.77%, #5cdacb 165.87%);
+    border-radius: 8px 8px 0 0;
+
+    .border--left {
+        color: white;
+        position: absolute;
+        margin: 15px 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .border--right {
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #669ee9;
+        float: right;
+        margin: 14px 18px;
+        font-size: 24px;
+        border-radius: 50%;
+        border: none;
+        svg {
+            width: 55%;
+        }
+        &.delete {
+            margin-right: 0;
+        }
+    }
+}
