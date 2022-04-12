@@ -4,10 +4,10 @@ import productApi from "../../../Api/productApi";
 import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
-const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
+const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) => {
   const [form] = Form.useForm();
   const onSubmit = (data) => {
-    const productData = {
+    const AccessoryData = {
       id: data?.id,
       title: data?.title,
       image01: data?.image01,
@@ -16,26 +16,25 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
       price: data?.price,
       slug: data?.slug,
       color: data?.colors,
-      version: data?.version,
       description: data?.description,
     };
     console.log(data);
-    if (productDetail?.id) {
+    if (accessoryDetail?.id) {
       productApi
-        .update(productDetail.id && productData)
+        .update(accessoryDetail.id && AccessoryData)
         .then((res) => {
           onClose();
-          onReloadProduct();
+          onReloadAccessory();
         })
         .catch((error) => {
           console.log(`error`, error);
         });
     } else {
       productApi
-        .add(productData)
+        .add(AccessoryData)
         .then((res) => {
           onClose();
-          onReloadProduct();
+          onReloadAccessory();
         })
         .catch((error) => {
           console.log(`error`, error);
@@ -60,9 +59,9 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
       >
         <Form form={form} onFinish={onSubmit} name="control-ref">
           <SubTitle
-            title={productDetail ? "Edit Product" : "Add Product"}
+            title={accessoryDetail ? "Edit Accessory" : "Add Accessory"}
             onClickClose={onClose}
-            defaultValue={productDetail}
+            defaultValue={accessoryDetail}
           />
           <div className="appointment--settings-form">
             <div className="appointment--form-wrapper">
@@ -188,23 +187,6 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                         />
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
-                      <label className="label-input">Version</label>
-                      <Form.Item
-                        name="version"
-                        rules={[
-                          {
-                            required: true,
-                            message: "validVersion",
-                          },
-                        ]}
-                      >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập phiên bản sản phẩm"
-                        />
-                      </Form.Item>
-                    </div>
                     <div className="appointment--setting description">
                       <label className="label-input">Description</label>
                       <Form.Item name="description">
@@ -217,7 +199,7 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                       </Form.Item>
                       <Form.Item shouldUpdate>
                         <div className="btn-project-submission">
-                          <ButtonSubmission isEdit={productDetail?.id} />
+                          <ButtonSubmission isEdit={accessoryDetail?.id} />
                         </div>
                       </Form.Item>
                     </div>
@@ -232,4 +214,4 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
   );
 };
 
-export default AddProduct;
+export default AddAccessory;

@@ -11,12 +11,12 @@ import Addproduct from "../AddProduct/Addproduct";
 import "./index.scss";
 
 const AdminProductCard = (props) => {
-  const [visible, setVisible] = useState(false);
+  const [isModalEditProduct, setIsModalEditProduct] = useState(false);
   const [id, setId] = useState(null);
-  const [projectDetail, setProjectDetail] = useState(null);
+  const [productDetail, setProductDetail] = useState(null);
   const [openModalDeleteProjects, setOpenModalDeleteProjects] = useState(false);
-  const [openModalDeleteAccessory, setOpenModalDeleteAccessory] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
+
 
   const handelDeleteProduct = (check) => {
     if (check && id) {
@@ -38,25 +38,28 @@ const AdminProductCard = (props) => {
         setTimeout(() => {
           enqueueSnackbar("Success");
         }, 500);
-        setOpenModalDeleteAccessory(false);
+        setOpenModalDeleteProjects(false);
         props.onReloadAccessory();
       });
     } else {
-      setOpenModalDeleteAccessory(false);
+      setOpenModalDeleteProjects(false);
     }
   };
 
-  const showDeleteConfirm = (id) => {
-    setOpenModalDeleteProjects(true);
-    setOpenModalDeleteAccessory(true);
+  const showDeleteProductConfirm = (id) => {
     setId(id);
+    setOpenModalDeleteProjects(true);
   };
-  const onClose = () => {
-    setVisible(false);
+  const onCloseModal = () => {
+    setIsModalEditProduct(false);
+    setProductDetail(null);
   };
 
-  const showModalEdit = () => {
-    setVisible(true);
+  const showModalEdit = (item) => {
+    return () => {
+      setIsModalEditProduct(true);
+      setProductDetail(item);
+    }
   };
   return (
     <div className="admin-product-card">
@@ -64,7 +67,7 @@ const AdminProductCard = (props) => {
         <img src={props.img01} alt="NEW" />
         <img src={props.img02} alt="" />
       </div>
-      <h3 className="admin-product-card__name">{props.name}</h3>
+      <h3 className="admin-product-card__name">{props.title}</h3>
       <div className="admin-product-card__price">
         {numberWithCommas(props.price)}
         <span className="admin-product-card__price__old">
@@ -73,22 +76,22 @@ const AdminProductCard = (props) => {
       </div>
       <div className="admin-product-card__btn">
         <Button
-          onClick={showModalEdit}
+          onClick={showModalEdit(props?.item)}
           style={{ padding: "0 20px", margin: "0 20px" }}
           className="btn-nowidth"
           icon={<EditOutlined />}
         ></Button>
         <Button
-          onClick={() => showDeleteConfirm(props?.id)}
+          onClick={() => showDeleteProductConfirm(props?.id)}
           style={{ padding: "0 20px", margin: "0 20px" }}
           icon={<DeleteOutlined />}
         ></Button>
       </div>
-      {visible && (
+      {isModalEditProduct && (
         <Addproduct
-          visible={visible}
-          onClose={onClose}
-          projectDetail={projectDetail}
+          openModal={isModalEditProduct}
+          onClose={onCloseModal}
+          productDetail={productDetail}
         />
       )}
       <ConfirmPopup
@@ -97,7 +100,7 @@ const AdminProductCard = (props) => {
       />
        <ConfirmPopup
         onConfirm={handelDeleteAccessory}
-        visibleModal={openModalDeleteAccessory}
+        visibleModal={openModalDeleteProjects}
       />
     </div>
   );
@@ -106,9 +109,8 @@ const AdminProductCard = (props) => {
 AdminProductCard.propTypes = {
   img01: PropTypes.string.isRequired,
   img02: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  slug: PropTypes.string.isRequired,
 };
 
 export default AdminProductCard;

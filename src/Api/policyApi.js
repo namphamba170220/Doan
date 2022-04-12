@@ -19,7 +19,7 @@ const policyApi = {
   },
   remove(id) {
     const url = `/policy/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

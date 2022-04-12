@@ -19,7 +19,7 @@ const heroSliderApi = {
   },
   remove(id) {
     const url = `/heroSliderData/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

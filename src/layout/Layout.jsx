@@ -9,6 +9,7 @@ import { auth } from "../firebase";
 import PrivateRoute from "../privateRoute";
 import Accessories from "../view/Accessory/Accessories";
 import Admin from "../view/Admin/admin";
+import ControlAccessory from "../view/Admin/ControlAccessory";
 import Login from "../view/Authentication/Login/Login";
 import Resgister from "../view/Authentication/Register/Resgister";
 import VerifyEmail from "../view/Authentication/verifyEmail/verifyEmail";
@@ -59,6 +60,7 @@ const Layout = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/controlAccessory" element={<ControlAccessory/>} />
         </Routes>
       </AuthProvider>
       <Footer />

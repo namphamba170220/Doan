@@ -19,7 +19,7 @@ const categoryApi = {
   },
   remove(id) {
     const url = `/category/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

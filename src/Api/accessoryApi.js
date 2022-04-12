@@ -19,7 +19,7 @@ const accessoryApi = {
   },
   remove(id) {
     const url = `/accessory/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

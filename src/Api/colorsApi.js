@@ -19,7 +19,7 @@ const colorsApi = {
   },
   remove(id) {
     const url = `/colors/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

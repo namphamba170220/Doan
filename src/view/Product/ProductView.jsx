@@ -34,19 +34,19 @@ const ProductView = () => {
     setVersion(undefined);
   }, [productData]);
 
-  const check = () => {
-    if (color === undefined) {
-      alert("Vui lòng chọn màu sắc!");
-      return false;
-    }
+  // const check = () => {
+  //   if (color === undefined) {
+  //     alert("Vui lòng chọn màu sắc!");
+  //     return false;
+  //   }
 
-    if (version === undefined) {
-      alert("Vui lòng chọn phiên bản!");
-      return false;
-    }
+  //   if (version === undefined) {
+  //     alert("Vui lòng chọn phiên bản!");
+  //     return false;
+  //   }
 
-    return true;
-  };
+  //   return true;
+  // };
 
   // const addToCart = () => {
   //     if (check()) {

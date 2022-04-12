@@ -19,7 +19,7 @@ const versionApi = {
   },
   remove(id) {
     const url = `/versions/${id}`;
-    return axiosClient.get(url);
+    return axiosClient.delete(url);
   },
 };
 

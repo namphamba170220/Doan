@@ -12,8 +12,9 @@ export const ButtonSubmission= ({ isEdit, onSubmit }) => {
         onClick={() => {
             onSubmit && typeof onSubmit === 'function' && onSubmit();
         }}
+        htmlType="submit"
         >
-            {isEdit ? 'update' : 'submit'}
+            {isEdit ? 'update' : 'Add new'}
         </Button>
     </div>
   </>
