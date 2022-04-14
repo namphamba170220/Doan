@@ -41,6 +41,7 @@ function ControlProduct() {
       });
   }, [isReloadProduct]);
 
+
   return (
     <Helmet title="Quản lí thiết bị di động">
       <Button icon={<PlusOutlined />} onClick={showModalAddNew}>
@@ -63,6 +64,7 @@ function ControlProduct() {
                 version={item.version}
                 description={item.description}
                 onReloadProduct={handleReloadProduct}
+                item={item}
               ></AdminProductCard>
             ))}
           </Grid>

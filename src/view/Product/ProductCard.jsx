@@ -1,10 +1,23 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import productApi from "../../Api/productApi";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
 
 const ProductCard = (props) => {
+  const [id, setId] = useState(null);
+  const [productData, setProductData] = useState([])
+
+  const showModalProduct = (check) => {
+    console.log("aaa");
+    // if(check && id) {
+    //   productApi.get(id).then((res) => {
+    //     setProductData(res?.data);
+    //   })
+    // }
+  }
+
   return (
     <div className="product-card">
       <Link to={`/catalog/${props.slug}`}>
@@ -25,7 +38,9 @@ const ProductCard = (props) => {
           size="sm"
           icon="bx bx-cart"
           animate={true}
-          // onClick={() =>}
+          onClick={() => showModalProduct(props?.id)
+
+          }
         >
           Chọn mua
         </Button>

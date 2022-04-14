@@ -1,15 +1,30 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import productApi from "../../Api/productApi";
 import Button from "../../components/Button/Button";
-// import numberWithCommas from '../utils/numberWithCommas'
-const ProductView = () => {
-  const [productData, setProductData] = useState([]);
-  const [previewImg, setPreviewImg] = useState(productData.image01);
+// import numberWithCommas from "../../utils/numberWithCommas";
+const ProductView = product => {
+
+
+    if (product === undefined) product = {
+        title: "",
+        price: '',
+        image01: null,
+        image02: null,
+        categorySlug: "",
+        colors: [],
+        slug: "",
+        version: [],
+        description: ""
+    }
+
+
+  const [previewImg, setPreviewImg] = useState(product.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
   const [color, setColor] = useState(undefined);
   const [version, setVersion] = useState(undefined);
   const [quantity, setQuantity] = useState(1);
+
+
 
   const updateQuantity = (type) => {
     if (type === "plus") {
@@ -19,20 +34,13 @@ const ProductView = () => {
     }
   };
 
-  useEffect(() => {
-    productApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setProductData(res.data);
-      }
-    });
-  }, []);
 
   useEffect(() => {
-    setPreviewImg(productData.image01);
+    setPreviewImg(product.image01);
     setQuantity(1);
     setColor(undefined);
     setVersion(undefined);
-  }, [productData]);
+  }, [product]);
 
   // const check = () => {
   //   if (color === undefined) {
@@ -51,10 +59,10 @@ const ProductView = () => {
   // const addToCart = () => {
   //     if (check()) {
   //         let newItem = {
-  //             slug: productData.slug,
+  //             slug: product.slug,
   //             color: color,
   //             version: version,
-  //             price: productData.price,
+  //             price: product.price,
   //             quantity: quantity
   //         }
   //     }
@@ -63,10 +71,10 @@ const ProductView = () => {
   // const goToCart = () => {
   //     if (check()) {
   //         let newItem = {
-  //             slug: productData.slug,
+  //             slug: product.slug,
   //             color: color,
   //             version: version,
-  //             price: productData.price,
+  //             price: product.price,
   //             quantity: quantity
   //         }
   //     }
@@ -78,15 +86,15 @@ const ProductView = () => {
         <div className="product__images__list">
           <div
             className="product__images__list__item"
-            onClick={() => setPreviewImg(productData.image01)}
+            onClick={() => setPreviewImg(product.image01)}
           >
-            <img src={productData.image01} alt="" />
+            <img src={product.image01} alt="" />
           </div>
           <div
             className="product__images__list__item"
-            onClick={() => setPreviewImg(productData.image02)}
+            onClick={() => setPreviewImg(product.image02)}
           >
-            <img src={productData.image02} alt="" />
+            <img src={product.image02} alt="" />
           </div>
         </div>
         <div className="product__images__main">
@@ -98,7 +106,7 @@ const ProductView = () => {
           <div className="product-description__title">Chi tiết sản phẩm</div>
           <div
             className="product-description__content"
-            dangerouslySetInnerHTML={{ __html: productData.description }}
+            dangerouslySetInnerHTML={{ __html: product.description }}
           ></div>
           <div className="product-description__toggle">
             <Button
@@ -111,16 +119,16 @@ const ProductView = () => {
         </div>
       </div>
       <div className="product__info">
-        <h1 className="product__info__title">{productData.title}</h1>
+        <h1 className="product__info__title">{product.title}</h1>
         <div className="product__info__item">
           <span className="product__info__item__price">
-            {/* {numberWithCommas(productData.price)} */}
+            {/* {numberWithCommas(product.price)} */}
           </span>
         </div>
         <div className="product__info__item">
           <div className="product__info__item__title">Màu sắc</div>
           <div className="product__info__item__list">
-            {productData.colors.map((item, index) => (
+            {product.colors.map((item, index) => (
               <div
                 key={index}
                 className={`product__info__item__list__item ${
@@ -136,7 +144,7 @@ const ProductView = () => {
         <div className="product__info__item">
           <div className="product__info__item__title">Phiên bản</div>
           <div className="product__info__item__list">
-            {productData.version.map((item, index) => (
+            {product.version.map((item, index) => (
               <div
                 key={index}
                 className={`product__info__item__list__item ${
@@ -184,7 +192,7 @@ const ProductView = () => {
         <div className="product-description__title">Chi tiết sản phẩm</div>
         <div
           className="product-description__content"
-          dangerouslySetInnerHTML={{ __html: productData.description }}
+          dangerouslySetInnerHTML={{ __html: product.description }}
         ></div>
         <div className="product-description__toggle">
           <Button

@@ -1,11 +1,19 @@
-import { Form, Input, Modal } from "antd";
-import React from "react";
+import { Form, Input, Modal, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import categoryApi from "../../../Api/categoryApi";
+import colorsApi from "../../../Api/colorsApi";
 import productApi from "../../../Api/productApi";
+import versionApi from "../../../Api/versionApi";
 import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
+const {Option} = Select;
 const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
   const [form] = Form.useForm();
+  const [categoryData, setCategoryData] = useState([]);
+  const [colorData, setColorData] = useState([]);
+  const [versionData, setVersionData] = useState([]);
+
   const onSubmit = (data) => {
     const productData = {
       id: data?.id,
@@ -15,14 +23,13 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
       categoryslug: data?.categoryslug,
       price: data?.price,
       slug: data?.slug,
-      color: data?.colors,
+      colors: data?.colors,
       version: data?.version,
       description: data?.description,
     };
-    console.log(data);
     if (productDetail?.id) {
       productApi
-        .update(productDetail.id && productData)
+        .update({...productData,id:productDetail.id})
         .then((res) => {
           onClose();
           onReloadProduct();
@@ -43,6 +50,29 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
     }
   };
 
+  useEffect(() => {
+    categoryApi.getAll().then((res) => {
+      setCategoryData(res?.data)
+    })
+    .catch((err) => {})
+  },[])
+  useEffect(() => {
+    colorsApi.getAll().then((res) => {
+      setColorData(res?.data)
+    })
+    .catch((err) => {})
+  },[])
+  useEffect(() => {
+    versionApi.getAll().then((res) => {
+      setVersionData(res?.data)
+    })
+    .catch((err) => {})
+  },[])
+
+  useEffect(() => {
+    form.setFieldsValue(productDetail);
+  }, [productDetail]);
+
   return (
     <>
       <Modal
@@ -58,7 +88,7 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
         visible={openModal}
         width={500}
       >
-        <Form form={form} onFinish={onSubmit} name="control-ref">
+        <Form form={form} onFinish={onSubmit} name="control-ref" defaultValue={productDetail}>
           <SubTitle
             title={productDetail ? "Edit Product" : "Add Product"}
             onClickClose={onClose}
@@ -103,7 +133,7 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                         />
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
+                    <div className="appointment--setting img01">
                       <label className="label-input">Image01</label>
                       <Form.Item
                         name="image01"
@@ -120,7 +150,7 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                         />
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
+                    <div className="appointment--setting img02">
                       <label className="label-input">Image02</label>
                       <Form.Item
                         name="image02"
@@ -137,10 +167,10 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                         />
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
+                    <div className="appointment--setting category">
                       <label className="label-input">Categoryslug</label>
                       <Form.Item
-                        name="category"
+                        name="categoryslug"
                         rules={[
                           {
                             required: true,
@@ -148,13 +178,22 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                           },
                         ]}
                       >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập phân loại sản phẩm"
-                        />
+                       <Select
+                          className="appointment--item name"
+                          placeholder="selectCategory"
+                          allowClear
+                        >
+                          {categoryData.map((item) => (
+                      
+                            <Option key={item.id} value={item.categoryslug}>
+                              {item.display}
+                            </Option>
+                            
+                          ))}
+                        </Select>
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
+                    <div className="appointment--setting color">
                       <label className="label-input">Colors</label>
                       <Form.Item
                         name="colors"
@@ -165,10 +204,17 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                           },
                         ]}
                       >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập màu sản phẩm"
-                        />
+                        <Select
+                          mode="tags"
+                          style={{ width: "100%" }}
+                          placeholder="Select color"
+                        >
+                          {colorData.map((item) => (
+                            <Option key={item.id} value={item.color}>
+                              {item.display}
+                            </Option>
+                          ))}
+                        </Select>
                       </Form.Item>
                     </div>
                     <div className="appointment--setting name">
@@ -199,10 +245,17 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                           },
                         ]}
                       >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập phiên bản sản phẩm"
-                        />
+                        <Select
+                          mode="tags"
+                          style={{ width: "100%" }}
+                          placeholder="Select color"
+                        >
+                          {versionData.map((item) => (
+                            <Option key={item.id} value={item.version}>
+                              {item.display}
+                            </Option>
+                          ))}
+                        </Select>
                       </Form.Item>
                     </div>
                     <div className="appointment--setting description">

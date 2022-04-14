@@ -2,20 +2,39 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { useSnackbar } from "notistack";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import accessoryApi from "../../../Api/accessoryApi";
 import ConfirmPopup from "../../../components/ConfirmPopup";
 import numberWithCommas from "../../../utils/numberWithCommas";
-import Addproduct from "../AddProduct/Addproduct";
+import AddAccessory from "../AddAccessory";
 import "./index.scss";
 
 const AdminAccessoryCard = (props) => {
   const [isModalEditAccessory, setIsModalEditAccessory] = useState(false);
   const [id, setId] = useState(null);
+  const [accessoryData, setAccessoryData] = useState([]);
+  const [isReloadAccessory, setIsReloadAccessory] = useState(false);
   const [accessoryDetail, setAccessoryDetail] = useState(null);
-  const [openModalDeleteAccessory, setOpenModalDeleteAccessory] = useState(false);
+  const [openModalDeleteAccessory, setOpenModalDeleteAccessory] =
+    useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
+  const handleReloadAccessory = () => {
+    setIsReloadAccessory(true);
+  };
+
+  useEffect(() => {
+    accessoryApi
+      .getAll()
+      .then((res) => {
+        if (res.statusText === "OK") {
+          setAccessoryData(res.data);
+        }
+      })
+      .finally(() => {
+        setIsReloadAccessory(false);
+      });
+  }, [isReloadAccessory]);
 
   const handelDeleteAccessory = (check) => {
     if (check && id) {
@@ -27,7 +46,7 @@ const AdminAccessoryCard = (props) => {
         props.onReloadAccessory();
       });
     } else {
-        setOpenModalDeleteAccessory(false);
+      setOpenModalDeleteAccessory(false);
     }
   };
 
@@ -41,10 +60,8 @@ const AdminAccessoryCard = (props) => {
   };
 
   const showModalEdit = (item) => {
-    return () => {
-      setIsModalEditAccessory(true);
-      setAccessoryDetail(item);
-    }
+    setIsModalEditAccessory(true);
+    setAccessoryDetail(item);
   };
   return (
     <div className="admin-product-card">
@@ -56,12 +73,12 @@ const AdminAccessoryCard = (props) => {
       <div className="admin-product-card__price">
         {numberWithCommas(props.price)}
         <span className="admin-product-card__price__old">
-          <del>{numberWithCommas(25000000)}</del>
+          <del>{numberWithCommas(2000000)}</del>
         </span>
       </div>
       <div className="admin-product-card__btn">
         <Button
-          onClick={showModalEdit(props?.item)}
+          onClick={() => showModalEdit(props?.item)}
           style={{ padding: "0 20px", margin: "0 20px" }}
           className="btn-nowidth"
           icon={<EditOutlined />}
@@ -73,13 +90,14 @@ const AdminAccessoryCard = (props) => {
         ></Button>
       </div>
       {isModalEditAccessory && (
-        <Addproduct
+        <AddAccessory
           openModal={isModalEditAccessory}
           onClose={onCloseModal}
           accessoryDetail={accessoryDetail}
+          onReloadAccessory={handleReloadAccessory}
         />
       )}
-       <ConfirmPopup
+      <ConfirmPopup
         onConfirm={handelDeleteAccessory}
         visibleModal={openModalDeleteAccessory}
       />

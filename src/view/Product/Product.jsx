@@ -11,18 +11,17 @@ import ProductView from "./ProductView";
 
 const Product = (props) => {
   const [productData, setProductData] = useState([]);
-
+  const [id, setId] = useState(null);
   const relatedProducts = productData.slice(0, 8);
 
+  
+
   useEffect(() => {
-    productApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setProductData(res.data);
-      }
+    productApi.get(id).then((res) => {
+        setProductData(res?.data);
+        console.log(res.data);
     });
   }, []);
-  localStorage.setItem("add item", productData);
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

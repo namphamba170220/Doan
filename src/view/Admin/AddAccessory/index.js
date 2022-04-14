@@ -1,11 +1,22 @@
-import { Form, Input, Modal } from "antd";
-import React from "react";
+import { Form, Input, Modal, Select } from "antd";
+import React, { useEffect, useState } from "react";
 import accessoryApi from "../../../Api/accessoryApi";
+import categoryAccessoryApi from "../../../Api/categoryAccessoryApi";
+import colorsApi from "../../../Api/colorsApi";
 import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
-const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) => {
+const { Option } = Select;
+const AddAccessory = ({
+  openModal,
+  onClose,
+  accessoryDetail,
+  onReloadAccessory,
+}) => {
   const [form] = Form.useForm();
+  const [categoryAccessoryData, setCategoryAccessoryData] = useState([]);
+  const [colorData, setColorData] = useState([]);
+
   const onSubmit = (data) => {
     const AccessoryData = {
       id: data?.id,
@@ -15,13 +26,12 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
       categoryslug: data?.categoryslug,
       price: data?.price,
       slug: data?.slug,
-      color: data?.colors,
+      colors: data?.colors,
       description: data?.description,
     };
-    console.log(data);
     if (accessoryDetail?.id) {
       accessoryApi
-        .update(accessoryDetail.id && AccessoryData)
+        .update({...AccessoryData, id:accessoryDetail?.id})
         .then((res) => {
           onClose();
           onReloadAccessory();
@@ -42,6 +52,27 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
     }
   };
 
+  useEffect(() => {
+    categoryAccessoryApi
+      .getAll()
+      .then((res) => {
+        setCategoryAccessoryData(res?.data);
+      })
+      .catch((err) => {});
+  }, []);
+  useEffect(() => {
+    colorsApi
+      .getAll()
+      .then((res) => {
+        setColorData(res?.data);
+      })
+      .catch((err) => {});
+  }, []);
+
+  useEffect(() => {
+    form.setFieldsValue(accessoryDetail);
+  }, [accessoryDetail]);
+
   return (
     <>
       <Modal
@@ -57,7 +88,12 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
         visible={openModal}
         width={500}
       >
-        <Form form={form} onFinish={onSubmit} name="control-ref">
+        <Form
+          form={form}
+          onFinish={onSubmit}
+          name="control-ref"
+          defaultValue={accessoryDetail}
+        >
           <SubTitle
             title={accessoryDetail ? "Edit Accessory" : "Add Accessory"}
             onClickClose={onClose}
@@ -139,7 +175,7 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
                     <div className="appointment--setting name">
                       <label className="label-input">Categoryslug</label>
                       <Form.Item
-                        name="category"
+                        name="categoryslug"
                         rules={[
                           {
                             required: true,
@@ -147,13 +183,20 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
                           },
                         ]}
                       >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập phân loại sản phẩm"
-                        />
+                        <Select
+                          className="appointment--item category"
+                          placeholder="selectCategory"
+                          allowClear
+                        >
+                          {categoryAccessoryData.map((item) => (
+                            <Option key={item.id} value={item.categoryslug}>
+                              {item.display}
+                            </Option>
+                          ))}
+                        </Select>
                       </Form.Item>
                     </div>
-                    <div className="appointment--setting name">
+                    <div className="appointment--setting color">
                       <label className="label-input">Colors</label>
                       <Form.Item
                         name="colors"
@@ -164,10 +207,17 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
                           },
                         ]}
                       >
-                        <Input
-                          className="appointment--item custom__input"
-                          placeholder="Nhập màu sản phẩm"
-                        />
+                        <Select
+                          mode="tags"
+                          style={{ width: "100%" }}
+                          placeholder="Select color"
+                        >
+                          {colorData.map((item) => (
+                            <Option key={item.id} value={item.color}>
+                              {item.display}
+                            </Option>
+                          ))}
+                        </Select>
                       </Form.Item>
                     </div>
                     <div className="appointment--setting name">

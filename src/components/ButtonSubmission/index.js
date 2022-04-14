@@ -21,6 +21,6 @@ export const ButtonSubmission= ({ isEdit, onSubmit }) => {
   )
 }
 ButtonSubmission.propTypes = {
-    isEdit: PropTypes.string,
+    isEdit: PropTypes.any,
     onSubmit: PropTypes.func,
 };

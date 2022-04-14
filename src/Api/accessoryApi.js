@@ -14,6 +14,7 @@ const accessoryApi = {
     return axiosClient.post(url, data);
   },
   update(data) {
+    console.log(data);
     const url = `/accessory/${data.id}`;
     return axiosClient.patch(url, data);
   },

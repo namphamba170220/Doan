@@ -6,7 +6,7 @@ import Grid from "../../../components/Grid/Grid";
 import Helmet from "../../../components/Helmet/Helmet";
 import Section, { SectionBody } from "../../../components/Section/Section";
 import AddAccessory from "../AddAccessory";
-import AdminProductCard from "../AdminproductCard/AdminProductCard";
+import AdminAccessoryCard from "../AdminAccessoryCard";
 
 function ControlAccessory() {
   const [accessoryData, setAccessoryData] = useState([]);
@@ -29,14 +29,13 @@ function ControlAccessory() {
     accessoryApi
       .getAll()
       .then((res) => {
-        if (res.statusText === "OK") {
-          setAccessoryData(res.data);
-        }
+        setAccessoryData(res?.data);
       })
       .finally(() => {
         setIsReloadAccessory(false);
       });
   }, [isReloadAccessory]);
+
 
   return (
     <Helmet title="Quản lí phụ kiện">
@@ -47,7 +46,7 @@ function ControlAccessory() {
         <SectionBody>
           <Grid col={4} mdCol={1} smCol={1} gap={1}>
             {accessoryData.map((item, index) => (
-              <AdminProductCard
+              <AdminAccessoryCard
                 id={item.id}
                 key={index}
                 img01={item.image01}
@@ -59,7 +58,8 @@ function ControlAccessory() {
                 color={item.colors}
                 description={item.description}
                 onReloadAccessory={handleReloadAccessory}
-              ></AdminProductCard>
+                item={item}
+              ></AdminAccessoryCard>
             ))}
           </Grid>
         </SectionBody>

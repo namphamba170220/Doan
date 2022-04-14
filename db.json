@@ -1,16 +1,4 @@
 {
-  "user": [
-    {
-      "email": "nam@gmail.com",
-      "password": "nam123",
-      "role": 1
-    },
-    {
-      "email": "admin@gmail.com",
-      "password": "admin123",
-      "role": 0
-    }
-  ],
   "category": [
     {
       "id": 1,
@@ -128,55 +116,59 @@
   ],
   "products": [
     {
-      "id": 2,
-      "title": "iPhone 13 128GB | Chính hãng VN/A",
-      "price": 21490000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/ip13-pro_2.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-13-01.jpg",
-      "categoryslug": "iphone",
+      "title": "Samsung Galaxy Note 20 Ultra 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "categoryslug": "samsung",
+      "price": "29350000",
+      "slug": "samsung-01",
       "colors": [
         "white",
-        "red",
+        "pink",
+        "black"
+      ],
+      "version": [
+        "64GB",
+        "128GB"
+      ],
+      "description": "afafafaf",
+      "id": 1
+    },
+    {
+      "title": "iphonedafafaf",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-se-midnight-select-2022031.jpg",
+      "categoryslug": "samsung",
+      "price": "19990000",
+      "slug": "iphone-01",
+      "colors": [
+        "white",
+        "black",
         "blue",
         "pink"
       ],
-      "slug": "iphone-02",
       "version": [
-        "128GB"
-      ],
-      "description": "Cuối năm 2020, bộ 4 iPhone 12 đã được ra mắt với nhiều cái tiến. Sau đó, mọi sự quan tâm lại đổ dồn vào sản phẩm tiếp theo – iPhone 13. Vậy iP 13 sẽ có những gì, hãy tìm hiểu ngay sau đây.Thiết kế với nhiều đột phá.Về kích thước, iPhone 13 sẽ có 4 phiên bản khác nhau và kích thước không đổi so với series iPhone 12 hiện tại. Nếu iPhone 12 có sự thay đổi trong thiết kế từ góc cạnh bo tròn (Thiết kế được duy trì từ thời iPhone 6 đến iPhone 11 Pro Max) sang thiết kế vuông vắn (đã từng có mặt trên iPhone 4 đến iPhone 5S, SE).Thì trên điện thoại iPhone 13 vẫn được duy trì một thiết kế tương tự. Máy vẫn có phiên bản khung viền thép, một số phiên bản khung nhôm cùng mặt lưng kính. Tương tự năm ngoái, Apple cũng sẽ cho ra mắt 4 phiên bản là iPhone 13, 13 mini, 13 Pro và 13 Pro Max."
-    },
-    {
-      "id": 8,
-      "title": "Samsung Galaxy Note 20 Ultra 5G",
-      "price": 19990000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/y/e/yellow_final_2.jpg",
-      "categoryslug": "samsung",
-      "colors": [
-        "white",
-        "yellow",
-        "black"
-      ],
-      "slug": "samsung-08",
-      "version": [
-        "64GB",
         "128GB",
-        "256GB"
+        "256GB",
+        "64GB"
       ],
-      "description": "Điện thoại Samsung Note 20 Ultra 5G - Sang trọng, hiệu năng vượt trội.Bên cạnh biên bản Galaxy Note 20 thường, Samsung còn cho ra mắt Note 20 Ultra 5G cho khả năng kết nối dữ liệu cao cùng thiết kế nguyên khối sang trọng, bắt mắt. Đây sẽ là sự lựa chọn hoàn hảo dành cho bạn để sử dụng mà không bị lỗi thời sau thời gian dài ra mắt.Ngoài ra, bạn có thể tham khảo Galaxy Z Fold 3 5G nếu bạn cần sự khác biệt và khẳng định đẳng cấp.Là một sản phẩm có kích thước màn hình lớn vì vậy Samsung đã trang bị cho Galaxy Note 20 Ultra 5G  với công nghệ kết nối dữ liệu mạnh mẽ cùng thiết kế nguyên khối. Giúp các linh kiện bên trong điện thoại được cố định chắc chắn đảm bảo mọi thứ bên trong luôn được an toàn. Không những vậy khung nhôm tạo trên những đường viền cực kỳ sang trọng và bắt mắt khi nhìn vào.Mặt sau của SS Galaxy Note này được hãng trang bị mặt kính tạo nên vẻ sang trọng và cuốn hút khi nhìn vào chiếc điện thoại từ bên ngoài. Loại kính cho cả mặt trước và mặt sau đều là kính cường lực Gorilla Glass 6 không những sang trọng mà còn mang đến sự chắc chắn hạn chế rơi vỡ vực tốt."
+      "description": "afafaf",
+      "id": 2
     }
   ],
   "versions": [
     {
+      "id": 1,
       "display": "64GB",
       "version": "64GB"
     },
     {
+      "id": 2,
       "display": "128GB",
       "version": "128GB"
     },
     {
+      "id": 3,
       "display": "256GB",
       "version": "256GB"
     }
@@ -204,7 +196,7 @@
       "categoryslug": "mic",
       "colors": [
         "white",
-        "black"
+        "pink"
       ],
       "slug": "mic-01",
       "description": "Micro thu âm AKG C22 USB hứa hẹn sẽ mang đến cho người dùng những trải nghiệm tuyệt vời khi sử dụng. Không chỉ có vẻ ngoài bắt mắt mà chất lượng sản phẩm của thiết bị phòng thu âm này cũng rất tốt, phù hợp với nhiều nhu cầu sử dụng khác nhau.Micro thu âm AKG C22 USB có thiết kế khá nhỏ gọn, đơn giản, thân thiện với đa số người dùng. Vì vậy bạn có thể dễ dàng đặt nó ở bất cứ nơi nào mà mình muốn và không phải lo lắng việc gặp phải quá nhiều khó khăn trong quá trình sử dụng loại micro thu âm này."
@@ -215,9 +207,10 @@
       "price": 1490000,
       "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa.jpg",
       "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa-1.jpg",
-      "categoryslug": "capchuyendoi",
+      "categoryslug": "mic",
       "colors": [
-        "white"
+        "white",
+        "pink"
       ],
       "slug": "capchuyendoi-02",
       "description": "Một số dòng máy iPhone không sử dụng đầu cắm 3.5mm, do đó bạn cần đến cáp chuyển đổi Apple Lightning to 3.5mm Audio MXK22ZA. Đây là giải pháp được nhiều người sử dụng, rất tiện lợi mà không tốn kém nhiều chi phí. Cáp chuyển đổi Lightning to 3.5mm Audio (MXK22ZA/A) có kích thước hợp lý với chiều dài chỉ 7cm, thuận tiện để kết nối hai thiết bị. Với kích thước này, bạn có thể xếp gọn và mang theo trong túi quần đi mọi nơi mọi lúc.Lớp vỏ cáp làm từ nhựa cao cấp, dẻo dai và bền bỉ đạt tiêu chuẩn uốn cong không gãy gập. Màu trắng sứ hợp thời trang, bắt mắt, phù hợp sở thích của giới trẻ chuộng thời trang."
@@ -248,19 +241,6 @@
       ],
       "slug": "tainghe-01",
       "description": "Tai nghe kiểm âm AKG K92 được đánh giá cao về chất lượng âm thanh, cách âm hoàn hảo cùng thiết kế chuyên nghiệp, sang trọng. Tìm hiểu chi tiết về sản phẩm phòng thu âm chất lượng này của AKG dưới bài viết sau.Tai nghe kiểm âm AKG K92 với trọng lượng rất nhẹ chỉ 200g giúp bạn không bị mỏi cổ khi sử dụng trong thời gian dài. Thiết bị được làm từ nhựa cao cấp, khả năng co giãn đàn hồi tốt, không ép mạnh làm gãy gập tai khi nghe."
-    },
-    {
-      "id": 7,
-      "title": "Micro thu âm AKG P220",
-      "price": 4900000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/m/i/micro-thu-am-akg-p220.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/m/i/micro-thu-am-akg-p220.jpg",
-      "categoryslug": "mic",
-      "colors": [
-        "black"
-      ],
-      "slug": "mic-03",
-      "description": "Micro thu âm AKG P220 là chiếc microphone thu âm hoàn hảo cho những buổi podcast, thuyết minh và thu âm ban nhạc chuyên nghiệp. Được trang bị bộ lọc âm hiện đại cho chất giọng trầm ấm và êm tai, thiết bị phòng thu âm này sẽ không làm bạn thất vọng.Micro thu âm AKG P220 được chế tạo với lớp màng tạo âm trầm hiện đại, giúp cho chất lượng âm thanh thu được có độ ấm tốt và nghe êm dịu tai. Đặc biệt, bên trong micro thu âm AKG P220 còn trang bị bộ lọc cắt bass với đệm giảm ồn giúp duy trì âm thanh giọng nói ở mức lên đến 155dB, đồng thời lọc ra tạp âm không cần thiết để giữ lại chất giọng chuyên nghiệp chất lượng cao."
     }
   ]
 }
