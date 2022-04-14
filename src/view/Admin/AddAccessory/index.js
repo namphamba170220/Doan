@@ -1,6 +1,6 @@
 import { Form, Input, Modal } from "antd";
 import React from "react";
-import productApi from "../../../Api/productApi";
+import accessoryApi from "../../../Api/accessoryApi";
 import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
@@ -20,7 +20,7 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
     };
     console.log(data);
     if (accessoryDetail?.id) {
-      productApi
+      accessoryApi
         .update(accessoryDetail.id && AccessoryData)
         .then((res) => {
           onClose();
@@ -30,7 +30,7 @@ const AddAccessory = ({ openModal, onClose, accessoryDetail,onReloadAccessory}) 
           console.log(`error`, error);
         });
     } else {
-      productApi
+      accessoryApi
         .add(AccessoryData)
         .then((res) => {
           onClose();

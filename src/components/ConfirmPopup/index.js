@@ -7,7 +7,6 @@ import "./index.scss";
 const ConfirmPopup = ({ onConfirm, visibleModal = false }) => {
   const handleOk = () => {
     onConfirm(true);
-    console.log("fffff");
   };
 
   const handleCancel = () => {

@@ -3,47 +3,48 @@ import { Button } from "antd";
 import { useSnackbar } from "notistack";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import productApi from "../../../Api/productApi";
+import accessoryApi from "../../../Api/accessoryApi";
 import ConfirmPopup from "../../../components/ConfirmPopup";
 import numberWithCommas from "../../../utils/numberWithCommas";
 import Addproduct from "../AddProduct/Addproduct";
 import "./index.scss";
 
-const AdminProductCard = (props) => {
-  const [isModalEditProduct, setIsModalEditProduct] = useState(false);
+const AdminAccessoryCard = (props) => {
+  const [isModalEditAccessory, setIsModalEditAccessory] = useState(false);
   const [id, setId] = useState(null);
-  const [productDetail, setProductDetail] = useState(null);
-  const [openModalDeleteProduct, setOpenModalDeleteProduct] = useState(false);
+  const [accessoryDetail, setAccessoryDetail] = useState(null);
+  const [openModalDeleteAccessory, setOpenModalDeleteAccessory] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
-  const handelDeleteProduct = (check) => {
+
+  const handelDeleteAccessory = (check) => {
     if (check && id) {
-      productApi.remove(id).then((res) => {
+      accessoryApi.remove(id).then((res) => {
         setTimeout(() => {
           enqueueSnackbar("Success");
         }, 500);
-        setOpenModalDeleteProduct(false);
-        props.onReloadProduct();
+        setOpenModalDeleteAccessory(false);
+        props.onReloadAccessory();
       });
     } else {
-      setOpenModalDeleteProduct(false);
+        setOpenModalDeleteAccessory(false);
     }
   };
 
-  const showDeleteProductConfirm = (id) => {
+  const showDeleteAccessoryConfirm = (id) => {
     setId(id);
-    setOpenModalDeleteProduct(true);
+    setOpenModalDeleteAccessory(true);
   };
   const onCloseModal = () => {
-    setIsModalEditProduct(false);
-    setProductDetail(null);
+    setIsModalEditAccessory(false);
+    setAccessoryDetail(null);
   };
 
   const showModalEdit = (item) => {
     return () => {
-      setIsModalEditProduct(true);
-      setProductDetail(item);
-    };
+      setIsModalEditAccessory(true);
+      setAccessoryDetail(item);
+    }
   };
   return (
     <div className="admin-product-card">
@@ -66,31 +67,31 @@ const AdminProductCard = (props) => {
           icon={<EditOutlined />}
         ></Button>
         <Button
-          onClick={() => showDeleteProductConfirm(props?.id)}
+          onClick={() => showDeleteAccessoryConfirm(props?.id)}
           style={{ padding: "0 20px", margin: "0 20px" }}
           icon={<DeleteOutlined />}
         ></Button>
       </div>
-      {isModalEditProduct && (
+      {isModalEditAccessory && (
         <Addproduct
-          openModal={isModalEditProduct}
+          openModal={isModalEditAccessory}
           onClose={onCloseModal}
-          productDetail={productDetail}
+          accessoryDetail={accessoryDetail}
         />
       )}
-      <ConfirmPopup
-        onConfirm={handelDeleteProduct}
-        visibleModal={openModalDeleteProduct}
+       <ConfirmPopup
+        onConfirm={handelDeleteAccessory}
+        visibleModal={openModalDeleteAccessory}
       />
     </div>
   );
 };
 
-AdminProductCard.propTypes = {
+AdminAccessoryCard.propTypes = {
   img01: PropTypes.string.isRequired,
   img02: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
 };
 
-export default AdminProductCard;
+export default AdminAccessoryCard;
