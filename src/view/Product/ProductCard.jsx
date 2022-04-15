@@ -1,22 +1,21 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import productApi from "../../Api/productApi";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
+import ProductViewModal from "./ProductViewModal";
 
 const ProductCard = (props) => {
-  const [id, setId] = useState(null);
-  const [productData, setProductData] = useState([])
-
-  const showModalProduct = (check) => {
+  const [isModalProduct, setIsModalProduct] = useState(false);
+  const [productDetail, setProductDetail] = useState(null);
+  const onShowModalProduct = () => {
     console.log("aaa");
-    // if(check && id) {
-    //   productApi.get(id).then((res) => {
-    //     setProductData(res?.data);
-    //   })
-    // }
-  }
+    setIsModalProduct(true);
+  };
+  const closeModal = () => {
+    setIsModalProduct(false);
+    setProductDetail(null)
+  };
 
   return (
     <div className="product-card">
@@ -38,13 +37,14 @@ const ProductCard = (props) => {
           size="sm"
           icon="bx bx-cart"
           animate={true}
-          onClick={() => showModalProduct(props?.id)
-
-          }
+          onclick={onShowModalProduct}
         >
           Chọn mua
         </Button>
       </div>
+        {isModalProduct && (
+          <ProductViewModal openModal={isModalProduct} onClose={closeModal} productDetail={productDetail}/>
+        )}
     </div>
   );
 };

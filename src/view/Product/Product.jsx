@@ -11,28 +11,31 @@ import ProductView from "./ProductView";
 
 const Product = (props) => {
   const [productData, setProductData] = useState([]);
-  const [id, setId] = useState(null);
+  // const [id, setId] = useState(null);
   const relatedProducts = productData.slice(0, 8);
 
-  
-
   useEffect(() => {
-    productApi.get(id).then((res) => {
-        setProductData(res?.data);
-        console.log(res.data);
+    productApi.getAll().then((res) => {
+      setProductData(res?.data);
     });
   }, []);
+
+  // const handelShowProduct = (id) => {
+  //   setId(id);
+  // };
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+
+
   return (
     <Helmet title={productData.title}>
-      <Section>
+      {/* <Section>
         <SectionBody>
           <ProductView product={productData} />
         </SectionBody>
-      </Section>
+      </Section> */}
       <Section>
         <SectionTitle>Khám phá thêm</SectionTitle>
         <SectionBody>

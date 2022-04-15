@@ -154,6 +154,24 @@
       ],
       "description": "afafaf",
       "id": 2
+    },
+    {
+      "title": "Samsung Galaxy Note 20 Ultra 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/y/e/yellow_final_2.jpg",
+      "categoryslug": "iphone",
+      "price": "29350000",
+      "slug": "iphone-01",
+      "colors": [
+        "pink",
+        "black"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "rqwrqrqr",
+      "id": 3
     }
   ],
   "versions": [
@@ -227,20 +245,6 @@
       ],
       "slug": "capchuyendoi-03",
       "description": "Là một phụ kiên quan trọng trong trải nghiệm giải trí, dây cáp âm thanh Devia Ipure Series 3.5mm với độ bền cao cùng độ dài vượt trội sẽ là một trong những phụ kiện cần thiết trong mọi ngôi nhà.Cáp Devia Ipure Series 3.5mm với đầu cắm mạ mang lại khả năng chống nhiễu, chống oxy hóa cùng khả năng truyền tín hiệu ổn định. Phần lõi cáp được hoàn thiện từ lõi đồng nguyên chất kỹ khí OFC mang lại dẫ điện và truyền âm tốt. Cáp với chiều dài lên đến 1m, với chiều dài này, cáp dễ kết nối giữa các thiết bị mà không gặp quá nhiều khó khăn."
-    },
-    {
-      "id": 6,
-      "title": "Tai nghe kiểm âm AKG K92",
-      "price": 1850000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/t/a/tai-nghe-kiem-am-akg-k92-1.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/t/a/tai-nghe-kiem-am-akg-k92-1.jpg",
-      "categoryslug": "mic",
-      "colors": [
-        "black",
-        "yellow"
-      ],
-      "slug": "tainghe-01",
-      "description": "Tai nghe kiểm âm AKG K92 được đánh giá cao về chất lượng âm thanh, cách âm hoàn hảo cùng thiết kế chuyên nghiệp, sang trọng. Tìm hiểu chi tiết về sản phẩm phòng thu âm chất lượng này của AKG dưới bài viết sau.Tai nghe kiểm âm AKG K92 với trọng lượng rất nhẹ chỉ 200g giúp bạn không bị mỏi cổ khi sử dụng trong thời gian dài. Thiết bị được làm từ nhựa cao cấp, khả năng co giãn đàn hồi tốt, không ép mạnh làm gãy gập tai khi nghe."
     }
   ]
 }
