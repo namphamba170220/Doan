@@ -15,6 +15,7 @@ import Section, {
 import HeroSlider from "../../components/Slider/HeroSlider";
 import ProductCard from "../Product/ProductCard";
 
+
 const Home = () => {
   const [productData, setProductData] = useState([]);
   const [heroSliderData, setHeroSliderData] = useState([]);

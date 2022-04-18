@@ -6,14 +6,14 @@ import numberWithCommas from "../../utils/numberWithCommas";
 import ProductViewModal from "./ProductViewModal";
 
 const ProductCard = (props) => {
-  const [isModalProduct, setIsModalProduct] = useState(false);
+  const [isShowModalProduct, setIsShowModalProduct] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
   const onShowModalProduct = () => {
     console.log("aaa");
-    setIsModalProduct(true);
+    // setIsModalProduct(true);
   };
   const closeModal = () => {
-    setIsModalProduct(false);
+    setIsShowModalProduct(false);
     setProductDetail(null)
   };
 
@@ -42,9 +42,11 @@ const ProductCard = (props) => {
           Chọn mua
         </Button>
       </div>
-        {isModalProduct && (
-          <ProductViewModal openModal={isModalProduct} onClose={closeModal} productDetail={productDetail}/>
+      <div>
+        {isShowModalProduct && (
+          <ProductViewModal openModal={isShowModalProduct} onClose={closeModal} productDetail={productDetail}/>
         )}
+      </div>
     </div>
   );
 };
