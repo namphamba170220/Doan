@@ -11,26 +11,26 @@ import ProductView from "./ProductView";
 
 const Product = (props) => {
   const [productData, setProductData] = useState([]);
-  // const [id, setId] = useState(null);
+  const [id, setId] = useState(null);
   const relatedProducts = productData.slice(0, 8);
-
+  const arrProductData = JSON.stringify(Object.assign({}, productData))
+  const product = JSON.parse(arrProductData)
   useEffect(() => {
     productApi.getAll().then((res) => {
       setProductData(res?.data);
     });
   }, []);
 
-  // const handelShowProduct = (id) => {
-  //   setId(id);
-  // };
+  const handelShowProduct = (id) => {
+    setId(id);
+  };
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
 
-
   return (
-    <Helmet title={productData.title}>
+    <Helmet title="{product[id].title}">
       {/* <Section>
         <SectionBody>
           <ProductView product={productData} />
@@ -42,6 +42,7 @@ const Product = (props) => {
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {relatedProducts.map((item, index) => (
               <ProductCard
+                id={item.id}
                 key={index}
                 img01={item.image01}
                 img02={item.image02}

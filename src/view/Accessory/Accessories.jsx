@@ -98,7 +98,7 @@ const Accessories = () => {
   const showHideFilter = () => filterRef.current.classList.toggle("active");
 
   return (
-    <Helmet title="Sản phẩm">
+    <Helmet title="Phụ kiện">
       <div className="catalog">
         <div className="catalog__filter" ref={filterRef}>
           <div

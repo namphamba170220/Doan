@@ -71,7 +71,7 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
 
   useEffect(() => {
     form.setFieldsValue(productDetail);
-  }, [productDetail]);
+  }, [ productDetail ]);
 
   return (
     <>

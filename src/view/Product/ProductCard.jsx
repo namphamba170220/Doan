@@ -8,9 +8,9 @@ import ProductViewModal from "./ProductViewModal";
 const ProductCard = (props) => {
   const [isShowModalProduct, setIsShowModalProduct] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
+
   const onShowModalProduct = () => {
-    console.log("aaa");
-    // setIsModalProduct(true);
+    setIsShowModalProduct(true);
   };
   const closeModal = () => {
     setIsShowModalProduct(false);
@@ -37,21 +37,25 @@ const ProductCard = (props) => {
           size="sm"
           icon="bx bx-cart"
           animate={true}
-          onclick={onShowModalProduct}
+          onClick={onShowModalProduct}
         >
           Chọn mua
         </Button>
       </div>
-      <div>
         {isShowModalProduct && (
-          <ProductViewModal openModal={isShowModalProduct} onClose={closeModal} productDetail={productDetail}/>
+          <ProductViewModal 
+          openModal={isShowModalProduct} 
+          onClose={closeModal} 
+          productDetail={productDetail}
+          id={props.id}
+          />
         )}
-      </div>
     </div>
   );
 };
 
 ProductCard.propTypes = {
+  id: PropTypes.number.isRequired,
   img01: PropTypes.string.isRequired,
   img02: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

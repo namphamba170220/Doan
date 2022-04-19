@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Button from "../../components/Button/Button";
 // import numberWithCommas from "../../utils/numberWithCommas";
-const ProductView = product => {
+const ProductView = ({product}) => {
 
 
     if (product === undefined) product = {
