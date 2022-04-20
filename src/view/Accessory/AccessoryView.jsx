@@ -2,24 +2,18 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
-const ProductView = (props) => {
+const AccessoryView = (props) => {
 
   const [previewImg, setPreviewImg] = useState(props.defaultValue.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
   const [color, setColor] = useState({});
-  const [version, setVersion] = useState(undefined);
   const [quantity, setQuantity] = useState(1);
-  const [versionData, setVersionData] = useState([]);
   const [colorData, setColorData] = useState([]);
-  const [cart, setCart] = useState([])
 
   useEffect(() => {
     setColorData(props?.defaultValue?.colors);
   }, []);
 
-  useEffect(() => {
-    setVersionData(props?.defaultValue?.version);
-  }, []);
 
   const updateQuantity = (type) => {
     if (type === "plus") {
@@ -33,17 +27,11 @@ const ProductView = (props) => {
     setPreviewImg(props.defaultValue.image01);
     setQuantity(1);
     setColor(undefined);
-    setVersion(undefined);
   }, [props.defaultValue.image01]);
 
   const check = () => {
     if (color === undefined) {
       alert("Vui lòng chọn màu sắc!");
-      return false;
-    }
-
-    if (version === undefined) {
-      alert("Vui lòng chọn phiên bản!");
       return false;
     }
 
@@ -53,14 +41,11 @@ const ProductView = (props) => {
   const addToCart = () => {
       if (check()) {
           let newItem = {
-              id:props.defaultValue.id,
               slug: props.defaultValue.slug,
               color: colorData,
-              version: versionData,
               price: props.defaultValue.price,
               quantity: quantity
           }
-          localStorage.setItem("cart", JSON.stringify(newItem))
       }
   }
 
@@ -69,13 +54,12 @@ const ProductView = (props) => {
           let newItem = {
               slug: props.defaultValue.slug,
               color: colorData,
-              version: versionData,
               price: props.defaultValue.price,
               quantity: quantity
           }
-          localStorage.setItem("cart", JSON.stringify(newItem))
       }
   }
+
   return (
     <div className="product">
       <div className="product__images">
@@ -138,24 +122,6 @@ const ProductView = (props) => {
           </div>
         </div>
         <div className="product__info__item">
-          <div className="product__info__item__title">Phiên bản</div>
-          <div className="product__info__item__list">
-            {versionData.map((item, index) => (
-              <div
-                key={index}
-                className={`product__info__item__list__item ${
-                  version === item ? "active" : ""
-                }`}
-                onClick={() => setVersion(item)}
-              >
-                <span className="product__info__item__list__item__size">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="product__info__item">
           <div className="product__info__item__title">Số lượng</div>
           <div className="product__info__item__quantity">
             <div
@@ -203,8 +169,8 @@ const ProductView = (props) => {
   );
 };
 
-ProductView.propTypes = {
+AccessoryView.propTypes = {
   product: PropTypes.object,
 };
 
-export default ProductView;
+export default AccessoryView;

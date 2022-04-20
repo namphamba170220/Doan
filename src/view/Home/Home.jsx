@@ -10,14 +10,15 @@ import Helmet from "../../components/Helmet/Helmet";
 import PolicyCard from "../../components/Policy/PolicyCard";
 import Section, {
   SectionBody,
-  SectionTitle
+  SectionTitle,
 } from "../../components/Section/Section";
 import HeroSlider from "../../components/Slider/HeroSlider";
 import ProductCard from "../Product/ProductCard";
-
+import ProductViewModal from "../Product/ProductViewModal";
 
 const Home = () => {
   const [productData, setProductData] = useState([]);
+  const [isShowModalProduct, setIsShowModalProduct] = useState(false);
   const [heroSliderData, setHeroSliderData] = useState([]);
   const [policyData, setPolicyData] = useState([]);
   useEffect(() => {
@@ -38,18 +39,20 @@ const Home = () => {
     });
   }, []);
 
+  const closeModal = () => {
+    setIsShowModalProduct(false);
+    setProductData([]);
+  };
+
   return (
     <Helmet title="Trang chủ">
-      {/* hero slider */}
       <HeroSlider
         data={heroSliderData}
         control={true}
         auto={false}
         timeOut={5000}
       />
-      {/* end hero slider */}
 
-      {/* policy section */}
       <Section>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
@@ -65,7 +68,6 @@ const Home = () => {
           </Grid>
         </SectionBody>
       </Section>
-      {/* end policy section */}
 
       <Section>
         <SectionBody>
@@ -79,13 +81,13 @@ const Home = () => {
         </SectionBody>
       </Section>
 
-      {/* best selling section */}
       <Section>
         <SectionTitle>Top sản phẩm bán chạy trong tuần</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.slice(4, 8).map((item, index) => (
               <ProductCard
+                id={item.id}
                 key={index}
                 img01={item.image01}
                 img02={item.image02}
@@ -97,15 +99,14 @@ const Home = () => {
           </Grid>
         </SectionBody>
       </Section>
-      {/* end best selling section */}
 
-      {/* new arrival section */}
       <Section>
         <SectionTitle>sản phẩm mới</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.slice(0, 6).map((item, index) => (
               <ProductCard
+                id={item.id}
                 key={index}
                 img01={item.image01}
                 img02={item.image02}
@@ -117,9 +118,7 @@ const Home = () => {
           </Grid>
         </SectionBody>
       </Section>
-      {/* end new arrival section */}
 
-      {/* banner */}
       <Section>
         <SectionBody>
           <Link to="/catalog">
@@ -127,15 +126,14 @@ const Home = () => {
           </Link>
         </SectionBody>
       </Section>
-      {/* end banner */}
 
-      {/* popular product section */}
       <Section>
         <SectionTitle>Phổ biến</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
             {productData.slice(6, 14).map((item, index) => (
               <ProductCard
+                id={item.id}
                 key={index}
                 img01={item.image01}
                 img02={item.image02}
@@ -147,7 +145,12 @@ const Home = () => {
           </Grid>
         </SectionBody>
       </Section>
-      {/* end popular product section */}
+      {isShowModalProduct && (
+        <ProductViewModal
+          openModal={isShowModalProduct}
+          onClose={closeModal}
+        />
+      )}
     </Helmet>
   );
 };

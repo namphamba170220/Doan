@@ -1,13 +1,31 @@
 import PropTypes from "prop-types";
-import React from "react";
-import { Link } from "react-router-dom";
+import React,{useState} from "react";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
+import accessoryApi from "../../Api/accessoryApi";
+import AccessoryViewModal from "./AccessoryViewModal";
 
 const AccessoryCard = (props) => {
+
+  const [isShowModalAccessory, setIsShowModalAccessory] = useState(false);
+  const [accsessoryData, setAccessoryData] = useState([]);
+  const onShowModalAccessory = (id) => {
+    callApi(id);
+    console.log(id);
+  };
+  const closeModal = () => {
+    setIsShowModalAccessory(false);
+    setAccessoryData({});
+  };
+
+  const callApi = (id) => {
+    accessoryApi.get(id).then((res) => {
+      setAccessoryData(res?.data);
+      setIsShowModalAccessory(true);
+    });
+  };
   return (
     <div className="accessory-card">
-      <Link to={`/accessories/${props.slug}`}>
         <div className="accessory-card__image">
           <img src={props.img01} alt="NEW" />
           <img src={props.img02} alt="" />
@@ -19,12 +37,23 @@ const AccessoryCard = (props) => {
             <del>{numberWithCommas(5000000)}</del>
           </span>
         </div>
-      </Link>
       <div className="accessory-card__btn">
-        <Button size="sm" icon="bx bx-cart" animate={true}>
+        <Button 
+        size="sm" 
+        icon="bx bx-cart" 
+        animate={true}
+        onClick={() => onShowModalAccessory(props.id)}
+        >
           Chọn mua
         </Button>
       </div>
+      {isShowModalAccessory && (
+        <AccessoryViewModal 
+        openModal={isShowModalAccessory}
+        onClose={closeModal}
+        accessoryDetail={accsessoryData}
+        />
+      )}
     </div>
   );
 };

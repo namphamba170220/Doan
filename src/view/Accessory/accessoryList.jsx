@@ -54,6 +54,7 @@ const AccessoryList = props => {
                 {
                     data.map((item, index) => (
                         <AccessoryCard
+                            id={item.id}
                             key={index}
                             img01={item.image01}
                             img02={item.image02}

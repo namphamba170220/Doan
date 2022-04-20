@@ -1,9 +1,9 @@
 import { Modal } from "antd";
 import React from "react";
 import { SubTitle } from "../../components/SubTitle";
-import ProductView from "./ProductView";
+import AccessoryView from "./AccessoryView";
 
-const ProductViewModal = ({ openModal, onClose, productDetail}) => {
+const AccessoryViewModal = ({ openModal, onClose, accessoryDetail}) => {
   return (
     <>
       <Modal
@@ -22,12 +22,12 @@ const ProductViewModal = ({ openModal, onClose, productDetail}) => {
         <SubTitle
           title={"Sản phẩm"}
           onClickClose={onClose}
-          defaultValue={productDetail}
+          defaultValue={accessoryDetail}
         />
-        <ProductView defaultValue={productDetail} />
+        <AccessoryView defaultValue={accessoryDetail} />
       </Modal>
     </>
   );
 };
 
-export default ProductViewModal;
+export default AccessoryViewModal;
