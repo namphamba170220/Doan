@@ -32,7 +32,7 @@ const Layout = () => {
   return (
     <Router>
       <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
-        {/* <CartProvider> */}
+        <CartProvider>
           <Header />
           <br />
           <br />
@@ -61,7 +61,7 @@ const Layout = () => {
             <Route path="/order" element={<Order />} />
             <Route path="/controlAccessory" element={<ControlAccessory />} />
           </Routes>
-        {/* </CartProvider> */}
+        </CartProvider>
       </AuthProvider>
       <Footer />
     </Router>

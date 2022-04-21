@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
-const AccessoryView = (props) => {
+import { useSnackbar } from "notistack";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 
+const AccessoryView = (props) => {
   const [previewImg, setPreviewImg] = useState(props.defaultValue.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
-  const [color, setColor] = useState({});
+  const [color, setColor] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [colorData, setColorData] = useState([]);
-
+  const cart = useContext(CartContext);
+  const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
   useEffect(() => {
     setColorData(props?.defaultValue?.colors);
   }, []);
-
 
   const updateQuantity = (type) => {
     if (type === "plus") {
@@ -39,26 +43,41 @@ const AccessoryView = (props) => {
   };
 
   const addToCart = () => {
-      if (check()) {
-          let newItem = {
-              slug: props.defaultValue.slug,
-              color: colorData,
-              price: props.defaultValue.price,
-              quantity: quantity
-          }
-      }
-  }
+    if (check()) {
+      let newItem = {
+        id: props.defaultValue.id,
+        img01: props.defaultValue.image01,
+        title: props.defaultValue.title,
+        slug: props.defaultValue.slug,
+        color: colorData,
+        price: props.defaultValue.price,
+        quantity: quantity,
+      };
+      cart.addToCart(newItem);
+      window.localStorage.setItem("cart", JSON.stringify(cart.cartItems));
+      props.onClose();
+      enqueueSnackbar("Thêm sản phẩm thành công!!!");
+    }
+  };
 
   const goToCart = () => {
-      if (check()) {
-          let newItem = {
-              slug: props.defaultValue.slug,
-              color: colorData,
-              price: props.defaultValue.price,
-              quantity: quantity
-          }
-      }
-  }
+    if (check()) {
+      let newItem = {
+        id: props.defaultValue.id,
+        img01: props.defaultValue.image01,
+        title: props.defaultValue.title,
+        slug: props.defaultValue.slug,
+        color: colorData,
+        price: props.defaultValue.price,
+        quantity: quantity,
+      };
+      cart.addToCart(newItem);
+      window.localStorage.setItem("cart", JSON.stringify(cart.cartItems));
+      props.onClose();
+      enqueueSnackbar("Thêm sản phẩm thành công!!!");
+      navigate("/cart");
+    }
+  };
 
   return (
     <div className="product">

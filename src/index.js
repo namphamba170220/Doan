@@ -8,9 +8,9 @@ import Layout from "./layout/Layout";
 import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
-    <SnackbarProvider maxSnack={4}>
-      <Layout />
-    </SnackbarProvider>,
+  <SnackbarProvider maxSnack={5}>
+    <Layout />
+  </SnackbarProvider>,
   document.getElementById("root")
 );
 

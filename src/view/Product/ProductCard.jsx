@@ -14,7 +14,6 @@ const ProductCard = (props) => {
   };
   const closeModal = () => {
     setIsShowModalProduct(false);
-    setProductData([]);
   };
 
   const callApi = (id) => {

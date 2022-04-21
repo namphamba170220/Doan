@@ -3,7 +3,7 @@ import React from "react";
 import { SubTitle } from "../../components/SubTitle";
 import AccessoryView from "./AccessoryView";
 
-const AccessoryViewModal = ({ openModal, onClose, accessoryDetail}) => {
+const AccessoryViewModal = ({ openModal, onClose, accessoryDetail }) => {
   return (
     <>
       <Modal
@@ -20,11 +20,11 @@ const AccessoryViewModal = ({ openModal, onClose, accessoryDetail}) => {
         keyboard={true}
       >
         <SubTitle
-          title={"Sản phẩm"}
+          title={"Thông tin sản phẩm"}
           onClickClose={onClose}
           defaultValue={accessoryDetail}
         />
-        <AccessoryView defaultValue={accessoryDetail} />
+        <AccessoryView defaultValue={accessoryDetail} onClose={onClose} />
       </Modal>
     </>
   );

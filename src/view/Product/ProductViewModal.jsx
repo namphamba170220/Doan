@@ -3,7 +3,7 @@ import React from "react";
 import { SubTitle } from "../../components/SubTitle";
 import ProductView from "./ProductView";
 
-const ProductViewModal = ({ openModal, onClose, productDetail}) => {
+const ProductViewModal = ({ openModal, onClose, productDetail }) => {
   return (
     <>
       <Modal
@@ -20,11 +20,11 @@ const ProductViewModal = ({ openModal, onClose, productDetail}) => {
         keyboard={true}
       >
         <SubTitle
-          title={"Sản phẩm"}
+          title={"Thông tin sản phẩm"}
           onClickClose={onClose}
           defaultValue={productDetail}
         />
-        <ProductView defaultValue={productDetail} />
+        <ProductView defaultValue={productDetail} onClose={onClose} />
       </Modal>
     </>
   );

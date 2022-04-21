@@ -1,18 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "../../components/Button/Button";
 import numberWithCommas from "../../utils/numberWithCommas";
+import { CartContext } from "../../contexts/CartContext";
+import { useSnackbar } from "notistack";
+import { useNavigate } from "react-router-dom";
 const ProductView = (props) => {
-
   const [previewImg, setPreviewImg] = useState(props.defaultValue.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
-  const [color, setColor] = useState({});
-  const [version, setVersion] = useState(undefined);
+  const [color, setColor] = useState("");
+  const [version, setVersion] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [versionData, setVersionData] = useState([]);
   const [colorData, setColorData] = useState([]);
-  const [cart, setCart] = useState([])
-
+  const cart = useContext(CartContext);
+  const { enqueueSnackbar } = useSnackbar();
+  const navigate = useNavigate();
   useEffect(() => {
     setColorData(props?.defaultValue?.colors);
   }, []);
@@ -51,31 +54,43 @@ const ProductView = (props) => {
   };
 
   const addToCart = () => {
-      if (check()) {
-          let newItem = {
-              id:props.defaultValue.id,
-              slug: props.defaultValue.slug,
-              color: colorData,
-              version: versionData,
-              price: props.defaultValue.price,
-              quantity: quantity
-          }
-          localStorage.setItem("cart", JSON.stringify(newItem))
-      }
-  }
+    if (check()) {
+      let newItem = {
+        title: props.defaultValue.title,
+        img01: props.defaultValue.image01,
+        id: props.defaultValue.id,
+        slug: props.defaultValue.slug,
+        color: color,
+        version: version,
+        price: props.defaultValue.price,
+        quantity: quantity,
+      };
+      cart.addToCart(newItem);
+      window.localStorage.setItem("cart", JSON.stringify(cart.cartItems));
+      props.onClose();
+      enqueueSnackbar("Thêm sản phẩm thành công!!!");
+    }
+  };
 
   const goToCart = () => {
-      if (check()) {
-          let newItem = {
-              slug: props.defaultValue.slug,
-              color: colorData,
-              version: versionData,
-              price: props.defaultValue.price,
-              quantity: quantity
-          }
-          localStorage.setItem("cart", JSON.stringify(newItem))
-      }
-  }
+    if (check()) {
+      let newItem = {
+        title: props.defaultValue.title,
+        img01: props.defaultValue.image01,
+        id: props.defaultValue.id,
+        slug: props.defaultValue.slug,
+        color: color,
+        version: version,
+        price: props.defaultValue.price,
+        quantity: quantity,
+      };
+      cart.addToCart(newItem);
+      window.localStorage.setItem("cart", JSON.stringify(cart.cartItems));
+      props.onClose();
+      enqueueSnackbar("Thêm sản phẩm thành công!!!");
+      navigate("/cart");
+    }
+  };
   return (
     <div className="product">
       <div className="product__images">
@@ -130,7 +145,9 @@ const ProductView = (props) => {
                 className={`product__info__item__list__item ${
                   color === item ? "active" : ""
                 }`}
-                onClick={() => setColor(item)}
+                onClick={() => {
+                  setColor(item);
+                }}
               >
                 <div className={`circle bg-${item}`}></div>
               </div>

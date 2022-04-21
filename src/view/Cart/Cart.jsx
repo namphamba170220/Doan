@@ -1,19 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import Helmet from "../../components/Helmet/Helmet";
-import numberWithCommas from "../../utils/numberWithCommas";
 import CartItem from "../../components/CartItem/CartItem";
+import Helmet from "../../components/Helmet/Helmet";
+import ModalSubmitInfoUser from "../../components/ModalSubmitInfoUser";
+import { CartContext } from "../../contexts/CartContext";
+import numberWithCommas from "../../utils/numberWithCommas";
+
 const Cart = () => {
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || '[]';
+  const cart = useContext(CartContext);
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
-//   useEffect(() => {
-//     setCartProducts(cartItems);
-//     setTotalProducts(cartItems.quantity);
-//     setTotalPrice(cartItems.price);
-//   }, [cartItems]);
+  const [isModalInfoUser, setIsModalInfoUser] = useState(false);
+
+  const onShowmodalInfoUser = () => {
+    setIsModalInfoUser(true);
+  };
+  const closeModal = () => {
+    setIsModalInfoUser(false);
+  };
+
+  useEffect(() => {
+    setCartProducts(cart.cartItems);
+
+    const total = cart.cartItems.reduce((currentItem, nextItem) => {
+      return currentItem + nextItem.quantity;
+    }, 0);
+    const price = cart.cartItems.reduce((currentItem, nextItem) => {
+      return currentItem + parseFloat(nextItem.price) * nextItem.quantity;
+    }, 0);
+    setTotalProducts(total);
+    setTotalPrice(price);
+  }, [cart]);
+
+  useEffect(() => {}, [cartProducts]);
 
   return (
     <Helmet title="Giỏ hàng">
@@ -27,18 +48,27 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart__info__btn">
-            <Button size="block">Đặt hàng</Button>
+            <Button size="block" onClick={onShowmodalInfoUser}>
+              Đặt hàng
+            </Button>
             <Link to="/catalog">
               <Button size="block">Tiếp tục mua hàng</Button>
             </Link>
           </div>
         </div>
-        {/* <div className="cart__list">
+        <div className="cart__list">
           {cartProducts.map((item, index) => (
-            <CartItem item={item} key={index} />
+            <CartItem item={item} key={item.id} index={index} />
           ))}
-        </div> */}
+        </div>
       </div>
+      {isModalInfoUser && (
+        <ModalSubmitInfoUser
+          openModal={isModalInfoUser}
+          onClose={closeModal}
+          productCardDetai={cartProducts}
+        />
+      )}
     </Helmet>
   );
 };

@@ -1,44 +1,62 @@
-import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
-
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
 import numberWithCommas from "../../utils/numberWithCommas";
-import { Link } from "react-router-dom";
 
 const CartItem = (props) => {
+  const cart = useContext(CartContext);
   const itemRef = useRef(null);
-
-  const [item, setItem] = useState(props.item);
+  const [item, setItem] = useState([props.item]);
   const [quantity, setQuantity] = useState(props.item.quantity);
 
+  const updateQuantity = (meth, index) => {
+    cart.updateItem(meth, index);
+  };
+
+  const removeCartItem = (index) => {
+    cart.removeFromCart(index);
+  };
+
+  useEffect(() => {
+    setItem(props.item);
+    setQuantity(props.item.quantity);
+  }, [props.item]);
   return (
     <div className="cart__item" ref={itemRef}>
       <div className="cart__item__image">
-        <img src={item.product.image01} alt="" />
+        <img src={props.item.img01} alt="" />
       </div>
       <div className="cart__item__info">
         <div className="cart__item__info__name">
-          <Link to={`/catalog/${item.slug}`}>
-            {`${item.product.title} - ${item.color} - ${item.size}`}
-          </Link>
+          {`${props.item.title} - ${props.item.color} - ${props.item.version}`}
         </div>
         <div className="cart__item__info__price">
-          {numberWithCommas(item.price)}
+          {numberWithCommas(props.item.price)}
         </div>
         <div className="cart__item__info__quantity">
           <div className="product__info__item__quantity">
-            <div className="product__info__item__quantity__btn">
+            <div
+              className="product__info__item__quantity__btn"
+              onClick={() => updateQuantity("-", props.index)}
+            >
               <i className="bx bx-minus"></i>
             </div>
             <div className="product__info__item__quantity__input">
-              {quantity}
+              {item.quantity}
             </div>
-            <div className="product__info__item__quantity__btn">
+            <div
+              className="product__info__item__quantity__btn"
+              onClick={() => updateQuantity("+", props.index)}
+            >
               <i className="bx bx-plus"></i>
             </div>
           </div>
         </div>
         <div className="cart__item__del">
-          <i className="bx bx-trash"></i>
+          <i
+            className="bx bx-trash"
+            onClick={() => removeCartItem(props.index)}
+          ></i>
         </div>
       </div>
     </div>
