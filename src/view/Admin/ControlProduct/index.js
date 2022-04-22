@@ -14,7 +14,6 @@ function ControlProduct() {
   const [isModalAddProduct, setIsModalAddProduct] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
 
-
   const closeModal = () => {
     setIsModalAddProduct(false);
     setProductDetail(null);
@@ -22,7 +21,6 @@ function ControlProduct() {
   const showModalAddNew = () => {
     setIsModalAddProduct(true);
   };
- 
 
   const handleReloadProduct = () => {
     setIsReloadProduct(true);
@@ -33,14 +31,12 @@ function ControlProduct() {
       .then((res) => {
         if (res.statusText === "OK") {
           setProductData(res.data);
-          console.log(res.data);
         }
       })
       .finally(() => {
         setIsReloadProduct(false);
       });
   }, [isReloadProduct]);
-
 
   return (
     <Helmet title="Quản lí thiết bị di động">

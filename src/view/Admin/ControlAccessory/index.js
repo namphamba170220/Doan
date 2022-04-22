@@ -29,13 +29,14 @@ function ControlAccessory() {
     accessoryApi
       .getAll()
       .then((res) => {
-        setAccessoryData(res?.data);
+        if (res.statusText === "OK") {
+          setAccessoryData(res.data);
+        }
       })
       .finally(() => {
         setIsReloadAccessory(false);
       });
   }, [isReloadAccessory]);
-
 
   return (
     <Helmet title="Quản lí phụ kiện">

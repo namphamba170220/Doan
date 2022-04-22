@@ -1,12 +1,10 @@
 import "antd/dist/antd.css";
-import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { AuthProvider } from "../contexts/AuthContext";
 import { CartProvider } from "../contexts/CartContext";
-import { auth } from "../firebase";
 import PrivateRoute from "../privateRoute";
 import Accessories from "../view/Accessory/Accessories";
 import Admin from "../view/Admin/admin";
@@ -21,17 +19,18 @@ import Home from "../view/Home/Home";
 import Order from "../view/Order/Order";
 
 const Layout = () => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [timeActive, setTimeActive] = useState(false);
+  const fetchUser = JSON.parse(localStorage.getItem("user"));
+  const [currentUser, setCurrentUser] = useState(fetchUser || "");
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user);
-    });
-  }, []);
+    console.log("currentUser", currentUser);
+    setUserName(currentUser.fullName);
+  }, [currentUser]);
+
   return (
     <Router>
-      <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
+      <AuthProvider value={{ currentUser, setCurrentUser, userName }}>
         <CartProvider>
           <Header />
           <br />

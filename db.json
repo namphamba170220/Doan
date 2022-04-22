@@ -1,4 +1,50 @@
 {
+  "user": [
+    {
+      "id": 1,
+      "isAdmin": true,
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "fullName": "Admin"
+    },
+    {
+      "id": 2,
+      "isAdmin": false,
+      "email": "phambanam@gmail.com",
+      "password": "123456",
+      "fullName": "Phạm Bá Nam"
+    },
+    {
+      "email": "phamaaaba@gmail.com",
+      "password": "12345",
+      "fullName": "afafafaf",
+      "id": 3
+    },
+    {
+      "email": "afarqr@gmail.com",
+      "password": "11111",
+      "fullName": "awrawrqrqrq",
+      "id": 5
+    },
+    {
+      "email": "phambaaaanam@gmail.com",
+      "password": "123456",
+      "fullName": "pham ba aaaa",
+      "id": 6
+    },
+    {
+      "email": "1241414@gmail.com",
+      "password": "12345",
+      "fullName": "afafafafa",
+      "id": 7
+    },
+    {
+      "email": "11241414@gmail.com",
+      "password": "12345678",
+      "fullName": "afafafaf",
+      "id": 8
+    }
+  ],
   "category": [
     {
       "id": 1,
@@ -124,6 +170,27 @@
         }
       ],
       "id": 2
+    },
+    {
+      "infoUserData": {
+        "fullname": "Phaqrqrqr",
+        "email": "12314qrqrqrqr@gmail.com",
+        "address": "15151423rwfesg262t6",
+        "phoneNumber": "15415156151515"
+      },
+      "productCardDetai": [
+        {
+          "title": "Samsung Galaxy Note 20 Ultra 5G",
+          "img01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+          "id": 1,
+          "slug": "samsung-01",
+          "color": "white",
+          "version": "64GB",
+          "price": "29350000",
+          "quantity": 4
+        }
+      ],
+      "id": 3
     }
   ],
   "colors": [

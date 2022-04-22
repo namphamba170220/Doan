@@ -2,7 +2,7 @@ import { LogoutOutlined } from "@ant-design/icons";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
-import { auth } from "../../firebase";
+import { useAuthValue } from "../../contexts/AuthContext";
 
 const mainNav = [
   {
@@ -32,11 +32,11 @@ const mainNav = [
 ];
 
 const Header = () => {
+  const { currentUser, userName } = useAuthValue();
+  const [userNameHeader, setUserNameHeader] = useState("");
   const { pathname } = useLocation();
   const activeNav = mainNav.findIndex((e) => e.path === pathname);
   const headerRef = useRef(null);
-  const [account, setAccount] = useState("");
-  const adminUser = "phambanamhaui@gmail.com";
   const ModelUser = mainNav.slice(0, 4);
   const ModelPublic = () => {
     return ModelUser.map((item, index) => (
@@ -70,9 +70,14 @@ const Header = () => {
     ));
   };
 
+  const onCleanUser = () => {
+    setUserNameHeader("");
+    localStorage.removeItem("user");
+  };
+
   useEffect(() => {
-    setAccount(auth?.currentUser?.email);
-  }, [auth?.currentUser?.email]);
+    setUserNameHeader(userName);
+  }, [userName]);
 
   useEffect(() => {
     const srollWeb = () => {
@@ -111,24 +116,30 @@ const Header = () => {
             <div className="header__menu__left__close" onClick={menuToggle}>
               <i className="bx bx-chevron-left"></i>
             </div>
-            {account === adminUser ? <ModelPrivate /> : <ModelPublic />}
+            {currentUser?.isAdmin ? <ModelPrivate /> : <ModelPublic />}
           </div>
           <div className="header__menu__right">
             <div className="header__menu__item header__menu__right__item">
-              {account === adminUser ? (
-                <div></div>
+              {currentUser?.isAdmin ? (
+                ""
               ) : (
                 <Link to="/cart">
-                  <i style={{color:"black"}} className="bx bx-shopping-bag"></i>
+                  <i
+                    style={{ color: "black" }}
+                    className="bx bx-shopping-bag"
+                  ></i>
                 </Link>
               )}
             </div>
             <div className="header__menu__item header__menu__right__item">
-              {account ? (
+              {currentUser ? (
                 <>
-                  <span>{account}</span>
+                  <span>{userNameHeader}</span>
                   <Link to="/login">
-                    <LogoutOutlined style={{ margin: "0 0 10px 20px" }} />
+                    <LogoutOutlined
+                      style={{ margin: "0 0 10px 20px" }}
+                      onClick={onCleanUser}
+                    />
                   </Link>
                 </>
               ) : (

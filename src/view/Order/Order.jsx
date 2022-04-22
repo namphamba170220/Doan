@@ -1,22 +1,48 @@
-import React from "react";
-import { Table, Tooltip } from "antd";
+import React, { useEffect, useState } from "react";
+import { Table, Tooltip, Button } from "antd";
+import { CheckSquareOutlined } from "@ant-design/icons";
+import orderApi from "../../Api/orderApi";
 function Order() {
+  const [productList, setProductList] = useState(null);
+  useEffect(() => {
+    console.log("productList", productList);
+  }, [productList]);
+  useEffect(() => {
+    orderApi.getAll().then((res) => {
+      const { data } = res;
+      const finalData = data.map((item) => {
+        const { productCardDetai } = item;
+        const resuilt = productCardDetai.map((CardDetai) => {
+          return {
+            ...item.infoUserData,
+            ...CardDetai,
+          };
+        });
+        return resuilt;
+      });
+      setProductList(finalData.flat());
+    });
+  }, []);
+
+  const onSubmitOrder = () => {
+    console.log("Submit");
+  };
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
+      title: "Họ và tên",
+      dataIndex: "fullname",
       key: "name",
       render: (text) => <a>{text}</a>,
       width: 150,
     },
     {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-      width: 80,
+      title: "Số điện thoại",
+      dataIndex: "phoneNumber",
+      key: "phoneNumber",
+      width: 150,
     },
     {
-      title: "Address",
+      title: "Địa chỉ",
       dataIndex: "address",
       key: "address 1",
       ellipsis: {
@@ -29,67 +55,90 @@ function Order() {
       ),
     },
     {
-      title: "Long Column Long Column Long Column",
-      dataIndex: "address",
-      key: "address 2",
+      title: "email",
+      dataIndex: "email",
+      key: "email",
       ellipsis: {
         showTitle: false,
       },
-      render: (address) => (
-        <Tooltip placement="topLeft" title={address}>
-          {address}
+      render: (email) => (
+        <Tooltip placement="topLeft" title={email}>
+          {email}
         </Tooltip>
       ),
     },
     {
-      title: "Long Column Long Column",
-      dataIndex: "address",
-      key: "address 3",
+      title: "Sản phẩm mua",
+      dataIndex: "title",
+      key: "title",
       ellipsis: {
         showTitle: false,
       },
-      render: (address) => (
-        <Tooltip placement="topLeft" title={address}>
-          {address}
+      render: (title) => (
+        <Tooltip placement="topLeft" title={title}>
+          {title}
         </Tooltip>
       ),
     },
     {
-      title: "Long Column",
-      dataIndex: "address",
-      key: "address 4",
+      title: "Màu",
+      dataIndex: "color",
+      key: "color",
       ellipsis: {
         showTitle: false,
       },
-      render: (address) => (
-        <Tooltip placement="topLeft" title={address}>
-          {address}
+      render: (color) => (
+        <Tooltip placement="topLeft" title={color}>
+          {color}
         </Tooltip>
+      ),
+    },
+    {
+      title: "Phiên bản RAM",
+      dataIndex: "version",
+      key: "version",
+      ellipsis: {
+        showTitle: false,
+      },
+      render: (version) => (
+        <Tooltip placement="topLeft" title={version}>
+          {version}
+        </Tooltip>
+      ),
+    },
+    {
+      title: "Số lượng",
+      dataIndex: "quantity",
+      key: "quantity",
+      ellipsis: {
+        showTitle: false,
+      },
+      render: (quantity) => (
+        <Tooltip placement="topLeft" title={quantity}>
+          {quantity}
+        </Tooltip>
+      ),
+    },
+    {
+      title: "Action",
+      key: "action",
+      width: "150",
+      render: (item) => (
+        <div className="d-flex">
+          <Tooltip title="Submit">
+            <Button
+              onClick={onSubmitOrder(item)}
+              type="text"
+              className="d-flex justify-content-center align-items-center"
+              icon={<CheckSquareOutlined />}
+            ></Button>
+          </Tooltip>
+        </div>
       ),
     },
   ];
 
-  const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park, New York No. 1 Lake Park",
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      address: "London No. 2 Lake Park, London No. 2 Lake Park",
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      address: "Sidney No. 1 Lake Park, Sidney No. 1 Lake Park",
-    },
-  ];
-  return <Table columns={columns} dataSource={data} />;
+  return <Table sticky={true} columns={columns} dataSource={productList} />;
 }
 
 export default Order;

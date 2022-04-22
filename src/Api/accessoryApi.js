@@ -1,9 +1,9 @@
 import axiosClient from "./axiosClient";
 
 const accessoryApi = {
-  getAll(params) {
+  getAll() {
     const url = "/accessory";
-    return axiosClient.get(url, { params: params });
+    return axiosClient.get(url);
   },
   get(id) {
     const url = `/accessory/${id}`;

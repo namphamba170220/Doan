@@ -1,13 +1,11 @@
-import {Navigate} from 'react-router-dom'
-import {useAuthValue} from './contexts/AuthContext';
+import { Navigate } from "react-router-dom";
+import { useAuthValue } from "./contexts/AuthContext";
 
-
-export default function PrivateRoute({children}) {
-  const {currentUser} = useAuthValue()
-
-  if(!currentUser?.emailVerified){
-    return <Navigate to='/' replace/>
+export default function PrivateRoute({ children }) {
+  const { currentUser } = useAuthValue();
+  if (!currentUser) {
+    return <Navigate to="/" replace />;
   }
 
-  return children
+  return children;
 }
