@@ -23,7 +23,9 @@ const AdminProductCard = (props) => {
           enqueueSnackbar("Success");
         }, 500);
         setOpenModalDeleteProduct(false);
-        props.onReloadProduct();
+        productApi.getAll().then((res) => {
+          props.setProductData(res?.data);
+        });
       });
     } else {
       setOpenModalDeleteProduct(false);

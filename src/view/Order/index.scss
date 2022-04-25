@@ -1,0 +1,52 @@
+.icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(96.34deg, #ff9c23 -5.73%, #fd53cf 155.34%);
+  border-radius: 50%;
+  margin: 0px auto;
+
+  .icon-warning {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+
+.confirm-p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1b242c;
+}
+
+.content-confirm {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #485058;
+  text-align: center;
+}
+
+.cancel {
+  background: #ffffff;
+  border-radius: 4px;
+  width: 142px;
+  height: 42px;
+  border: 1px solid #669ee9;
+  color: #669ee9;
+}
+
+.submit-confirm {
+  background: linear-gradient(96.34deg, #ff9c23 -5.73%, #fd53cf 155.34%);
+  border-radius: 4px;
+  width: 142px;
+  height: 42px;
+  border: 1px solid #ff9c23;
+  color: white;
+}
+
+.mr-3 {
+  margin-right: 5px;
+}

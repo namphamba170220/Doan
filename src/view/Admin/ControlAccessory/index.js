@@ -1,4 +1,3 @@
-import { PlusOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import React, { useEffect, useState } from "react";
 import accessoryApi from "../../../Api/accessoryApi";
@@ -10,13 +9,8 @@ import AdminAccessoryCard from "../AdminAccessoryCard";
 
 function ControlAccessory() {
   const [accessoryData, setAccessoryData] = useState([]);
-  const [isReloadAccessory, setIsReloadAccessory] = useState(false);
   const [isModalAddAccessory, setIsModalAddAccessory] = useState(false);
   const [accessoryDetail, setAccessoryDetail] = useState(null);
-
-  const handleReloadAccessory = () => {
-    setIsReloadAccessory(true);
-  };
 
   const closeModal = () => {
     setIsModalAddAccessory(false);
@@ -26,23 +20,16 @@ function ControlAccessory() {
     setIsModalAddAccessory(true);
   };
   useEffect(() => {
-    accessoryApi
-      .getAll()
-      .then((res) => {
-        if (res.statusText === "OK") {
-          setAccessoryData(res.data);
-        }
-      })
-      .finally(() => {
-        setIsReloadAccessory(false);
-      });
-  }, [isReloadAccessory]);
+    accessoryApi.getAll().then((res) => {
+      if (res.statusText === "OK") {
+        setAccessoryData(res?.data);
+      }
+    });
+  }, []);
 
   return (
     <Helmet title="Quản lí phụ kiện">
-      <Button icon={<PlusOutlined />} onClick={showModalAddNew}>
-        Add New
-      </Button>
+      <Button onClick={showModalAddNew}>Add New</Button>
       <Section>
         <SectionBody>
           <Grid col={4} mdCol={1} smCol={1} gap={1}>
@@ -58,7 +45,7 @@ function ControlAccessory() {
                 categoryslug={item.categoryslug}
                 color={item.colors}
                 description={item.description}
-                onReloadAccessory={handleReloadAccessory}
+                setAccessoryData={setAccessoryData}
                 item={item}
               ></AdminAccessoryCard>
             ))}
@@ -70,7 +57,7 @@ function ControlAccessory() {
           openModal={isModalAddAccessory}
           onClose={closeModal}
           accessoryDetail={accessoryDetail}
-          onReloadAccessory={handleReloadAccessory}
+          setAccessoryData={setAccessoryData}
         />
       )}
     </Helmet>

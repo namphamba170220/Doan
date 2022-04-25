@@ -14,13 +14,16 @@ const productApi = {
     return axiosClient.post(url, data);
   },
   update(data) {
-    console.log(data);
     const url = `/products/${data.id}`;
     return axiosClient.patch(url, data);
   },
   remove(id) {
     const url = `/products/${id}`;
     return axiosClient.delete(url);
+  },
+  searchDetail(assetCode) {
+    const url = `products/${assetCode}`;
+    return axiosClient.get(url);
   },
 };
 

@@ -14,7 +14,6 @@ const orderApi = {
     return axiosClient.post(url, data);
   },
   update(data) {
-    console.log(data);
     const url = `/orders/${data.id}`;
     return axiosClient.patch(url, data);
   },

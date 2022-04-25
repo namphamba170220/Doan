@@ -1,21 +1,72 @@
+import { CheckSquareOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Button, Table, Tooltip } from "antd";
+import { useSnackbar } from "notistack";
 import React, { useEffect, useState } from "react";
-import { Table, Tooltip, Button } from "antd";
-import { CheckSquareOutlined } from "@ant-design/icons";
 import orderApi from "../../Api/orderApi";
+import ConfirmPopup from "../../components/ConfirmPopup/index";
+import ModalOrder from "./ModalOrder";
 function Order() {
   const [productList, setProductList] = useState(null);
-  useEffect(() => {
-    console.log("productList", productList);
-  }, [productList]);
+  const [isShowModal, setIsShowModal] = useState(false);
+  const [openModalDeleteProjects, setOpenModalDeleteProjects] = useState(false);
+  const { enqueueSnackbar } = useSnackbar();
+  const [id, setId] = useState(null);
+
+  const onShowModal = (item) => {
+    return () => {
+      setIsShowModal(true);
+    };
+  };
+
+  const closeModal = () => {
+    setIsShowModal(false);
+  };
+
+  const showDeleteConfirm = (id) => {
+    setId(id);
+    setOpenModalDeleteProjects(true);
+  };
+
+  const handelDeleteProduct = (check) => {
+    if (check && id) {
+      orderApi.remove(id).then((res) => {
+        setTimeout(() => {
+          enqueueSnackbar("Success");
+        }, 500);
+        setOpenModalDeleteProjects(false);
+        orderApi.getAll().then((res) => {
+          const { data } = res;
+          const finalData = data.map((item) => {
+            const { productCardDetai } = item;
+            const resuilt = productCardDetai.map((CardDetai) => {
+              return {
+                ...item.infoUserData,
+                ...CardDetai,
+              };
+            });
+            return resuilt;
+          });
+          setProductList(finalData.flat());
+        });
+      });
+    } else {
+      setOpenModalDeleteProjects(false);
+    }
+  };
+
+  useEffect(() => {}, [productList]);
   useEffect(() => {
     orderApi.getAll().then((res) => {
       const { data } = res;
+
       const finalData = data.map((item) => {
         const { productCardDetai } = item;
+
         const resuilt = productCardDetai.map((CardDetai) => {
           return {
-            ...item.infoUserData,
             ...CardDetai,
+            ...item.infoUserData,
+            id: item.id,
           };
         });
         return resuilt;
@@ -24,9 +75,6 @@ function Order() {
     });
   }, []);
 
-  const onSubmitOrder = () => {
-    console.log("Submit");
-  };
   const columns = [
     {
       title: "Họ và tên",
@@ -100,8 +148,8 @@ function Order() {
       ellipsis: {
         showTitle: false,
       },
-      render: (version) => (
-        <Tooltip placement="topLeft" title={version}>
+      render: (version, index) => (
+        <Tooltip placement="topLeft" title={version} key={index}>
           {version}
         </Tooltip>
       ),
@@ -113,8 +161,8 @@ function Order() {
       ellipsis: {
         showTitle: false,
       },
-      render: (quantity) => (
-        <Tooltip placement="topLeft" title={quantity}>
+      render: (quantity, index) => (
+        <Tooltip placement="topLeft" title={quantity} key={index}>
           {quantity}
         </Tooltip>
       ),
@@ -127,10 +175,19 @@ function Order() {
         <div className="d-flex">
           <Tooltip title="Submit">
             <Button
-              onClick={onSubmitOrder(item)}
+              onClick={onShowModal(item)}
               type="text"
               className="d-flex justify-content-center align-items-center"
               icon={<CheckSquareOutlined />}
+            ></Button>
+          </Tooltip>
+          <Tooltip title={"delete"}>
+            {" "}
+            <Button
+              type="text"
+              onClick={() => showDeleteConfirm(item.id)}
+              className="d-flex justify-content-center align-items-center"
+              icon={<DeleteOutlined />}
             ></Button>
           </Tooltip>
         </div>
@@ -138,7 +195,18 @@ function Order() {
     },
   ];
 
-  return <Table sticky={true} columns={columns} dataSource={productList} />;
+  return (
+    <>
+      <Table sticky={true} columns={columns} dataSource={productList} />
+      {isShowModal && (
+        <ModalOrder openModal={isShowModal} onClose={closeModal} />
+      )}
+      <ConfirmPopup
+        onConfirm={handelDeleteProduct}
+        visibleModal={openModalDeleteProjects}
+      />
+    </>
+  );
 }
 
 export default Order;

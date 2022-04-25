@@ -12,37 +12,15 @@
       "isAdmin": false,
       "email": "phambanam@gmail.com",
       "password": "123456",
-      "fullName": "Phạm Bá Nam"
+      "fullName": "Phạm Bá Nam",
+      "codeResetPass": "ba5iZ"
     },
     {
-      "email": "phamaaaba@gmail.com",
-      "password": "12345",
-      "fullName": "afafafaf",
-      "id": 3
-    },
-    {
-      "email": "afarqr@gmail.com",
-      "password": "11111",
-      "fullName": "awrawrqrqrq",
-      "id": 5
-    },
-    {
-      "email": "phambaaaanam@gmail.com",
-      "password": "123456",
-      "fullName": "pham ba aaaa",
-      "id": 6
-    },
-    {
-      "email": "1241414@gmail.com",
-      "password": "12345",
-      "fullName": "afafafafa",
-      "id": 7
-    },
-    {
-      "email": "11241414@gmail.com",
+      "email": "phambanamhaui@gmail.com",
       "password": "12345678",
-      "fullName": "afafafaf",
-      "id": 8
+      "fullName": "afafafafa",
+      "id": 3,
+      "codeResetPass": "ofVzk"
     }
   ],
   "category": [
@@ -140,128 +118,67 @@
         {
           "title": "Samsung Galaxy Note 20 Ultra 5G",
           "img01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-          "id": 1,
-          "slug": "samsung-01",
-          "color": "pink",
-          "version": "128GB",
+          "id": 3,
+          "slug": "iphone-01",
+          "color": "black",
+          "version": "256GB",
           "price": "29350000",
-          "quantity": 1
+          "quantity": 3
         }
       ],
       "id": 1
-    },
-    {
-      "infoUserData": {
-        "fullname": "Pham ba nam",
-        "email": "1231456@gmail.com",
-        "address": "124141414qfafgagag",
-        "phoneNumber": "03154789"
-      },
-      "productCardDetai": [
-        {
-          "title": "Samsung Galaxy Note 20 Ultra 5G",
-          "img01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-          "id": 1,
-          "slug": "samsung-01",
-          "color": "pink",
-          "version": "128GB",
-          "price": "29350000",
-          "quantity": 1
-        }
-      ],
-      "id": 2
-    },
-    {
-      "infoUserData": {
-        "fullname": "Phaqrqrqr",
-        "email": "12314qrqrqrqr@gmail.com",
-        "address": "15151423rwfesg262t6",
-        "phoneNumber": "15415156151515"
-      },
-      "productCardDetai": [
-        {
-          "title": "Samsung Galaxy Note 20 Ultra 5G",
-          "img01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-          "id": 1,
-          "slug": "samsung-01",
-          "color": "white",
-          "version": "64GB",
-          "price": "29350000",
-          "quantity": 4
-        }
-      ],
-      "id": 3
     }
   ],
   "colors": [
     {
       "id": 1,
       "display": "Trắng",
-      "color": "white"
+      "color": "White"
     },
     {
       "id": 2,
       "display": "Hồng",
-      "color": "pink"
+      "color": "Pink"
     },
     {
       "id": 3,
       "display": "Đen",
-      "color": "black"
+      "color": "Black"
     },
     {
       "id": 4,
       "display": "Vàng",
-      "color": "yellow"
+      "color": "Yellow"
     },
     {
       "id": 5,
       "display": "Cam",
-      "color": "orange"
+      "color": "Orange"
     },
     {
       "id": 6,
       "display": "Xanh dương",
-      "color": "blue"
+      "color": "Blue"
     }
   ],
   "products": [
     {
-      "title": "Samsung Galaxy Note 20 Ultra 5G",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "title": "adfafafaf",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
       "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
       "categoryslug": "samsung",
-      "price": "29350000",
-      "slug": "samsung-01",
+      "price": "19990000",
+      "slug": "iphone-07",
       "colors": [
         "white",
-        "pink",
-        "black"
+        "yellow"
       ],
       "version": [
         "64GB",
         "128GB"
       ],
-      "description": "afafafaf",
+      "description": "âfaf",
       "id": 1
-    },
-    {
-      "title": "Samsung Galaxy Note 20 Ultra 5G",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/y/e/yellow_final_2.jpg",
-      "categoryslug": "iphone",
-      "price": "29350000",
-      "slug": "iphone-01",
-      "colors": [
-        "pink",
-        "black"
-      ],
-      "version": [
-        "128GB",
-        "256GB"
-      ],
-      "description": "rqwrqrqr",
-      "id": 3
     }
   ],
   "versions": [
@@ -308,33 +225,6 @@
       ],
       "slug": "mic-01",
       "description": "Micro thu âm AKG C22 USB hứa hẹn sẽ mang đến cho người dùng những trải nghiệm tuyệt vời khi sử dụng. Không chỉ có vẻ ngoài bắt mắt mà chất lượng sản phẩm của thiết bị phòng thu âm này cũng rất tốt, phù hợp với nhiều nhu cầu sử dụng khác nhau.Micro thu âm AKG C22 USB có thiết kế khá nhỏ gọn, đơn giản, thân thiện với đa số người dùng. Vì vậy bạn có thể dễ dàng đặt nó ở bất cứ nơi nào mà mình muốn và không phải lo lắng việc gặp phải quá nhiều khó khăn trong quá trình sử dụng loại micro thu âm này."
-    },
-    {
-      "id": 3,
-      "title": "Cáp chuyển đổi Apple Lightning to 3.5mm Audio MXK22ZA | Chính hãng Apple Việt Nam",
-      "price": 1490000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa-1.jpg",
-      "categoryslug": "mic",
-      "colors": [
-        "white",
-        "pink"
-      ],
-      "slug": "capchuyendoi-02",
-      "description": "Một số dòng máy iPhone không sử dụng đầu cắm 3.5mm, do đó bạn cần đến cáp chuyển đổi Apple Lightning to 3.5mm Audio MXK22ZA. Đây là giải pháp được nhiều người sử dụng, rất tiện lợi mà không tốn kém nhiều chi phí. Cáp chuyển đổi Lightning to 3.5mm Audio (MXK22ZA/A) có kích thước hợp lý với chiều dài chỉ 7cm, thuận tiện để kết nối hai thiết bị. Với kích thước này, bạn có thể xếp gọn và mang theo trong túi quần đi mọi nơi mọi lúc.Lớp vỏ cáp làm từ nhựa cao cấp, dẻo dai và bền bỉ đạt tiêu chuẩn uốn cong không gãy gập. Màu trắng sứ hợp thời trang, bắt mắt, phù hợp sở thích của giới trẻ chuộng thời trang."
-    },
-    {
-      "id": 4,
-      "title": "Cáp âm thanh devia audio cable 3.5mm 1m",
-      "price": 900000,
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-am-thanh-devia-ipure-audio-cable-3-5-mm-1m-1_1.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-am-thanh-devia-ipure-audio-cable-3-5-mm-1m-2_1.jpg",
-      "categoryslug": "capchuyendoi",
-      "colors": [
-        "black"
-      ],
-      "slug": "capchuyendoi-03",
-      "description": "Là một phụ kiên quan trọng trong trải nghiệm giải trí, dây cáp âm thanh Devia Ipure Series 3.5mm với độ bền cao cùng độ dài vượt trội sẽ là một trong những phụ kiện cần thiết trong mọi ngôi nhà.Cáp Devia Ipure Series 3.5mm với đầu cắm mạ mang lại khả năng chống nhiễu, chống oxy hóa cùng khả năng truyền tín hiệu ổn định. Phần lõi cáp được hoàn thiện từ lõi đồng nguyên chất kỹ khí OFC mang lại dẫ điện và truyền âm tốt. Cáp với chiều dài lên đến 1m, với chiều dài này, cáp dễ kết nối giữa các thiết bị mà không gặp quá nhiều khó khăn."
     }
   ]
 }

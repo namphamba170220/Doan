@@ -18,10 +18,6 @@ const mainNav = [
     path: "/accessories",
   },
   {
-    display: "Liên hệ",
-    path: "/contact",
-  },
-  {
     display: "Quản lí sản phẩm",
     path: "/admin",
   },
@@ -37,7 +33,7 @@ const Header = () => {
   const { pathname } = useLocation();
   const activeNav = mainNav.findIndex((e) => e.path === pathname);
   const headerRef = useRef(null);
-  const ModelUser = mainNav.slice(0, 4);
+  const ModelUser = mainNav.slice(0, 3);
   const ModelPublic = () => {
     return ModelUser.map((item, index) => (
       <div
@@ -53,7 +49,7 @@ const Header = () => {
       </div>
     ));
   };
-  const ModelAdmin = mainNav.slice(4, 6);
+  const ModelAdmin = mainNav.slice(3, 5);
   const ModelPrivate = () => {
     return ModelAdmin.map((item, index) => (
       <div

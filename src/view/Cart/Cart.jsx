@@ -15,7 +15,6 @@ const Cart = () => {
   const [isModalInfoUser, setIsModalInfoUser] = useState(false);
 
   const onShowmodalInfoUser = () => {
-    console.log(cart.cartItems);
     if (cart.cartItems.length === 0) {
       alert("Vui long mua san pham de thanh toan");
     } else {

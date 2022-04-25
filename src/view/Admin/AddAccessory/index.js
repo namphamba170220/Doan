@@ -11,7 +11,7 @@ const AddAccessory = ({
   openModal,
   onClose,
   accessoryDetail,
-  onReloadAccessory,
+  setAccessoryData,
 }) => {
   const [form] = Form.useForm();
   const [categoryAccessoryData, setCategoryAccessoryData] = useState([]);
@@ -31,10 +31,12 @@ const AddAccessory = ({
     };
     if (accessoryDetail?.id) {
       accessoryApi
-        .update({...AccessoryData, id:accessoryDetail?.id})
+        .update({ ...AccessoryData, id: accessoryDetail?.id })
         .then((res) => {
           onClose();
-          onReloadAccessory();
+          accessoryApi.getAll().then((res) => {
+            setAccessoryData(res?.data);
+          });
         })
         .catch((error) => {
           console.log(`error`, error);
@@ -44,7 +46,9 @@ const AddAccessory = ({
         .add(AccessoryData)
         .then((res) => {
           onClose();
-          onReloadAccessory();
+          accessoryApi.getAll().then((res) => {
+            setAccessoryData(res?.data);
+          });
         })
         .catch((error) => {
           console.log(`error`, error);

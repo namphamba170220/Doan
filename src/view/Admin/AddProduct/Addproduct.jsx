@@ -7,8 +7,8 @@ import versionApi from "../../../Api/versionApi";
 import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
-const {Option} = Select;
-const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
+const { Option } = Select;
+const AddProduct = ({ openModal, onClose, productDetail, setProductData }) => {
   const [form] = Form.useForm();
   const [categoryData, setCategoryData] = useState([]);
   const [colorData, setColorData] = useState([]);
@@ -29,10 +29,12 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
     };
     if (productDetail?.id) {
       productApi
-        .update({...productData,id:productDetail.id})
+        .update({ ...productData, id: productDetail.id })
         .then((res) => {
           onClose();
-          onReloadProduct();
+          productApi.getAll().then((res) => {
+            setProductData(res?.data);
+          });
         })
         .catch((error) => {
           console.log(`error`, error);
@@ -42,7 +44,9 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
         .add(productData)
         .then((res) => {
           onClose();
-          onReloadProduct();
+          productApi.getAll().then((res) => {
+            setProductData(res?.data);
+          });
         })
         .catch((error) => {
           console.log(`error`, error);
@@ -51,27 +55,35 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
   };
 
   useEffect(() => {
-    categoryApi.getAll().then((res) => {
-      setCategoryData(res?.data)
-    })
-    .catch((err) => {})
-  },[])
+    categoryApi
+      .getAll()
+      .then((res) => {
+        setCategoryData(res?.data);
+      })
+      .catch((err) => {});
+  }, []);
   useEffect(() => {
-    colorsApi.getAll().then((res) => {
-      setColorData(res?.data)
-    })
-    .catch((err) => {})
-  },[])
+    colorsApi
+      .getAll()
+      .then((res) => {
+        setColorData(res?.data);
+      })
+      .catch((err) => {});
+  }, []);
   useEffect(() => {
-    versionApi.getAll().then((res) => {
-      setVersionData(res?.data)
-    })
-    .catch((err) => {})
-  },[])
+    versionApi
+      .getAll()
+      .then((res) => {
+        setVersionData(res?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   useEffect(() => {
     form.setFieldsValue(productDetail);
-  }, [ productDetail ]);
+  }, [productDetail]);
 
   return (
     <>
@@ -88,7 +100,12 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
         visible={openModal}
         width={500}
       >
-        <Form form={form} onFinish={onSubmit} name="control-ref" defaultValue={productDetail}>
+        <Form
+          form={form}
+          onFinish={onSubmit}
+          name="control-ref"
+          defaultValue={productDetail}
+        >
           <SubTitle
             title={productDetail ? "Edit Product" : "Add Product"}
             onClickClose={onClose}
@@ -178,17 +195,15 @@ const AddProduct = ({ openModal, onClose, productDetail,onReloadProduct}) => {
                           },
                         ]}
                       >
-                       <Select
+                        <Select
                           className="appointment--item name"
                           placeholder="selectCategory"
                           allowClear
                         >
                           {categoryData.map((item) => (
-                      
                             <Option key={item.id} value={item.categoryslug}>
                               {item.display}
                             </Option>
-                            
                           ))}
                         </Select>
                       </Form.Item>

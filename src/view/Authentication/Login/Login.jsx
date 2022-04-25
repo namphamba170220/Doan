@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
 import { useAuthValue } from "../../../contexts/AuthContext";
-import useApi from "../../../Api/userApi";
+import userApi from "../../../Api/userApi";
+import ForgotPassword from "../ForgotPassword";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,11 +11,20 @@ const Login = () => {
   const { setCurrentUser } = useAuthValue();
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
+  const [isShowModalForgot, setIsShowModalForgot] = useState(false);
+
+  const setIsShowModal = () => {
+    setIsShowModalForgot(true);
+  };
+
+  const closeModal = () => {
+    setIsShowModalForgot(false);
+  };
+
   const login = (e) => {
     e.preventDefault();
-    useApi.login(email, password).then((res) => {
+    userApi.login(email, password).then((res) => {
       const { data } = res;
-      console.log("res `1", res);
       if (data.length === 0) {
         setError("Verify Email or Password");
         alert("Verify Email or Password");
@@ -32,6 +42,8 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(user));
       }
     });
+    setEmail("");
+    setPassword("");
   };
   return (
     <div className="center">
@@ -61,6 +73,10 @@ const Login = () => {
           Don't have and account?
           <Link to="/register">Create one here</Link>
         </p>
+        <p onClick={setIsShowModal}>Forgot password</p>
+        {isShowModalForgot && (
+          <ForgotPassword openModal={isShowModalForgot} onClose={closeModal} />
+        )}
       </div>
     </div>
   );

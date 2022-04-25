@@ -15,8 +15,8 @@ const userApi = {
     const url = "/user";
     return axiosClient.post(url, data);
   },
-  update(data) {
-    const url = `/user/${data.id}`;
+  update(id, data) {
+    const url = `/user/${id}`;
     return axiosClient.patch(url, data);
   },
   remove(id) {
@@ -30,6 +30,10 @@ const userApi = {
   register(email, password, fullName) {
     const url = `/user`;
     return axiosClient.post(url, { email, password, fullName });
+  },
+  getUserWithForgot(email) {
+    const url = `/user?email=${email}`;
+    return axiosClient.get(url);
   },
 };
 

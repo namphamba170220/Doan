@@ -1,4 +1,3 @@
-import { PlusOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import React, { useEffect, useState } from "react";
 import productApi from "../../../Api/productApi";
@@ -10,7 +9,6 @@ import AdminProductCard from "../AdminproductCard/AdminProductCard";
 
 function ControlProduct() {
   const [productData, setProductData] = useState([]);
-  const [isReloadProduct, setIsReloadProduct] = useState(false);
   const [isModalAddProduct, setIsModalAddProduct] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
 
@@ -22,27 +20,17 @@ function ControlProduct() {
     setIsModalAddProduct(true);
   };
 
-  const handleReloadProduct = () => {
-    setIsReloadProduct(true);
-  };
   useEffect(() => {
-    productApi
-      .getAll()
-      .then((res) => {
-        if (res.statusText === "OK") {
-          setProductData(res.data);
-        }
-      })
-      .finally(() => {
-        setIsReloadProduct(false);
-      });
-  }, [isReloadProduct]);
+    productApi.getAll().then((res) => {
+      if (res.statusText === "OK") {
+        setProductData(res?.data);
+      }
+    });
+  }, []);
 
   return (
     <Helmet title="Quản lí thiết bị di động">
-      <Button icon={<PlusOutlined />} onClick={showModalAddNew}>
-        Add New
-      </Button>
+      <Button onClick={showModalAddNew}>Add New</Button>
       <Section>
         <SectionBody>
           <Grid col={4} mdCol={1} smCol={1} gap={1}>
@@ -59,7 +47,7 @@ function ControlProduct() {
                 color={item.colors}
                 version={item.version}
                 description={item.description}
-                onReloadProduct={handleReloadProduct}
+                setProductData={setProductData}
                 item={item}
               ></AdminProductCard>
             ))}
@@ -71,7 +59,7 @@ function ControlProduct() {
           openModal={isModalAddProduct}
           onClose={closeModal}
           productDetail={productDetail}
-          onReloadProduct={handleReloadProduct}
+          setProductData={setProductData}
         />
       )}
     </Helmet>

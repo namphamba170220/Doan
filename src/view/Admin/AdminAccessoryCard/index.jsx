@@ -2,7 +2,7 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { useSnackbar } from "notistack";
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import accessoryApi from "../../../Api/accessoryApi";
 import ConfirmPopup from "../../../components/ConfirmPopup";
 import numberWithCommas from "../../../utils/numberWithCommas";
@@ -12,29 +12,10 @@ import "./index.scss";
 const AdminAccessoryCard = (props) => {
   const [isModalEditAccessory, setIsModalEditAccessory] = useState(false);
   const [id, setId] = useState(null);
-  const [accessoryData, setAccessoryData] = useState([]);
-  const [isReloadAccessory, setIsReloadAccessory] = useState(false);
   const [accessoryDetail, setAccessoryDetail] = useState(null);
   const [openModalDeleteAccessory, setOpenModalDeleteAccessory] =
     useState(false);
   const { enqueueSnackbar } = useSnackbar();
-
-  const handleReloadAccessory = () => {
-    setIsReloadAccessory(true);
-  };
-
-  useEffect(() => {
-    accessoryApi
-      .getAll()
-      .then((res) => {
-        if (res.statusText === "OK") {
-          setAccessoryData(res.data);
-        }
-      })
-      .finally(() => {
-        setIsReloadAccessory(false);
-      });
-  }, [isReloadAccessory]);
 
   const handelDeleteAccessory = (check) => {
     if (check && id) {
@@ -43,7 +24,9 @@ const AdminAccessoryCard = (props) => {
           enqueueSnackbar("Success");
         }, 500);
         setOpenModalDeleteAccessory(false);
-        props.onReloadAccessory();
+        accessoryApi.getAll().then((res) => {
+          props.setAccessoryData(res?.data);
+        });
       });
     } else {
       setOpenModalDeleteAccessory(false);
@@ -94,7 +77,6 @@ const AdminAccessoryCard = (props) => {
           openModal={isModalEditAccessory}
           onClose={onCloseModal}
           accessoryDetail={accessoryDetail}
-          onReloadAccessory={handleReloadAccessory}
         />
       )}
       <ConfirmPopup
