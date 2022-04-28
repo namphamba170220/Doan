@@ -2,15 +2,19 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import productApi from "../../Api/productApi";
 import Button from "../../components/Button/Button";
+import { useAuthValue } from "../../contexts/AuthContext";
 import numberWithCommas from "../../utils/numberWithCommas";
 import ProductViewModal from "./ProductViewModal";
 
 const ProductCard = (props) => {
   const [isShowModalProduct, setIsShowModalProduct] = useState(false);
   const [productData, setProductData] = useState([]);
+  const { setCurrentUser } = useAuthValue();
 
   const onShowModalProduct = (id) => {
     callApi(id);
+    console.log(id);
+    console.log(setCurrentUser(id));
   };
   const closeModal = () => {
     setIsShowModalProduct(false);

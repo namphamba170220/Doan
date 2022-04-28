@@ -13,6 +13,7 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(cart);
   }, [cart]);
 
   function addToCart(newItem) {

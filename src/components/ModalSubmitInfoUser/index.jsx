@@ -35,7 +35,6 @@ function ModalSubmitInfoUser({ openModal, onClose, productCardDetai }) {
           Modal.destroyAll();
           onClose();
         }}
-        width={1000}
         footer={null}
         keyboard={true}
       >

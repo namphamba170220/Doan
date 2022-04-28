@@ -15,28 +15,32 @@ import Section, {
 import HeroSlider from "../../components/Slider/HeroSlider";
 import ProductCard from "../Product/ProductCard";
 import ProductViewModal from "../Product/ProductViewModal";
-
+import ReactLoading from "react-loading";
 const Home = () => {
   const [productData, setProductData] = useState([]);
   const [isShowModalProduct, setIsShowModalProduct] = useState(false);
   const [heroSliderData, setHeroSliderData] = useState([]);
   const [policyData, setPolicyData] = useState([]);
+  const [done, setDone] = useState(undefined);
   useEffect(() => {
-    productApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setProductData(res.data);
-      }
-    });
-    heroSliderApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setHeroSliderData(res.data);
-      }
-    });
-    policyApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setPolicyData(res.data);
-      }
-    });
+    setTimeout(() => {
+      productApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setProductData(res.data);
+        }
+      });
+      heroSliderApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setHeroSliderData(res.data);
+        }
+      });
+      policyApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setPolicyData(res.data);
+        }
+      });
+      setDone(true);
+    }, 2000);
   }, []);
 
   const closeModal = () => {
@@ -46,113 +50,118 @@ const Home = () => {
 
   return (
     <Helmet title="Trang chủ">
-      <HeroSlider
-        data={heroSliderData}
-        control={true}
-        auto={false}
-        timeOut={5000}
-      />
+      {!done ? (
+        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+      ) : (
+        <>
+          <HeroSlider
+            data={heroSliderData}
+            control={true}
+            auto={false}
+            timeOut={5000}
+          />
 
-      <Section>
-        <SectionBody>
-          <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {policyData.map((item, index) => (
-              <Link key={index} to="/contact">
-                <PolicyCard
-                  name={item.name}
-                  description={item.description}
-                  icon={item.icon}
+          <Section>
+            <SectionBody>
+              <Grid col={4} mdCol={2} smCol={1} gap={20}>
+                {policyData.map((item, index) => (
+                  <Link key={index} to="/contact">
+                    <PolicyCard
+                      name={item.name}
+                      description={item.description}
+                      icon={item.icon}
+                    />
+                  </Link>
+                ))}
+              </Grid>
+            </SectionBody>
+          </Section>
+
+          <Section>
+            <SectionBody>
+              <Link to="/catalog">
+                <img
+                  src={banner2}
+                  alt=""
+                  style={{ width: "100%", height: "500px" }}
                 />
               </Link>
-            ))}
-          </Grid>
-        </SectionBody>
-      </Section>
+            </SectionBody>
+          </Section>
 
-      <Section>
-        <SectionBody>
-          <Link to="/catalog">
-            <img
-              src={banner2}
-              alt=""
-              style={{ width: "100%", height: "500px" }}
+          <Section>
+            <SectionTitle>Top sản phẩm bán chạy trong tuần</SectionTitle>
+            <SectionBody>
+              <Grid col={4} mdCol={2} smCol={1} gap={20}>
+                {productData.slice(4, 8).map((item, index) => (
+                  <ProductCard
+                    id={item.id}
+                    key={index}
+                    img01={item.image01}
+                    img02={item.image02}
+                    name={item.title}
+                    price={Number(item.price)}
+                    slug={item.slug}
+                  />
+                ))}
+              </Grid>
+            </SectionBody>
+          </Section>
+
+          <Section>
+            <SectionTitle>sản phẩm mới</SectionTitle>
+            <SectionBody>
+              <Grid col={4} mdCol={2} smCol={1} gap={20}>
+                {productData.slice(0, 6).map((item, index) => (
+                  <ProductCard
+                    id={item.id}
+                    key={index}
+                    img01={item.image01}
+                    img02={item.image02}
+                    name={item.title}
+                    price={Number(item.price)}
+                    slug={item.slug}
+                  />
+                ))}
+              </Grid>
+            </SectionBody>
+          </Section>
+
+          <Section>
+            <SectionBody>
+              <Link to="/catalog">
+                <img src={banner} alt="" style={{ width: "100%" }} />
+              </Link>
+            </SectionBody>
+          </Section>
+
+          <Section>
+            <SectionTitle>Phổ biến</SectionTitle>
+            <SectionBody>
+              <Grid col={4} mdCol={2} smCol={1} gap={20}>
+                {productData.slice(6, 14).map((item, index) => (
+                  <ProductCard
+                    id={item.id}
+                    key={index}
+                    img01={item.image01}
+                    img02={item.image02}
+                    name={item.title}
+                    price={Number(item.price)}
+                    slug={item.slug}
+                  />
+                ))}
+              </Grid>
+            </SectionBody>
+          </Section>
+          {isShowModalProduct && (
+            <ProductViewModal
+              openModal={isShowModalProduct}
+              onClose={closeModal}
             />
-          </Link>
-        </SectionBody>
-      </Section>
-
-      <Section>
-        <SectionTitle>Top sản phẩm bán chạy trong tuần</SectionTitle>
-        <SectionBody>
-          <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(4, 8).map((item, index) => (
-              <ProductCard
-                id={item.id}
-                key={index}
-                img01={item.image01}
-                img02={item.image02}
-                name={item.title}
-                price={Number(item.price)}
-                slug={item.slug}
-              />
-            ))}
-          </Grid>
-        </SectionBody>
-      </Section>
-
-      <Section>
-        <SectionTitle>sản phẩm mới</SectionTitle>
-        <SectionBody>
-          <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(0, 6).map((item, index) => (
-              <ProductCard
-                id={item.id}
-                key={index}
-                img01={item.image01}
-                img02={item.image02}
-                name={item.title}
-                price={Number(item.price)}
-                slug={item.slug}
-              />
-            ))}
-          </Grid>
-        </SectionBody>
-      </Section>
-
-      <Section>
-        <SectionBody>
-          <Link to="/catalog">
-            <img src={banner} alt="" style={{ width: "100%" }} />
-          </Link>
-        </SectionBody>
-      </Section>
-
-      <Section>
-        <SectionTitle>Phổ biến</SectionTitle>
-        <SectionBody>
-          <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.slice(6, 14).map((item, index) => (
-              <ProductCard
-                id={item.id}
-                key={index}
-                img01={item.image01}
-                img02={item.image02}
-                name={item.title}
-                price={Number(item.price)}
-                slug={item.slug}
-              />
-            ))}
-          </Grid>
-        </SectionBody>
-      </Section>
-      {isShowModalProduct && (
-        <ProductViewModal
-          openModal={isShowModalProduct}
-          onClose={closeModal}
-        />
+          )}
+        </>
       )}
     </Helmet>
   );
 };
-
 export default Home;

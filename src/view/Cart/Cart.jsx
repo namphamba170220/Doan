@@ -6,14 +6,14 @@ import Helmet from "../../components/Helmet/Helmet";
 import ModalSubmitInfoUser from "../../components/ModalSubmitInfoUser";
 import { CartContext } from "../../contexts/CartContext";
 import numberWithCommas from "../../utils/numberWithCommas";
-
+import ReactLoading from "react-loading";
 const Cart = () => {
   const cart = useContext(CartContext);
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [cartProducts, setCartProducts] = useState([]);
   const [isModalInfoUser, setIsModalInfoUser] = useState(false);
-
+  const [done, setDone] = useState(undefined);
   const onShowmodalInfoUser = () => {
     if (cart.cartItems.length === 0) {
       alert("Vui long mua san pham de thanh toan");
@@ -26,52 +26,61 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    setCartProducts(cart.cartItems);
+    setTimeout(() => {
+      setCartProducts(cart.cartItems);
 
-    const total = cart.cartItems.reduce((currentItem, nextItem) => {
-      return currentItem + nextItem.quantity;
-    }, 0);
-    const price = cart.cartItems.reduce((currentItem, nextItem) => {
-      return currentItem + parseFloat(nextItem.price) * nextItem.quantity;
-    }, 0);
-    setTotalProducts(total);
-    setTotalPrice(price);
+      const total = cart.cartItems.reduce((currentItem, nextItem) => {
+        return currentItem + nextItem.quantity;
+      }, 0);
+      const price = cart.cartItems.reduce((currentItem, nextItem) => {
+        return currentItem + parseFloat(nextItem.price) * nextItem.quantity;
+      }, 0);
+      setTotalProducts(total);
+      setTotalPrice(price);
+      setDone(true);
+    }, 2000);
   }, [cart]);
 
   useEffect(() => {}, [cartProducts]);
 
   return (
     <Helmet title="Giỏ hàng">
-      <div className="cart">
-        <div className="cart__info">
-          <div className="cart__info__txt">
-            <p>Bạn đang có {totalProducts} sản phẩm trong giỏ hàng</p>
-            <div className="cart__info__txt__price">
-              <span>Thành tiền:</span>
-              <span>{numberWithCommas(Number(totalPrice))}</span>
+      {!done ? (
+        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+      ) : (
+        <>
+          <div className="cart">
+            <div className="cart__info">
+              <div className="cart__info__txt">
+                <p>Bạn đang có {totalProducts} sản phẩm trong giỏ hàng</p>
+                <div className="cart__info__txt__price">
+                  <span>Thành tiền:</span>
+                  <span>{numberWithCommas(Number(totalPrice))}</span>
+                </div>
+              </div>
+              <div className="cart__info__btn">
+                <Button size="block" onClick={onShowmodalInfoUser}>
+                  Đặt hàng
+                </Button>
+                <Link to="/catalog">
+                  <Button size="block">Tiếp tục mua hàng</Button>
+                </Link>
+              </div>
+            </div>
+            <div className="cart__list">
+              {cartProducts.map((item, index) => (
+                <CartItem item={item} key={item.id} index={index} />
+              ))}
             </div>
           </div>
-          <div className="cart__info__btn">
-            <Button size="block" onClick={onShowmodalInfoUser}>
-              Đặt hàng
-            </Button>
-            <Link to="/catalog">
-              <Button size="block">Tiếp tục mua hàng</Button>
-            </Link>
-          </div>
-        </div>
-        <div className="cart__list">
-          {cartProducts.map((item, index) => (
-            <CartItem item={item} key={item.id} index={index} />
-          ))}
-        </div>
-      </div>
-      {isModalInfoUser && (
-        <ModalSubmitInfoUser
-          openModal={isModalInfoUser}
-          onClose={closeModal}
-          productCardDetai={cartProducts}
-        />
+          {isModalInfoUser && (
+            <ModalSubmitInfoUser
+              openModal={isModalInfoUser}
+              onClose={closeModal}
+              productCardDetai={cartProducts}
+            />
+          )}
+        </>
       )}
     </Helmet>
   );

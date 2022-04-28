@@ -7,32 +7,37 @@ import categoryApi from "../../Api/categoryApi";
 import productApi from "../../Api/productApi";
 import colorsApi from "../../Api/colorsApi";
 import versionApi from "../../Api/versionApi";
+import ReactLoading from "react-loading";
 const Catalog = () => {
   const [productData, setProductData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [colorData, setColorData] = useState([]);
   const [versionData, setVersionData] = useState([]);
+  const [done, setDone] = useState(undefined);
   useEffect(() => {
-    productApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setProductData(res.data);
-      }
-    });
-    categoryApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setCategoryData(res.data);
-      }
-    });
-    colorsApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setColorData(res.data);
-      }
-    });
-    versionApi.getAll().then((res) => {
-      if (res.statusText === "OK") {
-        setVersionData(res.data);
-      }
-    });
+    setTimeout(() => {
+      productApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setProductData(res.data);
+        }
+      });
+      categoryApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setCategoryData(res.data);
+        }
+      });
+      colorsApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setColorData(res.data);
+        }
+      });
+      versionApi.getAll().then((res) => {
+        if (res.statusText === "OK") {
+          setVersionData(res.data);
+        }
+      });
+      setDone(true);
+    }, 2000);
   }, []);
 
   const initFilter = {
@@ -123,93 +128,97 @@ const Catalog = () => {
 
   return (
     <Helmet title="Sản phẩm">
-      <div className="catalog">
-        <div className="catalog__filter" ref={filterRef}>
-          <div
-            className="catalog__filter__close"
-            onClick={() => showHideFilter()}
-          >
-            <i className="bx bx-left-arrow-alt"></i>
-          </div>
-          <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">
-              Danh mục sản phẩm
+      {!done ? (
+        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+      ) : (
+        <div className="catalog">
+          <div className="catalog__filter" ref={filterRef}>
+            <div
+              className="catalog__filter__close"
+              onClick={() => showHideFilter()}
+            >
+              <i className="bx bx-left-arrow-alt"></i>
             </div>
-            <div className="catalog__filter__widget__content">
-              {categoryData.map((item, index) => (
-                <div
-                  key={index}
-                  className="catalog__filter__widget__content__item"
-                >
-                  <CheckBox
-                    label={item.display}
-                    onChange={(input) =>
-                      filterSelect("CATEGORY", input.checked, item)
-                    }
-                    checked={filter.category.includes(item.categoryslug)}
-                  />
-                </div>
-              ))}
+            <div className="catalog__filter__widget">
+              <div className="catalog__filter__widget__title">
+                Danh mục sản phẩm
+              </div>
+              <div className="catalog__filter__widget__content">
+                {categoryData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="catalog__filter__widget__content__item"
+                  >
+                    <CheckBox
+                      label={item.display}
+                      onChange={(input) =>
+                        filterSelect("CATEGORY", input.checked, item)
+                      }
+                      checked={filter.category.includes(item.categoryslug)}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">Màu sắc</div>
-            <div className="catalog__filter__widget__content">
-              {colorData.map((item, index) => (
-                <div
-                  key={index}
-                  className="catalog__filter__widget__content__item"
-                >
-                  <CheckBox
-                    label={item.display}
-                    onChange={(input) =>
-                      filterSelect("COLOR", input.checked, item)
-                    }
-                    checked={filter.color.includes(item.color)}
-                  />
-                </div>
-              ))}
+            <div className="catalog__filter__widget">
+              <div className="catalog__filter__widget__title">Màu sắc</div>
+              <div className="catalog__filter__widget__content">
+                {colorData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="catalog__filter__widget__content__item"
+                  >
+                    <CheckBox
+                      label={item.display}
+                      onChange={(input) =>
+                        filterSelect("COLOR", input.checked, item)
+                      }
+                      checked={filter.color.includes(item.color)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="catalog__filter__widget">
+              <div className="catalog__filter__widget__title">Phiên bản</div>
+              <div className="catalog__filter__widget__content">
+                {versionData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="catalog__filter__widget__content__item"
+                  >
+                    <CheckBox
+                      label={item.display}
+                      onChange={(input) =>
+                        filterSelect("VERSION", input.checked, item)
+                      }
+                      checked={filter.version.includes(item.version)}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="catalog__filter__widget">
+              <div className="catalog__filter__widget__content">
+                <Button size="sm" onClick={clearFilter}>
+                  Xóa bộ lọc
+                </Button>
+              </div>
             </div>
           </div>
-
-          <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__title">Phiên bản</div>
-            <div className="catalog__filter__widget__content">
-              {versionData.map((item, index) => (
-                <div
-                  key={index}
-                  className="catalog__filter__widget__content__item"
-                >
-                  <CheckBox
-                    label={item.display}
-                    onChange={(input) =>
-                      filterSelect("VERSION", input.checked, item)
-                    }
-                    checked={filter.version.includes(item.version)}
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="catalog__filter__toggle">
+            <Button size="sm" onClick={() => showHideFilter()}>
+              Bộ lọc
+            </Button>
           </div>
-
-          <div className="catalog__filter__widget">
-            <div className="catalog__filter__widget__content">
-              <Button size="sm" onClick={clearFilter}>
-                Xóa bộ lọc
-              </Button>
-            </div>
+          <div className="catalog__content">
+            <InfinityList data={products} />
           </div>
         </div>
-        <div className="catalog__filter__toggle">
-          <Button size="sm" onClick={() => showHideFilter()}>
-            Bộ lọc
-          </Button>
-        </div>
-        <div className="catalog__content">
-          <InfinityList data={products} />
-        </div>
-      </div>
+      )}
     </Helmet>
   );
 };

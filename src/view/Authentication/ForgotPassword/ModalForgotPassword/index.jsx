@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import userApi from "../../../../Api/userApi";
 import emailjs from "emailjs-com";
+
 function ModalForgotPassword() {
   const { email } = useParams();
   const [input, setInput] = useState("");
@@ -39,14 +40,14 @@ function ModalForgotPassword() {
     });
   };
   return (
-    <>
+    <div className="box">
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
       <button onClick={hanldeSubmit}>Submit</button>
-    </>
+    </div>
   );
 }
 

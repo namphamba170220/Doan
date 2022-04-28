@@ -5,12 +5,14 @@ import React, { useEffect, useState } from "react";
 import orderApi from "../../Api/orderApi";
 import ConfirmPopup from "../../components/ConfirmPopup/index";
 import ModalOrder from "./ModalOrder";
+import ReactLoading from "react-loading";
 function Order() {
   const [productList, setProductList] = useState(null);
   const [isShowModal, setIsShowModal] = useState(false);
   const [openModalDeleteProjects, setOpenModalDeleteProjects] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const [id, setId] = useState(null);
+  const [done, setDone] = useState(undefined);
 
   const onShowModal = (item) => {
     return () => {
@@ -56,23 +58,25 @@ function Order() {
 
   useEffect(() => {}, [productList]);
   useEffect(() => {
-    orderApi.getAll().then((res) => {
-      const { data } = res;
+    setTimeout(() => {
+      orderApi.getAll().then((res) => {
+        const { data } = res;
+        const finalData = data.map((item) => {
+          const { productCardDetai } = item;
 
-      const finalData = data.map((item) => {
-        const { productCardDetai } = item;
-
-        const resuilt = productCardDetai.map((CardDetai) => {
-          return {
-            ...CardDetai,
-            ...item.infoUserData,
-            id: item.id,
-          };
+          const resuilt = productCardDetai.map((CardDetai) => {
+            return {
+              ...CardDetai,
+              ...item.infoUserData,
+              id: item.id,
+            };
+          });
+          return resuilt;
         });
-        return resuilt;
+        setProductList(finalData.flat());
       });
-      setProductList(finalData.flat());
-    });
+      setDone(true);
+    }, 2000);
   }, []);
 
   const columns = [
@@ -197,14 +201,21 @@ function Order() {
 
   return (
     <>
-      <Table sticky={true} columns={columns} dataSource={productList} />
-      {isShowModal && (
-        <ModalOrder openModal={isShowModal} onClose={closeModal} />
+      {!done ? (
+        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+      ) : (
+        <>
+          {" "}
+          <Table sticky={true} columns={columns} dataSource={productList} />
+          {isShowModal && (
+            <ModalOrder openModal={isShowModal} onClose={closeModal} />
+          )}
+          <ConfirmPopup
+            onConfirm={handelDeleteProduct}
+            visibleModal={openModalDeleteProjects}
+          />
+        </>
       )}
-      <ConfirmPopup
-        onConfirm={handelDeleteProduct}
-        visibleModal={openModalDeleteProjects}
-      />
     </>
   );
 }

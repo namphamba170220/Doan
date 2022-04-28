@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import userApi from "../../../Api/userApi";
 import emailjs from "emailjs-com";
-
+import "./index.scss";
 function ForgotPassword({ openModal, onClose }) {
   const [email, setEmail] = useState("");
   const naigate = useNavigate();
