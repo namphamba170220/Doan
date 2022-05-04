@@ -46,7 +46,14 @@ const Cart = () => {
   return (
     <Helmet title="Giỏ hàng">
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <div className="loading">
+          <ReactLoading
+            type={"bubbles"}
+            color={"blue"}
+            height={100}
+            width={100}
+          />
+        </div>
       ) : (
         <>
           <div className="cart">

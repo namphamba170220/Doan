@@ -14,7 +14,7 @@ const ProductCard = (props) => {
   const onShowModalProduct = (id) => {
     callApi(id);
     console.log(id);
-    console.log(setCurrentUser(id));
+    console.log(setCurrentUser);
   };
   const closeModal = () => {
     setIsShowModalProduct(false);

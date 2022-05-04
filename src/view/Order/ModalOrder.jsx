@@ -3,9 +3,13 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { CheckCircleOutlined } from "@ant-design/icons";
 import "./index.scss";
-function ModalOrder({ openModal, onClose }) {
+import orderApi from "../../Api/orderApi";
+import { useSnackbar } from "notistack";
+function ModalOrder({ openModal, onClose, dataOrder, fullData }) {
   const form = useRef();
-
+  const { enqueueSnackbar } = useSnackbar();
+  const userId = dataOrder.id;
+  const fullProductData = fullData.find((data) => data.id === userId);
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -18,6 +22,16 @@ function ModalOrder({ openModal, onClose }) {
       .then(
         (result) => {
           console.log(result.text);
+          enqueueSnackbar("Success");
+          console.log(fullProductData, "fullProductData");
+          orderApi
+            .update({
+              ...fullProductData,
+              infoUserData: { ...fullProductData.infoUserData, status: true },
+            })
+            .then((res) => {
+              console.log("DONE");
+            });
         },
         (error) => {
           console.log(error.text);

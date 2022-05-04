@@ -8,6 +8,7 @@ import banner2 from "../../assets/images/banner2.jpg";
 import Grid from "../../components/Grid/Grid";
 import Helmet from "../../components/Helmet/Helmet";
 import PolicyCard from "../../components/Policy/PolicyCard";
+import "./index.scss";
 import Section, {
   SectionBody,
   SectionTitle,
@@ -51,7 +52,14 @@ const Home = () => {
   return (
     <Helmet title="Trang chủ">
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <div className="loading">
+          <ReactLoading
+            type={"bubbles"}
+            color={"blue"}
+            height={100}
+            width={100}
+          />
+        </div>
       ) : (
         <>
           <HeroSlider

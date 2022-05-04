@@ -36,7 +36,7 @@ function ControlAccessory() {
         <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
       ) : (
         <>
-          <Button onClick={showModalAddNew}>Add New</Button>
+          <Button onClick={showModalAddNew}>Thêm mới</Button>
           <Section>
             <SectionBody>
               <Grid col={4} mdCol={1} smCol={1} gap={1}>

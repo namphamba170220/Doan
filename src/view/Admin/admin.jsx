@@ -11,10 +11,10 @@ export default function Admin() {
     <Helmet title="Admin">
       <>
         <Tabs destroyInactiveTabPane={true} defaultActiveKey="1">
-          <TabPane tab="Products" key="1">
+          <TabPane tab="Điện thoại" key="1">
             <ControlProduct />
           </TabPane>
-          <TabPane tab="Accessory" key="2">
+          <TabPane tab="Phụ kiện" key="2">
             <ControlAccessory />
           </TabPane>
         </Tabs>

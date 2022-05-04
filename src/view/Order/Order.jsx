@@ -1,5 +1,5 @@
 import { CheckSquareOutlined, DeleteOutlined } from "@ant-design/icons";
-import { Button, Table, Tooltip } from "antd";
+import { Button, Table, Tag, Tooltip } from "antd";
 import { useSnackbar } from "notistack";
 import React, { useEffect, useState } from "react";
 import orderApi from "../../Api/orderApi";
@@ -12,10 +12,13 @@ function Order() {
   const [openModalDeleteProjects, setOpenModalDeleteProjects] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const [id, setId] = useState(null);
+  const [dataOrder, setDataOrder] = useState(null);
   const [done, setDone] = useState(undefined);
 
   const onShowModal = (item) => {
     return () => {
+      console.log(item);
+      setDataOrder(item);
       setIsShowModal(true);
     };
   };
@@ -56,24 +59,30 @@ function Order() {
     }
   };
 
+  const flattenData = (data) => {
+    const finalData = data?.map((item) => {
+      const { productCardDetai } = item;
+
+      const resuilt = productCardDetai?.map((CardDetai) => {
+        return {
+          ...CardDetai,
+          ...item.infoUserData,
+          id: item.id,
+        };
+      });
+      return resuilt;
+    });
+    return finalData?.flat();
+  };
+
   useEffect(() => {}, [productList]);
   useEffect(() => {
     setTimeout(() => {
       orderApi.getAll().then((res) => {
+        console.log(res);
         const { data } = res;
-        const finalData = data.map((item) => {
-          const { productCardDetai } = item;
-
-          const resuilt = productCardDetai.map((CardDetai) => {
-            return {
-              ...CardDetai,
-              ...item.infoUserData,
-              id: item.id,
-            };
-          });
-          return resuilt;
-        });
-        setProductList(finalData.flat());
+        // const finalData = flattenData(data);
+        setProductList(data);
       });
       setDone(true);
     }, 2000);
@@ -172,6 +181,22 @@ function Order() {
       ),
     },
     {
+      title: "Trạng thái đơn hàng",
+      key: "status",
+      dataIndex: "status",
+      render: (text, item) => {
+        console.log(item.status);
+        return (
+          <Tag
+            style={{ width: 80, textAlign: "center" }}
+            color={item.status ? "green" : "red"}
+          >
+            {item.status ? "Assigned" : "Unassigned"}
+          </Tag>
+        );
+      },
+    },
+    {
       title: "Action",
       key: "action",
       width: "150",
@@ -206,9 +231,18 @@ function Order() {
       ) : (
         <>
           {" "}
-          <Table sticky={true} columns={columns} dataSource={productList} />
+          <Table
+            sticky={true}
+            columns={columns}
+            dataSource={flattenData(productList)}
+          />
           {isShowModal && (
-            <ModalOrder openModal={isShowModal} onClose={closeModal} />
+            <ModalOrder
+              openModal={isShowModal}
+              onClose={closeModal}
+              dataOrder={dataOrder}
+              fullData={productList}
+            />
           )}
           <ConfirmPopup
             onConfirm={handelDeleteProduct}

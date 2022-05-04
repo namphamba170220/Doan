@@ -12,6 +12,7 @@ function ModalSubmitInfoUser({ openModal, onClose, productCardDetai }) {
       email: data.email,
       address: data.address,
       phoneNumber: data.phoneNumber,
+      status: false,
     };
     const postOrder = {
       infoUserData,

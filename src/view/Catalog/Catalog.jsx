@@ -129,7 +129,14 @@ const Catalog = () => {
   return (
     <Helmet title="Sản phẩm">
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <div className="loading">
+          <ReactLoading
+            type={"bubbles"}
+            color={"blue"}
+            height={100}
+            width={100}
+          />
+        </div>
       ) : (
         <div className="catalog">
           <div className="catalog__filter" ref={filterRef}>
