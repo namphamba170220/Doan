@@ -36,7 +36,6 @@ const Resgister = () => {
         if (!isHaveAccountWithSameEmail) {
           if (validatePassword()) {
             userApi.register(email, password, fullName).then((res) => {
-              console.log(res);
               const { data } = res;
               if (data.length === 0) {
                 setError("Sai mật khẩu");

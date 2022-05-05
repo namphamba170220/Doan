@@ -37,6 +37,7 @@ const Catalog = () => {
         }
       });
       setDone(true);
+      return () => {};
     }, 2000);
   }, []);
 

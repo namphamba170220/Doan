@@ -8,12 +8,12 @@ import { ButtonSubmission } from "../../../components/ButtonSubmission/index";
 import { SubTitle } from "../../../components/SubTitle";
 const { TextArea } = Input;
 const { Option } = Select;
-const AddProduct = ({ openModal, onClose, productDetail, setProductData }) => {
+const AddProduct = ({ openModal, onClose, productDetail, onSuccess }) => {
   const [form] = Form.useForm();
   const [categoryData, setCategoryData] = useState([]);
   const [colorData, setColorData] = useState([]);
   const [versionData, setVersionData] = useState([]);
-
+  console.log(onSuccess);
   const onSubmit = (data) => {
     const productData = {
       id: data?.id,
@@ -32,21 +32,18 @@ const AddProduct = ({ openModal, onClose, productDetail, setProductData }) => {
         .update({ ...productData, id: productDetail.id })
         .then((res) => {
           onClose();
-          productApi.getAll().then((res) => {
-            setProductData(res?.data);
-          });
+          onSuccess();
         })
         .catch((error) => {
           console.log(`error`, error);
         });
     } else {
+      console.log(productData);
       productApi
         .add(productData)
         .then((res) => {
           onClose();
-          productApi.getAll().then((res) => {
-            setProductData(res?.data);
-          });
+          onSuccess();
         })
         .catch((error) => {
           console.log(`error`, error);

@@ -33,7 +33,12 @@ function ControlAccessory() {
   return (
     <Helmet title="Quản lí phụ kiện">
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <ReactLoading
+          type={"bubbles"}
+          color={"blue"}
+          height={100}
+          width={100}
+        />
       ) : (
         <>
           <Button onClick={showModalAddNew}>Thêm mới</Button>

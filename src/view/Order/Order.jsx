@@ -17,7 +17,6 @@ function Order() {
 
   const onShowModal = (item) => {
     return () => {
-      console.log(item);
       setDataOrder(item);
       setIsShowModal(true);
     };
@@ -35,24 +34,16 @@ function Order() {
   const handelDeleteProduct = (check) => {
     if (check && id) {
       orderApi.remove(id).then((res) => {
-        setTimeout(() => {
-          enqueueSnackbar("Success");
-        }, 500);
-        setOpenModalDeleteProjects(false);
-        orderApi.getAll().then((res) => {
-          const { data } = res;
-          const finalData = data.map((item) => {
-            const { productCardDetai } = item;
-            const resuilt = productCardDetai.map((CardDetai) => {
-              return {
-                ...item.infoUserData,
-                ...CardDetai,
-              };
-            });
-            return resuilt;
+        if (res) {
+          orderApi.getAll().then((res) => {
+            const { data } = res;
+            setProductList(data);
           });
-          setProductList(finalData.flat());
-        });
+          setTimeout(() => {
+            enqueueSnackbar("Success");
+          }, 500);
+          setOpenModalDeleteProjects(false);
+        }
       });
     } else {
       setOpenModalDeleteProjects(false);
@@ -79,12 +70,11 @@ function Order() {
   useEffect(() => {
     setTimeout(() => {
       orderApi.getAll().then((res) => {
-        console.log(res);
         const { data } = res;
-        // const finalData = flattenData(data);
         setProductList(data);
       });
       setDone(true);
+      return () => {};
     }, 2000);
   }, []);
 
@@ -185,13 +175,12 @@ function Order() {
       key: "status",
       dataIndex: "status",
       render: (text, item) => {
-        console.log(item.status);
         return (
           <Tag
             style={{ width: 80, textAlign: "center" }}
-            color={item.status ? "green" : "red"}
+            color={item?.status ? "green" : "red"}
           >
-            {item.status ? "Assigned" : "Unassigned"}
+            {item?.status ? "Assigned" : "Unassigned"}
           </Tag>
         );
       },
@@ -223,11 +212,15 @@ function Order() {
       ),
     },
   ];
-
   return (
     <>
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <ReactLoading
+          type={"bubbles"}
+          color={"blue"}
+          height={100}
+          width={100}
+        />
       ) : (
         <>
           {" "}
@@ -242,6 +235,7 @@ function Order() {
               onClose={closeModal}
               dataOrder={dataOrder}
               fullData={productList}
+              setProductList={setProductList}
             />
           )}
           <ConfirmPopup

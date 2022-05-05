@@ -23,9 +23,7 @@ const AdminProductCard = (props) => {
           enqueueSnackbar("Success");
         }, 500);
         setOpenModalDeleteProduct(false);
-        productApi.getAll().then((res) => {
-          props.setProductData(res?.data);
-        });
+        props.onSuccess();
       });
     } else {
       setOpenModalDeleteProduct(false);
@@ -78,6 +76,7 @@ const AdminProductCard = (props) => {
           openModal={isModalEditProduct}
           onClose={onCloseModal}
           productDetail={productDetail}
+          onSuccess={props.onSuccess}
         />
       )}
       <ConfirmPopup

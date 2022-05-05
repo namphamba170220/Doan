@@ -4,7 +4,6 @@ import { CartContext } from "../../contexts/CartContext";
 import numberWithCommas from "../../utils/numberWithCommas";
 
 const CartItem = (props) => {
-  console.log(props);
   const cart = useContext(CartContext);
   const itemRef = useRef(null);
   const [item, setItem] = useState([props.item]);

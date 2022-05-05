@@ -5,7 +5,13 @@ import { CheckCircleOutlined } from "@ant-design/icons";
 import "./index.scss";
 import orderApi from "../../Api/orderApi";
 import { useSnackbar } from "notistack";
-function ModalOrder({ openModal, onClose, dataOrder, fullData }) {
+function ModalOrder({
+  openModal,
+  onClose,
+  dataOrder,
+  fullData,
+  setProductList,
+}) {
   const form = useRef();
   const { enqueueSnackbar } = useSnackbar();
   const userId = dataOrder.id;
@@ -22,15 +28,19 @@ function ModalOrder({ openModal, onClose, dataOrder, fullData }) {
       .then(
         (result) => {
           console.log(result.text);
-          enqueueSnackbar("Success");
-          console.log(fullProductData, "fullProductData");
           orderApi
             .update({
               ...fullProductData,
               infoUserData: { ...fullProductData.infoUserData, status: true },
             })
             .then((res) => {
-              console.log("DONE");
+              setTimeout(() => {
+                enqueueSnackbar("Success");
+              }, 500);
+              console.log("done");
+              orderApi.getAll().then((res) => {
+                setProductList(res?.data);
+              });
             });
         },
         (error) => {

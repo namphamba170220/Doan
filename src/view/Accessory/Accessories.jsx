@@ -30,6 +30,7 @@ const Accessories = () => {
         }
       });
       setDone(true);
+      return () => {};
     }, 2000);
   }, []);
 

@@ -49,7 +49,7 @@ const AccessoryView = (props) => {
         img01: props.defaultValue.image01,
         title: props.defaultValue.title,
         slug: props.defaultValue.slug,
-        color: colorData,
+        color: color,
         price: props.defaultValue.price,
         quantity: quantity,
       };
@@ -67,7 +67,7 @@ const AccessoryView = (props) => {
         img01: props.defaultValue.image01,
         title: props.defaultValue.title,
         slug: props.defaultValue.slug,
-        color: colorData,
+        color: color,
         price: props.defaultValue.price,
         quantity: quantity,
       };

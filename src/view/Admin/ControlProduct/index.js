@@ -21,6 +21,12 @@ function ControlProduct() {
     setIsModalAddProduct(true);
   };
 
+  const onModalSuccess = () => {
+    productApi.getAll().then((res) => {
+      setProductData(res?.data);
+    });
+  };
+
   useEffect(() => {
     setTimeout(() => {
       productApi.getAll().then((res) => {
@@ -35,7 +41,12 @@ function ControlProduct() {
   return (
     <Helmet title="Quản lí thiết bị di động">
       {!done ? (
-        <ReactLoading type={"balls"} color={"blue"} height={100} width={100} />
+        <ReactLoading
+          type={"bubbles"}
+          color={"blue"}
+          height={100}
+          width={100}
+        />
       ) : (
         <>
           <Button onClick={showModalAddNew}>Thêm mới</Button>
@@ -55,7 +66,7 @@ function ControlProduct() {
                     color={item.colors}
                     version={item.version}
                     description={item.description}
-                    setProductData={setProductData}
+                    onSuccess={onModalSuccess}
                     item={item}
                   ></AdminProductCard>
                 ))}
@@ -67,7 +78,7 @@ function ControlProduct() {
               openModal={isModalAddProduct}
               onClose={closeModal}
               productDetail={productDetail}
-              setProductData={setProductData}
+              onSuccess={onModalSuccess}
               setDone={setDone}
             />
           )}
