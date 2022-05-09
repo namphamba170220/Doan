@@ -12,6 +12,7 @@ function ControlProduct() {
   const [isModalAddProduct, setIsModalAddProduct] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
   const [done, setDone] = useState(undefined);
+  const [totalProducts, setTotalProducts] = useState(0);
 
   const closeModal = () => {
     setIsModalAddProduct(false);
@@ -24,6 +25,7 @@ function ControlProduct() {
   const onModalSuccess = () => {
     productApi.getAll().then((res) => {
       setProductData(res?.data);
+      setTotalProducts(res?.data.length);
     });
   };
 
@@ -32,6 +34,7 @@ function ControlProduct() {
       productApi.getAll().then((res) => {
         if (res.statusText === "OK") {
           setProductData(res?.data);
+          setTotalProducts(res?.data.length);
         }
       });
       setDone(true);
@@ -50,6 +53,7 @@ function ControlProduct() {
       ) : (
         <>
           <Button onClick={showModalAddNew}>Thêm mới</Button>
+          <div>Tổng số sản phẩm còn trong kho : {totalProducts}</div>
           <Section>
             <SectionBody>
               <Grid col={4} mdCol={1} smCol={1} gap={1}>

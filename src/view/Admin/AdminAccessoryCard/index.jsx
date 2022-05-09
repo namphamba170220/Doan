@@ -77,6 +77,7 @@ const AdminAccessoryCard = (props) => {
           openModal={isModalEditAccessory}
           onClose={onCloseModal}
           accessoryDetail={accessoryDetail}
+          onSuccess={props.onSuccess}
         />
       )}
       <ConfirmPopup

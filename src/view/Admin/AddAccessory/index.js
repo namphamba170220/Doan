@@ -12,6 +12,7 @@ const AddAccessory = ({
   onClose,
   accessoryDetail,
   setAccessoryData,
+  onSuccess,
 }) => {
   const [form] = Form.useForm();
   const [categoryAccessoryData, setCategoryAccessoryData] = useState([]);
@@ -34,9 +35,7 @@ const AddAccessory = ({
         .update({ ...AccessoryData, id: accessoryDetail?.id })
         .then((res) => {
           onClose();
-          accessoryApi.getAll().then((res) => {
-            setAccessoryData(res?.data);
-          });
+          onSuccess();
         })
         .catch((error) => {
           console.log(`error`, error);
@@ -46,9 +45,7 @@ const AddAccessory = ({
         .add(AccessoryData)
         .then((res) => {
           onClose();
-          accessoryApi.getAll().then((res) => {
-            setAccessoryData(res?.data);
-          });
+          onSuccess();
         })
         .catch((error) => {
           console.log(`error`, error);

@@ -14,13 +14,6 @@
       "password": "123456",
       "fullName": "Phạm Bá Nam",
       "codeResetPass": "ba5iZ"
-    },
-    {
-      "email": "phambanamhaui@gmail.com",
-      "password": "12345678",
-      "fullName": "afafafafa",
-      "id": 3,
-      "codeResetPass": "ofVzk"
     }
   ],
   "category": [
@@ -37,7 +30,7 @@
     {
       "id": 3,
       "display": "Hãng khác",
-      "categoryslug": "hang_khac"
+      "categoryslug": "hangkhac"
     }
   ],
   "categoryAccessory": [
@@ -62,21 +55,18 @@
       "id": 1,
       "title": "Điện thoại di động Apple iPhone 13 Pro Max - 256GB - Chính hãng VN/A",
       "description": "Apple đã chính thức ra mắt dòng iPhone 2021 với tên gọi iPhone 13 Series. Trong đó iPhone 13 Pro Max là phiên bản cao cấp nhất với màn hình lớn, tốc độ làm tươi 120Hz và dung lượng lưu trữ lên tới 1TB.",
-      "color": "blue",
-      "path": "/catalog/iphone-01"
+      "color": "blue"
     },
     {
       "id": 2,
       "title": "Samsung Galaxy S22 Ultra (8GB - 128GB)",
       "description": "Đúng như theo các đồn đoán trước đó, mẫu flagship mới của Samsung được ra mắt với tên gọi là Galaxy S22 Ultra. Mẫu điện thoại cao cấp đến từ Samsung này có nhiều thay đổi trong thiết kế và cấu hình.",
-      "path": "/catalog/samsung-07",
       "color": "pink"
     },
     {
       "id": 3,
       "title": "OPPO Reno6 5G",
       "description": "Tiếp theo phần ra mắt của series Reno 5 thì Oppo lại chuẩn bị trình làng mẫu smartphone mới nhất mang tên Reno6. Thiết kế sang trọng cấu hình mạnh mẽ với chipset Dimensity 900, OPPO Reno6 sẽ mang đến cho người dùng trải nghiệm mượt mà.Ngoài ra, bạn cũng có thể tham khảo thêm điện thoại OPPO Reno7 Z vừa ra mắt với nhiều cải tiến về thiết kế lẫn camera và cấu hình.Điện thoại OPPO Reno 6 (5G) là sản phẩm của công nghệ thiết kế vô cùng hoàn hảo và ấn tượng. Các góc cạnh của máy được bo cong mềm mại, uyển chuyển mang đến sự mượt mà và tinh tế. Kích thước máy nhỏ gọn dễ dàng cầm nắm trong quá trình sử dụng.",
-      "path": "/catalog/hang_khac-15",
       "color": "orange"
     }
   ],
@@ -137,16 +127,31 @@
       "id": 6,
       "display": "Xanh dương",
       "color": "blue"
+    },
+    {
+      "id": 7,
+      "display": "Đỏ",
+      "color": "red"
+    },
+    {
+      "id": 8,
+      "display": "Tím",
+      "color": "violet"
+    },
+    {
+      "id": 9,
+      "display": "Xanh lá",
+      "color": "green"
     }
   ],
   "products": [
     {
-      "title": "Samsung Galaxy Note 20 Ultra 5G",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "samsung-010",
+      "title": "iPhone 13 Pro Max 128GB | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-1_2.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-4_2.jpg",
+      "categoryslug": "iphone",
+      "price": "29690000",
+      "slug": "iphone-01",
       "colors": [
         "black",
         "blue"
@@ -155,11 +160,159 @@
         "128GB",
         "256GB"
       ],
-      "description": "afafafaf",
+      "description": "iPhone 13 Pro Max chắc chắn sẽ là chiếc smartphone cao cấp được quan tâm nhiều nhất trong năm 2021. Dòng iPhone 13 series được ra mắt vào ngày 14 tháng 9 năm 2021 tại sự kiện California Streaming diễn ra trực tuyến tương tự năm ngoái cùng với 3 phiên bản khác là iPhone 13, 13 mini và 13 Pro. Vậy điện thoại 13 Pro Max giá bao nhiêu? Có gì nổi bật? Cùng tìm hiểu ngay nhé! iPhone 12 ra mắt cách đây chưa lâu, thì những tin đồn mới nhất về iPhone 13 Pro Max đã khiến bao tín đồ công nghệ ngóng chờ. Cụm camera được nâng cấp, màu sắc mới, đặc biệt là màn hình 120Hz với phần notch được làm nhỏ gọn hơn chính là những điểm làm cho thu hút mọi sự chú ý trong năm nay.Dòng iPhone 12 được Apple áp dụng ngôn ngữ thiết kế tương tự iPhone 12 năm ngoái với phần cạnh viền máy được dát phẳng sang trọng cùng bốn góc được làm bo cong nhẹ, đây có thể được xem là một thiết kế hoài cổ từ dòng iPhone 5 trước đó. Vì thế mà iPhone 13 Pro Max nói riêng, cũng như dòng điện thoại iPhone 13 nói chung, cũng sẽ đi theo ngôn ngữ thiết kế này.Điểm thay đổi lớn trên 13 Pro Max có thể là phần nhô của cụm camera. Trong khi đó mặt trước của thiết bị được phủ một lớp Ceramic Shield, loại vật liệu cứng hơn bất kỳ loại kính điện thoại thông minh nào hiện có trên thị trường, giúp bảo vệ màn hình iPhone hiệu quả.Xét về chất liệu, iPhone 13 Pro Max vẫn áp dụng chất liệu thép không gỉ như thế hệ trước đó. Mặt này cũng được phủ một lớp kính mờ giúp hạn chế bám bụi bẩn và vân tay. Ngoài ra, điện thoại cũng sẽ đảm bảo được khả năng chống bụi / nước chuẩn IP68.Về màu sắc, iPhone 13 phiên bản Pro Max sẽ được ra mắt với nhiều tùy chọn màu sắc khác nhau. Trong đó gồm một số màu nổi bật như: vàng, bạc, xanh, đen,...Một trong những yếu tố khiến iPhone 13 Pro Max đáng mong chờ đó là thiết kế notch tai thỏ được thu gọn lại. Ngoài kích cỡ màn hình 6.7 inch với tấm nền Super Retina XDR OLED, máy sẽ có thiết kế notch được thu hẹp lại, giúp tăng tỷ lệ hiển thị trên màn hình điện thoại. Tất nhiên, những cảm biến quan trọng như TrueDepth, Face ID hoặc camera selfie đều sẽ giữ nguyên vị trí.",
+      "id": 1
+    },
+    {
+      "title": "iPhone 11 | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/l/a/layer_20.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/_/0/_0005_layer_6.jpg",
+      "categoryslug": "iphone",
+      "price": "11790000",
+      "slug": "iphone-02",
+      "colors": [
+        "red",
+        "white"
+      ],
+      "version": [
+        "64GB",
+        "128GB",
+        "256GB"
+      ],
+      "description": "Apple luôn làm hài lòng tín đồ iFan với các dòng iPhone trong từng phân khúc giá. Đặc biệt, phiên bản iPhone 11 vừa ra mắt nhưng đã chiếm lĩnh được thị trường smartphone trên toàn thế giới với giá cả phải chăng. Cùng tìm hiểu chi tiết rõ hơn qua bài viết sau đây để có quyết định có nên mua hay không nhé!Đầu quý 2 năm 2022, thị trường công nghệ bắt đầu nhộn nhịp trở lại, các đại lý bán lẻ đặc biệt là CellphoneS tung ra nhiều chương trình ưu đãi giảm giá hấp dẫn. Trong đó không thể không nhắc đến chính là iPhone 11 giảm cực sốc so với thời điểm trước đó.Cụ thể, giá iPhone 11 đã giảm về mức chỉ quanh 12 triệu đồng, khiến nhu cầu mua sắm tăng chóng mặt so với các tháng trước. Không những vậy, khách hàng còn nhận được ưu đãi hấp dẫn khi thu cũ lên đời tại CellphoneS, đồng thời còn được giảm giá thêm khi thanh toán qua ví Moca hay thẻ tín dụng VP Bank. Điện thoại iPhone 11 tuy sở hữu mức giá phải chăng nhưng lại được trang bị cấu hình khủng, camera ấn tượng đi kèm những tính năng hiện đại. Sau đây hãy cùng CellphoneS đánh giá chi tiết sản phẩm trước khi đưa ra quyết định có nên mua hay không nhé!Cụm camera phía sau đã được sắp xếp lại giống với Huawei Mate 20 Pro. Màn hình điện thoại iPhone 11 sở hữu notch rộng dài như các phiên bản tiền nhiệm và giữ nguyên thiết kế như iPhone XR. Notch tích hợp Face ID, loa âm thanh và camera selfie.Tấm nền IPS LCD không có cải tiến về độ sáng và tương phản. Tấm nền được bao bọc bởi lớp kính Gorilla Glass cao cấp, cạnh viền có góc độ cong khá nhỏ. Điện thoại trọng lượng nhẹ, dễ dàng cầm nắm chỉ với 194 gram. Kích thước chi tiết lần lượt là 5.94H x 2.98W x 0.33 D (inch).Apple ứng dụng công nghệ màn hình HD Retina lỏng cùng màn hình cảm ứng đa điểm LCD kích thước toàn màn hình là 6.1 inch với 326 ppi cho iPhone 11. Màn hình có độ phân giải thực tế là 828x1792 pixel vừa đủ dùng. Bên cạnh đó, công nghệ True Wireless được tích hợp trong khi chuẩn tỉ lệ tương phản video HDR chỉ được hiển thị trên màn hình Oled.Độ trễ màn hình gần như bằng 0, tốc độ làm mới màn hình nằm ở mức 60 Hz. Độ chính xác màu đạt đến mức tối đa, điểm DeltaE trung bình đạt 1.1, độ lệch tối đa 2.4 RGB. Ngay cả khi độ sáng giảm xuống mức 2.3 nit độ chính xác này vẫn được giữ nguyên.iPhone 11 sử dụng Chipset Apple A13 Bionic cùng Ram 4GB. Con chip này được đánh giá là tiết kiệm điện và chạy nhanh hơn so với thế hệ A12. Với bộ xử lý 6 nhân 2x2.65 GHz Lightning và CPU thunder 4x1.8 GHz. Neural Engine thế hệ 3 có 8 nhân phụ trách tính năng xử lý hình ảnh như Night Mode và Deep Fusion.Hệ điều hành iOS 13 được sử dụng cho iPhone 11, nếu muốn cài đặt lên các phiên bản cao hơn, bạn cần phải update hệ thống. Tính năng FaceID được ứng dụng gia tăng độ bảo mật của điện thoại. Tính năng 3D Touch đã được thay thế bằng Haptic Touch. Những phiên bản về sau có thể sẽ ứng dụng Haptic Touch vào.iPhone 11 có tổng cộng 2 camera sau: 2 camera sau và 1 đèn flash. Camera chính có độ phân giải 12 MP được tích hợp công nghệ chống rung quang học OIS, 1 camera góc rộng 12 MP.Camera chính với tiêu cự 28mm, khẩu độ là f/1.8, có Dual Pixel AF, chống rung quang học và chế độ Night Mode có sẵn trên camera. Camera góc rộng 13mm không có khả năng lấy nét, không có chống rung quang học.Chất lượng ảnh độ noise thấp, chi tiết sắc nét với dải màu động cực kỳ ấn tượng. Vì màu sắc chân thực, rõ nét nên không tránh khỏi tình trạng nhạt nhòa, thiếu sức sống. Camera góc rộng hỗ trợ giúp ảnh trở nên chi tiết, màu sắc, độ tương phản và giải màu động thì tương phản với camera chính.Khi chụp trong môi trường thiếu sáng, ban đêm thì chế độ chụp đêm Night Mode là cứu tinh trong lúc này. Chất lượng ảnh nhiều chi tiết, rõ nét, đủ thấy rõ, ấn tương là không bị mờ nhòe. Trong trường hợp chụp chân dung, các hiệu ứng ánh sáng khác nhau mở rộng cho bạn sự lựa chọn. Với chip xử lý 13, việc tách chủ thể và phông nền trở nên đơn giản hơn bao giờ hết.",
       "id": 2
     },
     {
-      "title": "adfafafaf",
+      "title": "iPhone 12 Pro Max | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12-pro-max_1__7.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone12_3_1.jpg",
+      "categoryslug": "iphone",
+      "price": "27000000",
+      "slug": "iphone-03",
+      "colors": [
+        "black",
+        "yellow"
+      ],
+      "version": [
+        "256GB",
+        "128GB"
+      ],
+      "description": "Cứ mỗi năm, đến dạo cuối tháng 8 và gần đầu tháng 9 thì mọi thông tin sôi sục mới về chiếc iPhone mới lại xuất hiện. Apple năm nay lại ra thêm một chiếc iPhone mới với tên gọi mới là iPhone 12 Pro Max, đây là một dòng điện thoại mới và mạnh mẽ nhất của nhà Apple năm nay. Mời bạn tham khảo thêm một số mô tả sản phẩm bên dưới để bạn có thể ra quyết định mua sắm.Năm nay, công nghệ màn hình trên 12 Pro Max cũng được đổi mới và trang bị tốt hơn cùng kích thước lên đến 6.7 inch, lớn hơn so với điện thoại iPhone 12 thường. Với công nghệ màn hình OLED cho khả năng hiển thị hình ảnh lên đến 2778 x 1284 pixels. Bên cạnh đó, màn hình này còn cho độ sáng tối đa cao nhất lên đến 800 nits, luôn đảm bảo cho bạn một độ sáng cao và dễ nhìn nhất ngoài nắng.Một điểm đổi mới nữa trên màn hình của chiếc điện thoại Apple iPhone 12 năm nay là việc chúng được thiết kế với khung viền vuông vức, viền thép không gỉ mang đến vẻ đẹp sang trọng cho điện thoại. Máy cũng được trang bị nhiều phiên bản màu sắc đặc biệt cho người dùng lựa chọn.Về trang bị phần cứng bên trong thì iPhone 12 Pro Max có một thanh RAM lên đến 6GB. Điều này cho thấy rằng Apple ngày đang lắng nghe người dùng nhiều hơn khi trang bị một dung lượng RAM lớn hơn để việc đa nhiệm ngày càng được cải thiện hơn. Việc thanh ram lớn giúp cho bạn trải nghiệm các tựa game và đa nhiệm mượt mà hơn.Năm nay, 12 Pro Max cũng sẽ có ba phiên bản bộ nhớ trong khác nhau, với bộ nhớ trong nhỏ nhất bắt đầu từ 128GB, 256GB và cao nhất sẽ là 512GB. Một chiếc điện thoại mà có một bộ nhớ trong lớn ngang ngửa một chiếc laptop là điều mà Apple muốn mang lại cho người dùng để có thể san sẻ bớt bộ nhớ cho các thiết bị khác.iPhone 12 Pro Max không những chỉ có các cải tiến trên, mà chúng còn có một thứ cải tiến được coi là nguồn lõi và là trái tim để vận hành chiếc điện thoại siêu phẩm 2020, đó là con chip Apple A14 SoC 5nm. Trang bị này giúp cho điện thoại có một sức mạnh đáng gờm hơn các đối thủ hơn về hiệu năng, hiệu suất sử dụng pin.Máy cũng được trang bị chuẩn kết nối wifi và mạng di động giúp cho bạn có thể cải thiện hiệu suất sử dụng mạng và chúng còn giúp các đường truyền tín hiệu luôn được đảm bảo không rớt kết nối và tăng chất lượng hiển thị hình ảnh trên mạng.Có thể nói camera cũng là một bước tiến mới trên iPhone 12 Pro Max khi chúng có một bộ 3 camera với chung một độ phân giải là 12MP. Tuy nhiên chúng có khẩu độ lớn và mật độ điểm ảnh trên một panel cũng lớn hơn, do đó chúng cho hình ảnh chi tiết hơn, bắt sáng tốt hơn. Ngoài ra, kết hợp chống rung quang học OIS thì máy còn có thể quay phim 4K tốt.Camera trên iPhone 12 Pro Max có chức năng quét chiều sâu và đảm bảo hình ảnh có một độ sâu nhất định. Cùng với đó chức năng chính của chiếc ống kính này là khả năng thể hiện hình ảnh 3D khi quét chúng vào một căn phòng nhất định. Giúp phục vụ cho công việc xây dựng cũng như định dạng hình ảnh trước khi xây.Camera trước 12MP cũng có cùng khẩu độ và kích thước điểm ảnh trong panel giống như camera. Điều này giúp cho việc sử dụng chúng cho chụp ảnh selfie tốt hơn và chân thực hơn. Cùng với đó một tính năng mà Apple luôn giữ chúng từ đời iPhone X đến giờ là khả năng quét khuôn mặt 3D FaceiD.Công nghệ chống nước là không thể thiếu trên các dòng điện thoại cao cấp và đặc biệt là đối với iPhone 12 Pro Max. Chúng được trang bị công nghệ chống nước và chống bụi tốt nhất hiện nay trên các dòng smartphone đó là tiêu chuẩn IP68. Giúp bạn luôn có thể yên tâm hơn trong việc sử dụng quay phim dưới nước hay ở môi trường khắc nghiệt.Một viên pin liền với dung lượng lớn trên iPhone 12 Pro Max giúp cho chiếc điện thoại bạn có thể hoạt động được một cách ổn thoả hơn và thời gian sử dụng được lâu dài hơn. Cụ thể, máy cho thời gian nghe nhạc lên tới 80 giờ hoặc 12 giờ xem video trực truyến.Công nghệ sạc là trên 12 Pro Max là công nghệ sạc nhanh không dây lên đến 15W. Điều này có thể giúp bạn hạn chế được các việc phải ngồi đợi chiếc điện thoại của mình sạc xong khi máy có thể bổ sung 50% dung lượng chỉ trong vòng 30 phút.",
+      "id": 3
+    },
+    {
+      "title": "iPhone 13 | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/ip13-pro_2.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-13-05_1.jpg",
+      "categoryslug": "iphone",
+      "price": "21750000",
+      "slug": "iphone-04",
+      "colors": [
+        "pink",
+        "blue"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "Cuối năm 2020, bộ 4 iPhone 12 đã được ra mắt với nhiều cái tiến. Sau đó, mọi sự quan tâm lại đổ dồn vào sản phẩm tiếp theo – iPhone 13. Vậy iP 13 sẽ có những gì, hãy tìm hiểu ngay sau đây.Về kích thước, iPhone 13 sẽ có 4 phiên bản khác nhau và kích thước không đổi so với series iPhone 12 hiện tại. Nếu iPhone 12 có sự thay đổi trong thiết kế từ góc cạnh bo tròn (Thiết kế được duy trì từ thời iPhone 6 đến iPhone 11 Pro Max) sang thiết kế vuông vắn (đã từng có mặt trên iPhone 4 đến iPhone 5S, SE).Thì trên điện thoại iPhone 13 vẫn được duy trì một thiết kế tương tự. Máy vẫn có phiên bản khung viền thép, một số phiên bản khung nhôm cùng mặt lưng kính. Tương tự năm ngoái, Apple cũng sẽ cho ra mắt 4 phiên bản là iPhone 13, 13 mini, 13 Pro và 13 Pro Max.Phần tai thỏ trên iPhone 13 cũng có thay đổi so với thế hệ trước, cụ thể tai thỏ này được làm nhỏ hơn so với 20%, trong khi đó độ dày của máy vẫn được giữ nguyên. Điểm khác biệt nhất về thiết kế trên thế hệ iPhone 2021 này đó là camera chéo.Màu sắc trên mẫu iPhone mới này cũng đa dạng hơn, trong đó nổi bật là iPhone 13 màu hồng. Các màu sắc còn lại đề đã từng được xuất hiện trên các phiên bản trước đó như trắng, đen, đỏ, xanh blue.Điện thoại iPhone 13 sẽ được sử dụng tấm nền OLED chất lượng cao và có kích thước 6.1 inch, lớn hơn iPhone 13 mini (5.4 inch). Với tấm nền này với công nghệ ProMotion giúp iPhone 13 tiết kiệm pin đến tối đa khi sử dụng. Người dùng cũng có thể dễ dàng điều chỉnh tốc độ làm tươi tùy theo ý thích.Về khả năng hiển thị, mang đến chất lượng hiển thị vượt trội với màn hình OLED độ phân giải cao, độ sáng lớn. Nhờ đó người dùng có thể nhìn rõ trong nhiều điều kiện sáng khác nhau, kể cả ngoài trời.Cụ thể, màn hình Super Retina XDR với độ sáng cao lên đên 800 nits, và tối đa có thể lên tới 1200 nits cùng dải màu rộng P3, tỉ lệ tương phản lớn. Phía bên ngoài màn hình được phủ lớp oleophobic giúp chống bám vân tay. Nhờ đó hạn chế được các tình trạng bám bụi bẩn và mồ hôi trong quá trình sử dụng.iPhone 13 có một sự thay đổi lớn về camera so với trên iPhone 12 Series. Cụ thể, iPhone có thể được trang bị ống kính siêu rộng mới giúp máy hiển thị được nhiều chi tiết hơn ở các bức hình thiếu sáng. Trong khi đó ống kính góc rộng có thể thu được nhiều sáng hơn, lên đến 47% giúp chất lượng bức ảnh, video được cải thiện hơn.Cụm camera được trang bị tính năng ổn định hình ảnh quang học cùng cảm biến mới, nhờ đó bức hình chụp mang lại khả năng ổn định.Số ống kính trên iPhone 13 vẫn được giữ nguyên so với iPhone 12, chỉ khác về vị trí từng ống kinh. Cả hai ống kính vẫn sở hữu độ phân giải 12MP. Trong đó camera góc rộng được trang bị khẩu độ ƒ / 1.6 trong khi góc siêu rộng là ƒ / 2.4 cùng góc quay 120 độ.Với iP13, người dùng có thể quay phim chuyên nghiệp với chế độ điện ảnh. Cụm camera này cũng hỗ trợ người dùng chụp cùng lúc nhiều bức ảnh khác nhau mà không cần nhấc ngón tay. Đặc biệt với chế độ chân dung hỗ trợ làm mờ hậu cảnh chuyên nghiệp giúp toàn bức ảnh tập trung vào chủ thể mà người dùng hướng tới.Ở chế độ chụp Smart HDR 4, máy có thể nhận diện được tối đa bốn người khác nhau trong một khung hình. Sau đó sẽ tiến hành tối ưu hóa ánh sáng, độ tương phản và tone mày cho từng người, mang lại một bức ảnh chất lượng tốt nhất. Nếu sử dụng bên đêm để chụp các bức ảnh thiếu sáng, lúc này chế độ Deep Fusion kích hoạt và phân tích chế độ phơi sáng ở từng pixel. ",
+      "id": 4
+    },
+    {
+      "title": "iPhone 12 | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12-tim_1.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12-mini-red-select-2020_3.png",
+      "categoryslug": "iphone",
+      "price": "16590000",
+      "slug": "iphone-05",
+      "colors": [
+        "green",
+        "violet"
+      ],
+      "version": [
+        "64GB",
+        "128GB"
+      ],
+      "description": "Dù Apple vừa giới thiệu dòng điện thoại iPhone 13 series tuy nhiên iPhone 12 vẫn đang là một trong những sự lựa chọn hàng đầu ở thời điểm hiện tại. Chiếc flagship năm 2020 của Táo khuyết đang nhận được rất nhiều sự quan tâm của người dùng bởi mức giá dễ tiếp cận hơn so với thời điểm ra mắt, đồng thời được trang bị cấu hình, màn hình, camera ấn tượng trong tầm giá.iPhone 12 gây ấn tượng với người dùng bởi thiết kế vuông vức quen thuộc, đây là thiết kế đã từng xuất hiện trên thế hệ iPhone 5 trước đó. Điện thoại được hoàn thiện mỏng hơn với cụm camera lớn hơn.Đặc biệt, máy được trang bị một khung viền thép không gỉ. Mặt lưng điện thoại iPhone 12 được trang bị một mặt kính Ceramic Shield bóng bẩy, gây được sự chú ý của người đối diện.Về kích thước cụ thể, máy có thông số từng cạnh lần lượt là 146.7 x 71.5 x 7.4 mm cùng cân nặng khoảng 164g. Tổng thể, máy khá mỏng nhẹ thích hợp với cả người dùng nam và nữ cũng như thích hợp với nhiều kích thước tay khác nhau.Màn hình là một điểm nhấn trên iPhone 12. Máy được trang bị tấm nền Super Retina XDR OLED, thay vì IPS LCD như thế hệ trước đó nhờ vậy người dùng sẽ cảm nhận được khả năng hiển thị sinh động, màu sắc đậm đà cũng như độ tương phản cao.Bên cạnh đó, điện thoại được trang bị một màn hình kích thước khá lớn, bằng với iPhone 12 Pro là 6.1 inch. Cùng với đó là độ phân giải 1.170 x 2.532 pixels nhờ đó mang lại khả năng hiển thị với hình ảnh đẹp mắt. Màn hình với tần số quét 60Hz mang lại trải nghiệm mượt mà, từ xem phim đến chơi game.Phần viền màn hình trên thế hệ iPhone 12 cũng nhỏ và mỏng hơn rất nhiều so với các thế thệ trước. Nhờ đó người dùng có không giản trải nghiệm rộng hơn, màn hình hiển thị được nhiều chi tiết hơn.Ngoài ra, màn hình trên thiết bị cũng được trang bị công nghệ True Tone giúp tự động điều chỉnh độ sáng màn hình theo độ sáng của môi trường giúp con mắt của người dùng thoải mái hơn khi sử dụng.Ngoài nhiều nâng cấp về thiết kế, cấu hình cũng là một điểm nâng cấp lớn. Cấu hình này giúp iPhone 12 trở thành là một trong những chiếc điện thoại mạnh mẽ nhất thời điểm ra mắt.Cụ thể, máy được trang bị con chip Apple A14 Bionic cùng dung lượng RAM 4GB cùng bộ nhớ trong 64GB (Bản tiêu chuẩn). Con chip A14 mới này được sản xuất trên tiến trình 5nm với hơn 11 tỷ bóng bán dẫn mang lại hiệu năng CPU tăng 40% và 30% GPU so với thế hệ trước.Cấu hình vượt trội này giúp thiết bị chiến tốt các tựa game hot trên thị trường như Liên Minh Huyền Thoại, Liên Quân Mobile, PUBG Mobile, Call Of Duty Mobile, Genshin Impact Mobile,…Ở các phần mềm chấm điểm hiệu năng, iPhone 12 cho điểm số khá ấn tượng. Cụ thể, điện thoại cho 592.383 điểm AnTuTu trong đó điểm CPU lên tới 182.690 điểm và GPU là 248.724 điểm.",
+      "id": 5
+    },
+    {
+      "title": "iPhone 13 Pro | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-2_1_7.jpg",
+      "categoryslug": "iphone",
+      "price": "27190000",
+      "slug": "iphone-06",
+      "colors": [
+        "blue",
+        "yellow"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "iPhone 13 Pro vừa được ra mắt cùng với iPhone 13 Pro Max cao cấp nhất, iPhone 13 và 13 mini vào tháng 9 năm 2021 với nhiều nâng cấp về cấu hình, camera cũng như thiết kế. Tuy nhiên, Apple sẽ không thay đổi số lượng cũng như kích thước màn hình của loạt iPhone 13 năm nay. iPhone 13 Pro chính là chiếc siêu phẩm được chờ đợi nhất trong năm 2021, hứa hẹn mang đến trải nghiệm đỉnh cao với những công nghệ mới như màn hình 120Hz, chip A15 Bionic, camera cảm biến lớn mang lại ảnh chụp chất lượng hơn.iPhone 13 Pro không có nhiều sự thay đổi về thiết kế, vẫn sở hữu kiểu dáng tương tự như iPhone 12 Pro với các cạnh viền vuông vắn hơn cùng khung thép không gỉ. Về kích thước, iPhone 13 Pro sẽ dày hơn iPhone 12 Pro khoảng 0.2mm với kích thước 146.7 x 71.5 x 7.6 mm.Cụm camera iPhone 13 Pro cũng sẽ có sự đổi mới, vẫn là cụm camera trên một modul hình vuông nhưng phần lồi sẽ dày hơn với kích thước của cụm camera sẽ tăng lên 29 x 29 mm.Ngoài ra bên cạnh các màu sắc quen thuộc thì iPhone 13 Pro cũng sở hữu những gam màu mới thời thượng hơn bao gồm các phiên bản màu: Sierra Blue, Silver, Gold và Graphite. Và có thể trong tương lai, Apple sẽ bổ sung những màu sắc mới vào bộ sư tập.Màn hình iPhone 13 Pro có phần notch tai thỏ nhỏ hơn so với iPhone 12 Pro vì vậy không gian hiển thị cũng sẽ tối ưu hơn. Phần viền màn hình siêu mỏng giúp tăng góc nhìn cho người dùng và với kích thước 6.1 inch, smartphone vẫn đảm bảo về độ nhỏ gọn để bạn dễ dàng bỏ túi. Mặt trước máy còn được trang bị một tấm chắn gốm cứng cáp, bảo vệ màn hình điện thoại.Được trang bị màn hình OLED Super Retina XDR cùng tần số quét 120Hz, nhờ đó màn hình có thể làm mới từ 10 đến 120 lần mỗi giây. Do đó, iP 13 Pro hứa hẹn sẽ mang đến cho bạn những trải nghiệm hình ảnh tốt hơn, mượt mà hơn, thoải mái tận hưởng không gian game, xem phim, giải trí hoặc làm việc tốt hơn với smartphone.Công nghệ màn hình OLED giúp hiển thị nội dung sống động hơn, kể cả dưới ánh nắng mặt trời. Tấm nền màn hình này cũng sở hữu độ tương phản lớn với màu đen sâu, màu trắng sáng.Giống như iPhone 12 Pro, iPhone 13 Pro cũng sở hữu hệ thống ba camera bao gồm camera chính, camera góc siêu rộng cùng với camera tele và cảm biến LiDAR với các tính năng chụp ảnh hữu ích như chế độ Night Mode, HDR, Panorama, Timeslape,….Trong đó, ống kính góc siêu rộng hỗ trợ lấy nét ở khoảng cách 2cm, nhờ đó người dùng có thể chụp những bức ảnh nghệ thuật của những chi tiết nhỏ như giọt sương, lông tơ của sâu bướm,... Ngoài khả năng chụp ảnh, iPhone 13 Pro còn hỗ trợ quay video macro với những chuyển động chậm hoặc tua nhanh theo ý thích.Thiết bị cũng được cải tiến trong khả năng chụp đêm. Với máy quét LiDAR, thiết bị hỗ trợ chụp chân dung ở chế độ ban đêm chất lượng. Trong khi đó, ánh sáng được thu nhiều hơn 2,2 lần ở camera góc rộng và 92% ở ống kinh siêu rộng, mang lại những bức ảnh chụp đêm rõ nét. Ngoài ra, ống kính tele với tiêu cự 77 mm và  zoom quang 3x hỗ trợ tốt trong việc chụp chân dung cổ điển hoặc chụp ảnh - quay video từ xa. Tương tự iPhone 13, trên iPhone 13 Pro cũng được trang bị chế độ quay phim điện ảnh. Chế độ cho phép chỉnh sửa các hiệu ứng và chiều sâu khi khi chụp. Ngoài ra còn nhiều công nghệ chụp ảnh thông minh khác trên mẫu iPhone 2021 mới này như Smart HDR 4, Deep Fusion.Với con chip mới mạnh mẽ và có hiệu suất được nâng cấp là A15 Bionic, iPhone 13 Pro sẽ có sức mạnh vượt trội hơn. Con chip này cũng hỗ trợ tốt hơn cho tốc độ làm tươi màn hình cũng như cải thiện về mức tiêu thụ điện năng giúp tiết kiệm pin cho smartphone.iPhone 13 Pro cũng được tích hợp bộ RAM có dung lượng lớn mang lại đa nhiệm mạnh mẽ và bộ nhớ có dung lượng lên đến 1TB nên đối với người dùng cần sử dụng nhiều dữ liệu hơn bạn hoàn toàn có thể thoải mái lưu trữ với iPhone 13 Pro.5G được xuất hiện lần đầu trên thế hệ iPhone 12 và chúng được cải tiến trên iPhone 13 series. Cụ thể trong dòng iPhone 2021 mới này, với nhiều bằng tần 5G hơn nhờ đó thiết bị cho khả năng phát trực tuyến mượt hơn, truyền - tải nhanh hơn. Cùng với đó là chế độ dữ liệu thông minh, chế độ giúp phát hiện và giảm tải tốc độ truyền tải khi không cần thiết để tiết kiệm pin. iPhone 13 Pro cũng sẽ hỗ trợ kết nối WiFi chuẩn 6E sẽ cho tốc độ truyền - tải dữ liệu cao hơn.",
+      "id": 6
+    },
+    {
+      "title": "iPhone XR | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_3_.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_1_.jpg",
+      "categoryslug": "iphone",
+      "price": "12500000",
+      "slug": "iphone-07",
+      "colors": [
+        "red",
+        "black"
+      ],
+      "version": [
+        "64GB",
+        "128GB"
+      ],
+      "description": "Được ra mắt cùng Apple iPhone XS và XS Max, iPhone XR không chỉ được thừa kế những tính năng đặc trưng nổi trội của người tiền nhiệm iPhone X được ra mắt một năm trước đó và còn có những cải tiến nhằm mang lại trải nghiệm mới lạ và thú vị cho người dùng.Đầu tiên, VN/A là mã trên sản phẩm Apple phân phối trực tiếp cho các đại lý ủy quyền Apple tại Việt Nam và iPhone XR 64GB chính hãng (VN/A) là hàng chính hãng do Apple sản xuất theo tiêu chuẩn của thị trường Việt Nam.iPhone XR 64GB chính hãng (VN/A) là hàng mới nên chất lượng hoàn toàn được đảm bảo. Ngoài ra, khi mua điện thoại iPhone chính hãng (VN/A) khách hàng sẽ được hưởng gói bảo hành ưu đãi, cụ thể được đổi mới trong vòng 30 ngày tại CellphoneS, bảo hành 1 năm tại các trung tâm bảo hành ủy quyền của Apple. Khi mua máy khách hàng cũng được cung cấp đầy đủ hóa đơn chứng minh nguồn gốc cũng như phụ kiện kèm theo.Về ngoại hình, iP XR không quá khác biệt so với iPhone X với vẻ đẹp đến từ thiết kế viền siêu mỏng, tai thỏ mặt trước, và các cạnh được bo tròn. Máy cũng được có tiêu chuẩn chống nước chống bụi IP67 như các dòng siêu phẩm mới sau này của Apple.Đồng thời, thiết kế của Apple iPhone XR 64GB vẫn được thừa hưởng iPhone X với hai mặt kính, điểm khác biệt là nhà sản xuất trang bị cho iPhone XR khung nhôm series 7000 (iPhone XR là khung thép không rỉ). Một trong những điểm hấp dẫn người dùng nên cân nhắc lựa chọn iPhone XR chính là việc sản phẩm được ra mắt với nhiều màu sắc giúp người dùng có đến 6 sự lựa chọn phù hợp sở thích của mình: trắng, đen, đỏ, xanh, cam san hô và vàng.iPhone XR sử dụng tấm nền Liquid Retina, đồng thời tăng kích thước màn hình so với iPhone X (6.1 inch so với 5.8 inch), độ phân giải 828 x 1792 pixels cùng mật độ điểm ảnh 324 ppi. Khác với iPhone XS hay XS Max, dòng smartphone này sở hữu màn hình LCD - Apple cho biết đây là màn hình LCD tiên tiến nhất trên bất kỳ điện thoại thông minh nào.Một ưu điểm của chiếc smartphone này là sự hỗ trợ của công nghệ Tone True, nhấn để mở sáng màn hình (tap to wake) và dải màu rộng. Trải nghiệm màn hình cảm ứng của người dùng trên thiết bị vẫn siêu mượt mà. Với các thông số trên, bạn có thể yên tâm rằng Apple iPhone XR 64GB sẽ mang lại những hình ảnh chân thực và sống động nhất.iPhone XR được Apple trang bị 2 tùy chọn bộ nhớ trong là 64GB và 256GB, trong khi 256GB là quá nhiều với nhu cầu sử dụng bình thường của người dùng thì 64GB là dung lượng lưu trữ khá tốt và thoải mái. Hiện nay có rất nhiều ứng dụng cung cấp dịch vụ lưu trữ lên đám mây nên bạn không cần phải lo hết dung lượng.Với 64GB, bạn hoàn toàn có thể lưu trữ một lượng khá ảnh, phim, game,… vì một game nặng hiện nay cũng chỉ chiếm khoảng 2GB. Bên cạnh đó, với sự tiện lợi khi ở đâu cũng có Wifi và 3G/4G, bạn có thể lưu trữ trên iCloud, Google Drive, xem phim trực tuyến thay vì phải lưu về.Mỗi lần ra mắt sản phẩm mới, Apple lại trình làng một con chip mới và Apple A12 Bionic mà iPhone XR sử dụng là con chip đầu tiên sản xuất trên nền tảng 7nm, gồm CPU, GPU và Neural Engine. Chip A12 Bionic được đánh giá là có nhiều cải tiến so với tiền nhiệm chip A11 khi xử lý dữ liệu mạnh mẽ hơn 15%, xử lý đồ họa nhanh hơn 40% và tiết kiệm điện năng hơn 50%.Một điểm ấn tượng của công nghệ AI trên Apple A12, XR có thể ghi nhớ được các thao tác hằng ngày của người dùng để hoàn thiện, từ đó hỗ trợ người dùng tốt hơn.Đừng nghĩ rằng chỉ có camera kép mới có thể xóa phông đẹp, iPhone XR với camera sau 12 MP khẩu độ f/1.8 duy nhất vẫn có khả năng tạo hiệu ứng bokeh huyền ảo, làm nổi bận chân dung nhân vật chính và cho những hình ảnh vô cùng sắc nét và chi tiết. Ngoài ra, camera trước với độ phân giải 7 MP, khẩu độ f/2.2 mang công nghệ TrueDepth mới nhất cùng Animoji, Memoji thông minh sẽ cho bạn những tấm ảnh selfie với hiệu ứng ánh sáng studio có chiều sâu và những biểu tượng cảm xúc sinh động.Apple còn tận dụng sức mạnh xử lý của chip A12 Bionic để ứng dụng vào tính năng chụp ảnh HDR thông minh: dù bạn chụp ảnh có độ sáng tối khác biệt nhiều nhưng vẫn giữ được chủ thể. Về khả năng quay, bạn vẫn có thể ghi lại những khoảnh khắc thú vị trong cuộc sống bằng cách quay video 4K ở tốc độ 60 khung hình/giây, đặc biệt hơn là bạn có thể ghi lại âm thanh stereo trong lúc quay, giúp âm thanh sống động, chân thật hơn.iPhone XR 64GB được cho là chiếc iPhone có thời lượng pin “trâu bò” 2.942 mAh, lâu hơn 1 tiếng rưỡi so với thời lượng của iPhone 8 Plus. Ngoài ra, chiếc smartphone này có hỗ trợ sạc pin nhanh và sạc pin không dây Qi, do đó việc nạp năng lượng cho thiết bị không còn là vấn đề tốn nhiều thời gian nữa.Ở iPhone XR, nút Home cảm biến vân tay TouchID bị “khai tử” và thay thế bằng công nghệ FaceID và Haptic Touch. Công nghệ bảo mật khuôn mặt FaceID ngày càng hoàn thiện giúp người dụng mở khóa nhanh chóng trong mọi điều kiện sử dụng. Tính năng Haptic Touch cũng tương tự chức năng của 3D Touch: bạn sẽ nhấn giữ vào các nút nhất định để mở ra các menu, phím tắt giống như 3D Touch và máy cũng sẽ rung lên cho bạn biết.Điện thoại iPhone XR chính hãng hiện đã có mặt tại CellphoneS - hệ thống cửa hàng chuyên bán lẻ điện thoại di động, máy tính bảng và các phụ kiện chính hãng trên toàn quốc. Quý khách có thể mua sản phẩm tại CellphoneS với mức giá vô cùng cạnh tranh và hợp lý. Điện thoại iPhone XR được bảo hành 12 tháng tại trung tâm bảo hành Chính hãng và bảo hành 1 đổi 1 trong 30 ngày nếu có lỗi nhà sản xuất. Bên cạnh đó, CellphoneS còn cung cấp dịch vụ giao hàng và thanh toán tận nơi miễn phí cho người dùng ở xa khi mua hàng.",
+      "id": 7
+    },
+    {
+      "title": "iPhone SE 2022 | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_se_2022.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/l/c/lcimg-beede483-355b-48bb-b07a-51285393a1031122.jpg",
+      "categoryslug": "iphone",
+      "price": "12490000",
+      "slug": "iphone-08",
+      "colors": [
+        "white",
+        "red",
+        "black"
+      ],
+      "version": [
+        "64GB",
+        "128GB",
+        "256GB"
+      ],
+      "description": "Những thông tin mới nhất về các dòng iPhone vừa ra mắt luôn mang được sự mong chờ và nhiều sự háo hức của người hâm mộ. Có thể nói rằng chiếc iPhone SE là dòng smartphone kích thước nhỏ, mang đến sự cơ động nhưng sở hữu cấu hình mạnh mẽ. Song liệu thế hệ thứ 3 có những điểm nào nổi bật, iPhone SE 2022 có giá bao nhiêu và khi nào ra mắt? Hãy cùng chúng tôi tìm hiểu nhé!Thế hệ iPhone SE trước đó chỉ được trang bị ba phiên bản màu. Sang đến thế hệ SE 2022, thiết bị vẫn giữ lại ba màu sắc trên thế hệ trước lần lượt là đỏ, trắng và đen. Đặc biệt, iPhone SE 2022 sẽ không được trang bị thêm màu sắc mới.Với ba phiên bản màu sắc trên thì Midnight và Starlight sẽ là những sự lựa chọn an toàn, không bị lỗi thời sau thời gian sử dụng. Trong khi đó SE 2022 đỏ sẽ là một sự lựa chọn cá tính, hợp với các người dùng trẻ. Đặc biệt hơn khi Apple đã tuyên bố doanh số thu được từ phiên bản PRODUCT RED sẽ được quyên góp để chống lại căn bệnh AIDS.Nếu các thế hệ trước đó được Apple trang bị khung nhôm hoặc khung thép không gỉ thì tới SE 2022, máy được Apple trang bị khung nhôm không chứa Carbon. Đây là thế hệ iPhone đầu tiên của Apple được trang khung viền này.Việc đưa nhôm không carbon vào sản xuất iPhone 13 là hành động góp phần bảo vệ môi trường, hạn chế phát sinh và thải khí nhà kính ra môi trường, tuân theo kim chỉ nam trước đó Apple đưa ra khi loại bỏ cốc sạc ra khỏi thiết bị.iPhone SE 2022 được trang bị mặt kính cường lực ở cả hai mặt trước và sau và được Apple giới thiệu là vật liệu kinh cứng nhất với khả năng chống vỡ và chống trầy hiệu quả. Kếu quả, sau một số bài thử nghiệm thả rơi, thế hệ iPhone se 2022, thiết bị bền bỉ hơn so với thế hệ SE 2 và gần như bằng iPhone 13.Cụ thể, iPhone SE 2022 vẫn hoạt động và chỉ bị trầy xước nhẹ sau bài test thả rơi từ độ cao gần 2m xuống nền xi măng. Khi thả rơi ở độ cao tương tự nhưng hướng mặt lưng, mặt lưng nứt nhưng vẫn sống sót.Trong bài test kháng nước, iPhone SE 2022 với chuẩn kháng nước và bụi bẩn IP67 vẫn trụ được sau thời gian ngâm 30 phút ở độ sâu 1 mét. Cụ thể, khi lấy lên thì iPhone SE 2022 có âm thanh bị biến dạng nhẹ do nước vào trong các lỗ loa. Nhưng sau một thời gian, âm thanh sẽ trở lại bình thường. Tuy nhiên, nhà sản xuất sẽ không bảo hành tính năng vào nước cho người dùng iPhone do đó hạn chế test và sử dụng tính năng kháng nước này của sản phẩm.Được trang bị một phần cứng mạnh mẽ của iPhone 13, vậy iPhone SE 2022 có sở hữu được hiệu năng tương tự? Cụ thể, điện thoại iPhone SE 2022 ( iPhone SE 3) đạt được 1695 điểm đơn nhân và 4021 điểm đa nhân trên Geekbench. Trong khi đó, iPhone 13 với cùng con chipi Apple A15 đạt 1670 điểm đơn nhân và 4481 điểm đa nhân.Như vậy sự khác biệt về điểm số giữa hai thiết bị không có quá nhiều khác biệt và người dùng sẽ khó để nhận ra sự khác biệt này trong các tác vụ thường ngày. Và nếu so với thế hệ cũ – iPhone SE 2020, điểm hiệu năng trên SE 3 nhỉnh hơn khá nhiều khi số điểm trên thiết bị tiền nhiệm là 1300 điểm đơn nhân và 3300 điểm đa nhân.iPhone SE thế hệ mới được Apple nâng cấp về dung lượng RAM. Cụ thể thì khi iPhone SE 2020 ra mắt trước đó được trang bị dung lượng bộ nhớ RAM 3GB thì đến SE 2022, máy được nâng cấp bộ nhớ RAM 4GB.Mức dung lượng RAM này tương đương với iPhone 13, hứa hẹn mang lại một hiệu năng cùng đa nhiệm không kém flagship vừa ra mắt không lâu trước đó.iPhone SE 3 sẽ không có nhiều tùy chọn màu sắc như dự kiến. Trước đó, có nhiều đồn đoán rằng iPhone SE 2022 sẽ có nhiều phiên bản màu như đỏ, vàng, xanh ngọc, xanh dương, và hồng… những màu sắc đã từng xuất hiện trước đó. Thay vào đó, SE 3 sẽ chỉ có ba tùy chọn màu cơ bản là đen, trắng và đỏ.Trang tin 9to5Mac mới đây cho hay, Táo khuyết đang lên kế hoạch tổ chức một sự kiện vào đầu tháng 3 của năm 2022. Đây nhiều khả năng sẽ là một sự kiện diễn ra trực tuyến với nhân vật chính được nhiều người mong chờ đó là iPhone SE 3 hay iPhone SE 2022.Tuy nhiên trang GSMArena vừa cập nhật, không loại trừ khả năng Apple sẽ trình làng mẫu iPhone SE mới này vào cuối tháng 4 hoặc đầu tháng 5 tới đây, cùng với đó công ty sẽ bắt đầu giao hàng các sản phẩm của mình vào khoảng thời gian tương tự. Nhưng Apple đã giới thiệu mẫu điện thoại giá rẻ của mình sớm hơn so với dự kiến, đúng dịp quốc tế phụ nữ 8/3.Thế hệ iPhone SE 2 tuy sở hữu thiết kế cũ nhưng khá mạnh mẽ ở thời điểm ra mắt. Vậy phiên bản kế nhiệm iPhone SE 2022 thì như thế nào, có gì nổi bật.",
+      "id": 8
+    },
+    {
+      "title": "iPhone 12 mini | Chính hãng VN/A",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12_1_.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12_4_.jpg",
+      "categoryslug": "iphone",
+      "price": "14500000",
+      "slug": "iphone-09",
+      "colors": [
+        "black",
+        "green"
+      ],
+      "version": [
+        "64GB",
+        "128GB",
+        "256GB"
+      ],
+      "description": "iPhone 12 series hiện nay đang là thế hệ smartphone hiện đại nhất của Apple, vẻ đẹp từ thiết kế, và sức hấp dẫn của các tính năng hiện đại mà dòng máy này sở hữu khiến người dùng công nghệ toàn cầu ‘đứng ngồi không yên”. iPhone 12 Mini tuy là phiên bản thấp nhất, nhưng chiếc smartphone này vẫn sở hữu những ưu điểm vượt trội về sự tiện lợi, linh động khi sử dụng và tính năng sạc nhanh cùng camera chất lượng cao.Điện thoại iPhone 12 phiên bản Mini là một trong những phiên bản điện thoại siêu phẩm của Apple, ở dòng máy này viền máy không còn được thiết kế bo cong các cạnh, mà thay vào đó là phần cạnh máy được vát phẳng vô cùng mạnh mẽ và cá tính.Màn hình kiểu dáng tai thỏ quen thuộc, với phần khuyết được tinh gọn hơn mang đến cảm giác màn hình lớn hơn dù iPhone 12 Mini có kích cỡ màn hình chỉ 5.4 inch.Màn hình kích cỡ 5.4 inch là điểm thuận lợi bởi máy khá nhỏ gọn, có thể dễ dàng đặt trong túi áo, quần hơn so với 6.1 inch trên điện thoại iPhone 12 Pro hay 6.7 inch trên 12 Pro Max.Màn hình của iPhone 12 Mini có độ phân giải 2340x1080, từng chi tiết, chuyển động trên màn hình đều hiện lên rõ nét, tươi sáng và không gặp phải tình trạng nhòe, giật hình.Điểm nhấn của dòng điện thoại lần này nằm ở camera, camera của điện thoại iPhone 12 Mini với camera kép 12MP nhờ đó hình ảnh sẽ được ghi lại rõ nét, không bể hình khi phóng to.iPhone 12 Mini cũng tương tự các phiên bản iPhone 12 khác khi máy được trang bị con chip Apple A14. Nhờ đó, điện thoại cho khả năng xử lý nhanh - mượt mà.RAM của iPhone 12 Mini sẽ là 4GB và bộ nhớ trong 64GB. Với dung lượng bộ nhớ này, vẫn đủ khả năng để người dùng lưu trữ thả ga và tốc độ giải quyết thao tác nhanh chóng.Tuy dòng điện thoại lần này sẽ không được đi kèm với bộ sạc, nhưng bù lại, chiếc điện thoại iPhone 2020 Mini này có dung lượng pin tương đối lớn, dung lượng pin tuy không thuộc hàng “khủng” nhưng vẫn cho thời lượng sử dụng lên đên 17 giờ xem video, 50 giờ nghe nhạc.Ngoài ra, iP 12 Mini còn được trang bị tính năng sạc nhanh 20W, nhờ có điểm này, người dùng có thể nhanh chóng sạc đầy chiếc điện thoại của mình, để tiếp tục công việc mà không bị gián đoạn quá lâu.Không chỉ thế, tính năng sạc nhanh này không chỉ được áp dụng với bộ sạc có dây mà đối với cả sạc không dây với cường độ 12W.Theo thông tin trong sự kiện ra mắt của Apple, iPhone 12 Mini là phiên bản có mức giá thấp nhất 699 USD, kế đến là iPhone 12 thường có giá 799 USD, giá iPhone 12 Pro là 999 USD và cao nhất 1099 USD thuộc về chiếc điện thoại được xem là siêu phẩm nhất năm nay, iPhone 12 Pro Max.Khi mua sản phẩm, khách hàng sẽ được hưởng chế độ bảo hành 12 tháng tại trung tâm bảo hành ủy quyền của Apple tại Việt Nam. Hệ thống CellphoneS là địa chỉ chuyên bán lẻ smartphone chính hãng, uy tín và chất lượng cao. Đến với chúng tôi, đội ngũ nhân viên chuyên nghiệp và thân thiện sẽ giải đáp mọi thắc mắc của bạn.Nếu bạn muốn được tư vấn rõ hơn về sản phẩm điện thoại iPhone 12 Mini chính hãng VN/A tại CellphoneS nhưng không thể đến trực tiếp cửa hàng, thì có thể truy cập trang cellphones.com.vn để tìm hiểu thêm về sản phẩm và đặt câu hỏi cho tư vấn viên. ",
+      "id": 9
+    },
+    {
+      "title": "iPhone 13 mini | Chính hãng VN/A",
       "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
       "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
       "categoryslug": "samsung",
@@ -167,355 +320,341 @@
       "slug": "iphone-07",
       "colors": [
         "pink",
-        "orange"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 4
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 5
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "White",
-        "Black"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 6
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "White",
-        "Yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 7
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "yellow",
-        "orange"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 8
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "Orange",
-        "Yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 9
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 10
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 11
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 12
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 13
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 14
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
+        "black",
+        "blue",
+        "red",
         "white"
       ],
       "version": [
         "64GB",
-        "128GB"
+        "128GB",
+        "256GB"
       ],
-      "description": "âfaf",
-      "id": 15
+      "description": "Apple vừa trình làng iPhone 13 mini cùng với 3 phiên bản khác là iPhone 13 Pro và 13 Pro Max cùng iPhone 13 thường tương tự năm ngoái. Tuy nhiên dòng sản phẩm mới năm nay có nhiều nâng cấp về cấu hình, camera, thiết kế lẫn màu sắc. Như vậy, Apple đã không thay đổi số lượng phiên bản cũng như kích thước màn hình của loạt điện thoại iPhone 13 năm nay.Tương tự như iPhone 12 Series, iPhone 13 cũng sẽ được trang bị một phiên bản thu nhỏ mang tên iPhone 13 mini. Mẫu iPhone nhỏ gọn với nhiều cải tiến so với iPhone 12 mini tiền nhiệm.Về thiết kế bên ngoài, iPhone 13 Mini sẽ không có quá nhiều khác biệt với người tiền nhiệm. Máy vẫn được trang bị một thiết kế nhỏ nhắn, nằm gọn trong lòng bàn tay. Khung viền trên phiên bản iPhone này cũng vẫn được hoàn thiện vuông vức với mặt trước trang bị kính Ceramic Shield và mặt sau bằng nhôm.Điểm khác biệt lớn nhất về thiết kế phiên bản này đó là cụm camera. Thay vì đặt dọc như iPhone 12 mini, camera trên iPhone 13 mini sẽ được thiết kế chéo. Phần notch tai thỏ phía trước màn hình cũng được thiết kế nhỏ gọn hơn.Điểm nâng cấp đầu tiên trên iPhone 13 Mini đó là tần số màn hình. Điện thoại iPhone 2021 mới này được nâng cấp lên màn hình Super Retina XDR nhờ đó các thao tác chạm, vuốt diễn ra mượt mà.Về khả năng hiển thị, iPhone 13 Mini được trang bị màn hình với độ phân giải cùng độ sáng cao. Nhờ đó iPhone 13 Mini sẽ mang lại bức ảnh chụp ấn tượng.Hiệu năng là điểm nâng cấp trên mẫu iPhone này. Điện thoại sẽ được trang bị con chip Apple Apple A15 được gia công trên tiến trình tân tiến. Nhờ con chip thế hệ mới này, iPhone 13 mini sẽ có hiệu năng mạnh hơn 20% so với thế hệ iPhone 12 mini. Với cấu hình này, người dùng có thể thoải mái trải nghiệm lướt web, nghe nhạc, chơi game mà không gặp tình trạng đơ, giật lag.Bên cạnh đó là dung lượng RAM cùng bộ nhớ trong 128GB ở phiên bản tiêu chuẩn.So với dung lượng 2.227 mAh của iPhone 12 Mini thì viên pin trên iPhone 13 mini được nâng cấp. Kết hợp với con chip tiết kiệm năng lượng Apple A15 mà iPhone 13 mini mang lại thời gian sử dụng ổn định.Ngoài ra, thiết bị cũng vẫn sẽ được trang bị công nghệ sạc nhanh và sạc nhanh không dây tiện dụng cho người dùng.Điện thoại iPhone 13 mini được nâng cấp về camera mang lại chất lượng chụp ảnh ấn tượng. Cụ thể, máy sẽ được trang bị cảm biến nâng cao, điều mà chỉ xuất hiện trên iPhone 12 pro Max. Mặt sau máy vẫn được trang bị camera kép nhưng có thay đổi trong thiết kế. Mặt trước vẫn là camera đơn nằm trong notch tai thỏ.Tiếp tục kế thừa những gì đã có trên iPhone 12 mini, iPhone 13 mini cũng sẽ được trang bị bộ sưu tập màu sắc đa dạng. Màu sắc series iPhone 13 mini lúc này là Đỏ, Xanh dương, Trắng, Hồng và Đen. Với phiên bản màu đa dạng, người dùng có thể thoải mái lựa chọn mẫu điện thoại theo sở thích và các tính của bản thân.Điện thoại iPhone mới phiên bản mini này vừa được ra mắt cùng iPhone 13, 13 Pro và 13 Pro Max tại sự kiện trực tuyến diễn ra vào ngày 14/9. Bên cạnh dòng iPhone mới, Apple cũng cho ra mắt thêm Apple Watch series 7, iPad Gen 9 và iPad mini 6.iPhone 13 mini có bán giá bao nhiêu tiền? Đây sẽ là phiên bản rẻ nhất trong bộ 4 điện thoại iPhone 2021 mới ra mắt. Trong đó iPhone 13 Mini dự kiến lên kệ với giá khoảng hơn 21 triệu đồng.Nếu bạn yêu thích mẫu điện thoại nhỏ gọn với hiệu năng siêu khủng cùng camera chất lượng thì iPhone 13 Mini sẽ là một sản phẩm không nên bỏ qua. Để là một trong những người sở hữu điện thoại iPhone 13 mini mới nhất, hãy nhanh tay đặt hàng tại website CellphoneS. Tại CellphoneS hiện có nhiều phiên bản điện thoại iPhone chính hãng với giá ưu đãi bạn có thể quan tâm. ",
+      "id": 10
     },
     {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "title": "Samsung Galaxy S22 Ultra",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-s908_galaxys22ultra_front_green_211119.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-s908_galaxys22ultra_front_burgundy_211119_1.jpg",
       "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 16
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 17
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 18
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 19
-    },
-    {
-      "title": "adfafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "iphone-07",
-      "colors": [
-        "white",
-        "yellow"
-      ],
-      "version": [
-        "64GB",
-        "128GB"
-      ],
-      "description": "âfaf",
-      "id": 20
-    },
-    {
-      "title": "iphonedafafaf",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-se-midnight-select-2022031.jpg",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-se-midnight-select-2022031.jpg",
-      "categoryslug": "samsung",
-      "price": "29350000",
+      "price": "29190000",
       "slug": "samsung-01",
       "colors": [
-        "yellow",
-        "black"
+        "red",
+        "blue",
+        "white"
       ],
       "version": [
         "128GB",
-        "64GB"
+        "256GB"
       ],
-      "description": "yyyyy",
-      "id": 21
+      "description": "Đúng như theo các đồn đoán trước đó, mẫu flagship mới của Samsung được ra mắt với tên gọi là Galaxy S22 Ultra. Mẫu điện thoại cao cấp đến từ Samsung này có nhiều thay đổi trong thiết kế và cấu hình. Vậy S22 Ultra có gì mới, giá bao nhiêu và có nên mua không? Hãy cùng tìm hiểu ngay sau đây.Những thông tin mới nhất về Galaxy S22 Ultra - chiếc flagship mới nhất đến từ hãng công nghệ Hàn Quốc đang khiến giới công nghệ háo hức. Những nâng cấp lớn về hiệu năng, dung lượng pin, và trên hết là camera sau chính là những điểm khiến nó trở thành siêu phẩm trong phân khúc cao cấp. Dưới đây là những thông tin cần biết về dòng điện thoại vừa ra mắt của Samsung.Tuy chưa chính thức mở bán nhưng Samsung S22 Ultra và hai người anh em đã được Samsung cho phép đặt hàng trước. Và kết quả S22 Ultra là mẫu điện thoại bán chạy nhất trong bộ ba vừa ra mắt, chiếm tới 80% tổng số đơn đặt trước. Với nhiều tính năng giống dòng Note, S22 Ultra có tỉ lệ đặt cao hơn từ 4-6 lần tổng số đơn của S22 và S22 Plus.Bên trong hộp Samsung S22 Ultra có gì? Cũng như nhiều phiên bản trước, hộp đựng Samsung Galaxy S22 sở hữu một thiết kế theo phong cách tối giản với tone màu chủ đạo là đen. Ngay sau nắp hộp là chiếc điện thoại Samsung S22 Ultra được nhiều người dùng mong chờ.Phía dưới nữa là các phụ kiện quen thuộc không thể thiếu như cáp sạc, sách hướng dẫn sử dụng, que chọc sim. Toàn bộ các phụ kiện này được bọc kỹ trong một lớp giấy cứng. Samsung S22 Ultra sẽ không có củ sạc, tương tự nhiều flagship hiện nay.Sau nhiều đồn đoán về thời gian ra mắt, mới đây Samsung đã chính thức ấn định thời gian ra mắt siêu phẩm Galaxy S của mình. Theo đó, máy sẽ được chính thức giới thiệu đến người tiêu dùng vào sự kiện Galaxy Unpacked, diễn ra vào ngày 9/2.Trước nhiều đồn đoán rằng  Samsung Galaxy S22 Ultra có thể cho ra mắt phiên bản bộ nhớ 1TB thì thực tế hãng chỉ cho ra mắt ba phiên bản cấu hình bộ nhớ, trong đó phiên bản bộ nhớ cao nhất là 512GB.Galaxy S22 Ultra 128GB bộ nhớ trong: Đây là phiên bản cấu hình tiêu chuẩn, phù hợp với nhu cầu sử dụng của nhiều người dùng.Galaxy S22 Ultra 256GB bộ nhớ trong: Nếu người dùng có như cầu lưu trữ hình ảnh, video lớn thì bộ nhớ 256GB là lựa chọn đáng để tham khảo.Galaxy S22 Ultra 512GB bộ nhớ trong: Với phiên bản 512GB bộ nhớ sẽ phù hợp với những người dùng đòi hỏi không gian lưu trữ lớn như quay phim, chụp ảnh 8K hay lưu trữ dữ liệu lớn.Ngoài ba phiên bản bộ nhớ lưu trữ thì Samsung cũng cung cấp tới haio phiên bản bộ nhớ RAM lần lượt là 8GB và 12GB cho người dùng lựa chọn.S Pen là sản phẩm đặc trưng của dòng Samsung Note. Tuy thế hệ S vẫn có thể sử dụng bút S Pen nhưng sẽ phải mua riêng và không thể cất bên trong điện thoại. Nhưng với Samsung S22 Ultra, Samsung đã trang bị khe cắm S Pen trên thiết bị giúp người dùng có thể tiện lợi khi sử dụng. Tuy nhiên khác với trước đó là Spen sẽ có cùng màu với máy thì năm nay, S-Pen sẽ chỉ có màu đen.Với bút Spen, giời đây người dùng Samsung S22 Ultra có thể thoải mái ghi chú, điều khiển điện thoại như trên các dòng Samsung Note. Bút Spen mới này cũng được cải thiện độ trễ mang lại trải nghiệm dùng chân thực từ viết chữ, vẽ hay ghi chú.Về thời gian ra mắt, cũng như mọi năm, dòng Galaxy S thông thường sẽ được ra mắt vào quý 1. Và không có gì thay đổi, vừa qua Samsung đã trình làng chiếc Galaxy S22 Ultra vào ngày 9 tháng 2 năm 2022 tại sự kiện Galaxy Unpacked.Tại sự kiện này, bên cạnh Samsung S22 Ultra thì Samsung còn giới thiệu đến người dùng nhiều sản phẩm khác như Samsung S22 và Samsung S22 Plus.Galaxy S22 Ultra đi theo ngôn ngữ thiết kế nguyên khối - kính cao cấp và sang trọng, vốn đã làm nên sự thành công của model tiền nhiệm. Chiếc máy có thiết kế mặt lưng đơn sắc tối giản nhưng không kém phần tinh tế, và màn hình tràn viền bao phủ gần như trọn mặt trước, tạo nên trải nghiệm quan sát rộng rãi trên một thiết bị di động nhỏ gọn vừa tay cầm.Độ bền của Samsung Galaxy S22 Ultra được đảm bảo tối ưu không chỉ qua lớp vỏ nhôm nguyên khối Amor đánh bóng, mà còn qua kính cường lực Corning Gorilla Glass Victus+ bao phủ hai mặt trước và sau. Khung nhôm và kính hoạt động như bộ giáp bảo vệ điện thoại an toàn. Chiếc máy còn có khả năng chống bụi / nước đạt chuẩn IP68 giúp người dùng luôn an tâm khi dùng máy trong những điều kiện môi trường khác nhau.Ống kính chính trên Samsung S22 Ultra với độ phân giải lên đến 108MP, với những khả năng chụp ảnh đêm, chụp chân dung, chụp góc siêu rộng, và zoom quang học 100x đều hiện diện. Chi tiết ảnh và màu sắc tốt nằm trong khoảng zoom 10x, có thể sử dụng zoom 30x trong điều kiện ánh sáng tốt, còn zoom 100x mang tính chất lưu lại thông tin. Camera chính và camera tele hỗ trợ công nghệ chống rung quang học OIS.Cụm camera sau cho phép người dùng sáng tạo ảnh chụp của mình không giới hạn. Hai ống kính còn lại là ống kính 12MP hỗ trợ chụp góc siêu rộng và ống kính tele 10MP. Người dùng có thể sử dụng S22 chụp ảnh macro với ống kính siêu rộng. Màu sắc và chi tiết ảnh cao hơn các model tầm trung, cho độ phân giải và cảm biến tốt hơn.",
+      "id": 11
     },
     {
       "title": "Samsung Galaxy Note 20 Ultra 5G",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/b/l/black_final_1.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/n/o/note_20_ultra_1_8.jpg",
       "categoryslug": "samsung",
-      "price": "19990000",
-      "slug": "samsung-010",
+      "price": "18990000",
+      "slug": "samsung-02",
       "colors": [
         "black",
-        "yellow"
+        "yellow",
+        "white"
+      ],
+      "version": [
+        "128GB"
+      ],
+      "description": "Bên cạnh biên bản Galaxy Note 20 thường, Samsung còn cho ra mắt Note 20 Ultra 5G cho khả năng kết nối dữ liệu cao cùng thiết kế nguyên khối sang trọng, bắt mắt. Đây sẽ là sự lựa chọn hoàn hảo dành cho bạn để sử dụng mà không bị lỗi thời sau thời gian dài ra mắt.Ngoài ra, bạn có thể tham khảo Galaxy Z Fold 3 5G nếu bạn cần sự khác biệt và khẳng định đẳng cấp.Là một sản phẩm có kích thước màn hình lớn vì vậy Samsung đã trang bị cho Galaxy Note 20 Ultra 5G  với công nghệ kết nối dữ liệu mạnh mẽ cùng thiết kế nguyên khối. Giúp các linh kiện bên trong điện thoại được cố định chắc chắn đảm bảo mọi thứ bên trong luôn được an toàn. Không những vậy khung nhôm tạo trên những đường viền cực kỳ sang trọng và bắt mắt khi nhìn vào.Mặt sau của SS Galaxy Note này được hãng trang bị mặt kính tạo nên vẻ sang trọng và cuốn hút khi nhìn vào chiếc điện thoại từ bên ngoài. Loại kính cho cả mặt trước và mặt sau đều là kính cường lực Gorilla Glass 6 không những sang trọng mà còn mang đến sự chắc chắn hạn chế rơi vỡ vực tốt.Đối với bất kỳ chiếc điện thoại nào đến từ Samsung dòng Note luôn là những chiếc điện thoại có kích thước màn hình lớn. Samsung Galaxy Note 20 Ultra 5G cũng vậy nó được trang bị màn hình 6.9 inch 2 cạnh bên cong tạo nên vẻ đẹp sang trọng, độ phân giải đạt 2K 1440 x 3200 pixels cho hình ảnh hiển thị cực kỳ sắc nét. Ngoài ra tần số quét trên màn hình cũng nằm ở mức lớn 120Hz ở độ phân giải FHD và 60Hz ở QHD. Mọi hình ảnh khi bạn chơi game với khung hình cao hay trải nghiệm những bộ phim hành động cực kỳ mượt mà và sắc nét với công nghệ HDR10+.Samsung Note 20 Ultra 5G sở hữu bên trong một cấu hình cực kỳ mạnh mẽ cân dư sức các tựa game nặng nhất hiện nay. Máy sử dụng chip Exynos 992 tốc độ siêu nhanh đi kèm bộ nhớ RAM 12GB cho bộ nhớ 256GB giúp người dùng có thể thoải mái sử dụng đa nhiệm và lưu trữ thoải mái. Tất cả tạo nên một cấu hình cực kỳ mạnh mẽ có thể đáp ứng mọi nhu cầu của bạn trên một chiếc điện thoại.Hầu hết trên tất cả các nước nói chung và Việt Nam nói riêng đều đang bắt đầu phủ sóng băng tần 5G dần dần để thay đổi các chuẩn thấp hiện tại. Nắm bắt được nhu cầu và xu hướng thị trường hãng đang trang bị Samsung Galaxy Note 20 Ultra công nghệ 5G tốc độ cao. Khi lựa chọn chiếc điện thoại này bạn sẽ không cần phải lo lắng chiếc điện thoại của mình sẽ không theo kịp các công nghệ đổi mới của tương lai.Với công nghệ 5G người dùng có thể truy cập internet với tốc độ cực cao lên đến 10Gb/s nhanh hơn tất cả các đường truyền wifi cáp quang mà bạn đang sử dụng. Vì vậy lựa chọn Note 20 Ultra 5G không những mạnh mẽ về cấu hình với kích thước lớn mà còn giúp bạn không đi lùi so với những công nghệ nổi bật và quan trọng như 5G.Không những mang đến cấu hình máy hiệu năng cao Galaxy Note 20 Ultra 5G còn mang đến cho bạn bộ 3 camera có độ phân giải cao. Cụ thể camera chính có độ phân giải 108 MP khẩu độ f/1.8, camera periscope telephoto 13 MP khẩu độ f/3.4, camera góc rộng 2 MP khẩu độ f/2.2. Bộ 3 camera này cộng lại cho khả năng zoom quang học lên đến 50X. Giúp bạn lưu lại được những hình ảnh chất lượng cao ở khoảng cách xa và góc cực rộng với độ phân giải lên đến 8K.Camera trước Note 20 Ultra 5G cũng được hãng trang bị độ phân giải cực cao lên đến 10MP. Chất lượng độ phân giải mà camera này mang lại cũng ở mức cao 4K/60fps. Giúp người dùng có thể thoải mái selfie lưu lại những hình ảnh sắc nét hay chat video call với hình ảnh cực kỳ rõ ràng.Samsung Note 20 Ultra 5G được hãng trang bị khả năng sạc nhanh công suất lên đến 45W qua cổng USB Type C cho khả năng sạc đầy pin cực kỳ nhanh chóng chưa đến 90 phút. Không những vậy Note 20 Ultra 5G còn có khả năng sạc ngược cho thiết bị khác với công suất 9W. Máy cũng trang bị khả năng sạc không dây công suất lên đến 15W.Với hiệu năng cực khủng kèm màn hình lớn Samsung đã trang bị cho Note 20 Ultra 5G viên pin li-ion có dung lượng lên đến 4500mAh. Bạn có thể sử dụng thoải mái chiếc điện thoại của mình trong cả ngày dài mà không sợ hết pin giữa chừng. Smartphone này có thể cân mọi tựa game với độ phân giải cao nhất lên đến hơn 8 tiếng liên tục mà không hết pin với chế độ tiết kiệm pin.Hầu hết các dòng điện thoại Samsung Galaxy Note đều được trang bị bút S-Pen và Galaxy Note 20 Ultra 5G cũng không ngoại lệ. Chiếc bút này được cải tiến nhiều hơn so với các dòng cũ có độ nhạy cực cao và điều hướng thông minh cực kỳ chính xác. Bạn có thể sử dụng bút S-Pen để thỏa sức sáng tạo với những tính năng tuyệt vời và công nghệ cực kỳ thông minh.Sắp tới đây, hãng sẽ giới hiệu chiếc điện thoại Samsung S22 Ultra mang thiết kế của dòng Galaxy Note và có hỗ trợ bút S-Pen kèm theo máy.Samsung Note 20 Ultra 5G cũng được trang bị các kết nối mới nhất tiên tiến nhất hiện nay như: Wi-Fi 802.11 ac hỗ trợ băng tần kép. Bluetooth 5.0 cũng được Samsung đưa vào thiết bị để kết nối mang lại sự ổn định tối đa và nhiều cảm biến công nghệ mới giúp thiết bị thông minh hơn khi sử dụng.Nhằm đem lại thiết kế cực kỳ sang trọng và tinh tế Samsung đã trang bị cảm biến vân tay dưới màn hình. Giúp chiếc máy gọn gàng hơn khi cảm biến vân tay được đặt chiếm chỗ như trước. Người dùng có thể dễ dàng mở khóa chiếc điện thoại một cách nhanh nhất ngay trên màn hình Note 20 Ultra 5G mà không gặp phải bất kỳ khó khăn nào.",
+      "id": 12
+    },
+    {
+      "title": "Samsung Galaxy A73",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/a/samsung-galaxy-a73-1-600x600.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/a/7/a73-xanh.jpg",
+      "categoryslug": "samsung",
+      "price": "11990000",
+      "slug": "samsung-03",
+      "colors": [
+        "blue",
+        "white"
       ],
       "version": [
         "128GB",
         "256GB"
       ],
-      "description": "afafafaf",
+      "description": "Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Theo thông tin được chia sẻ, hãng sẽ tiếp tục cho ra mắt nhiều sản phẩm smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc điện thoại Samsung A73.Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.Samsung Galaxy A73 được thiết kế gọn nhẹ với tiêu chí đáp ứng khả năng mang theo để tiện đi lại cho người dùng. Giờ đây, bạn có thể mang theo chiếc smartphone bên cạnh đến bất cứ đâu, bất cứ lúc nào.Kích thước và trọng lượng của chiếc điện thoại rất vừa phải và dĩ nhiên sẽ không chiếm quá nhiều diện tích trong túi xách và có thể di chuyển dễ dàng.Về màn hình, tương tự như đa số chiếc smartphone thế hệ mới sau này của hãng Samsung đã trang bị cho điện thoại một chiếc màn hình cảm ứng Super AMOLED với kích thước rất lớn lên đến 6,7 inch.Với kích thước này, chúng ta cũng có hình dung được màn hình của siêu phẩm Galaxy A73 sẽ được mở rộng không gian thêm rất nhiều. Tỷ lệ khung hình lên thân máy có thể đạt tới hơn 95% cho bạn thỏa mãn về khoản nhìn.Ngoài ra, màn hình của Samsung A73 còn có độ phân giải cao Full HD+ 1080 x 2400 pixels cùng tỷ lệ khung hình 20:9, thêm vào đó là mật độ điểm ảnh là 393 pixels/inch, cho phép hình ảnh được cải thiện rõ rệt.Với những điểm vượt trội trong thiết kế màn hình như trên, sẽ chẳng có gì ngạc nhiên khi người dùng có thể thưởng thức chất lượng khung hình siêu nét cũng như chuyển động mượt mà khi sử dụng phiên bản Samsung A73 của Samsung.Độ sâu cũng như mức độ chi tiết của hình ảnh là điều không cần phải bàn cãi. Thêm vào đó, màu sắc của hình ảnh hiển thị trên màn hình chiếc Galaxy A73 cũng được phản ánh một cách chân thực, giữ được đầy đủ độ tươi và sáng.Về hiệu năng, Samsung Galaxy A73 có thể hoạt động một cách mượt mà là nhờ vào chip xử lý Snapdragon 778G sản xuất bởi Qualcomm với bộ xử lý tám nhân Octa-core hiện đại.Với một chip xử lý như trên, chiếc điện thoại A73 của bạn có thể đảm nhiệm nhiều tác vụ cùng lúc, từ nhẹ đến nặng một cách thoải mái và trơn tru. Bộ xử lý đồ họa GPU Adreno được trang bị giúp cấu hình thêm mạnh mẽ.Về dung lượng, bạn sẽ có thêm nhiều không gian để lưu trữ và tải ứng dụng nặng khi bản Galaxy A73 được trang bị một RAM 8GB cũng như một bộ nhớ có dung lượng rất lớn 256GB, do đó không phải lo bộ nhớ dễ đầy.Một điểm sáng nổi bật khi nói đến khả năng chụp ảnh của chiếc Samsung A73 là chiếc điện thoại được nhà sản xuất hỗ trợ một hệ thống camera gồm tới 5 bộ cảm biến ở phía sau với chất lượng độ phân giải khác nhau.Samsung A73 sở hữu bộ bốn camera với độ phân giải lần lượt là camera chính 108MP, một cảm biến chụp góc rộng 12MP, một cảm biến macro 5MP, một cảm biến chiều sâu 5MP.Ngoài chụp ảnh sắc nét, Galaxy A73 còn hỗ trợ nhiều chế độ quay phim chất lượng cao như 4K, 1080p, 1080p. Camera trước 32 MP cho bạn những tấm ảnh selfie đẹp mắt và sống động.Chiếc điện thoại Galaxy A73 còn được trang bị một chiếc pin dung lượng 5000mAh kèm theo chế độ sạc nhanh. Nhờ đó, bạn có thể rút ngắn thời gian chờ đợi một cách đáng kể khi chưa đầy 60 phút là điện thoại sẽ được sạc đầy ngay.Ngoài ra, phiên bản Galaxy A73 còn có hỗ trợ mạng 5G. Đây là mạng sẽ cho tốc độ truyền tải tốt hơn gấp nhiều lần so với 4G hiện tại. Thêm vào đó, mạng 5G còn có ưu điểm khác là độ trễ thấp, công suất lớn.Hiện tại điện thoại Samsung A73 đã chính thức được giới thiệu đến với người tiêu dùng. Cụ thể, Samsung đã giới thiệu sản phẩm Samsung A với của mình vào ngày 17/3/2022.Phiên bản Samsung A màn hình lớn cùng nhiều tính năng hấp dẫn này sẽ được bán chính thức tại thị trường Việt Nam vào tháng 4 với giá bán hấp dẫn.Samsung Galaxy A là phiên bản điện thoại cận cao cấp của hãng điện thoại Hàn Quốc Samsung, do đó điện thoại Galay A73 sẽ có giá bán trên dưới 10 triệu đồng. Cụ thể, điện thoại Samsung Galay A73 chính hãng được lên kệ với mức giá gần 13 triệu đồng.Ngoài ra, khi khách hàng đặt trước tại CellphoneS trong đợt về hàng đầu tiên sẽ được tặng nhiều phần quà hấp dẫn cùng hỗ trợ trợ giá lên đời.Chiếc điện thoại Samsung Galaxy A73 chính hãng sẽ được phân phối tại các cửa hàng CellphoneS kèm với nhiều chương trình khuyến mãi đặc biệt dành cho khách hàng. Vậy nên hãy đến CellphoneS mua ngay điện thoại xịn xò này nhé.",
+      "id": 13
+    },
+    {
+      "title": "Samsung Galaxy A13 4G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/a/samsung-galaxy-a13-xanh-thumb-1-600x600.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/s/a/samsung-galaxy-a13-4g-150322-112412-600x600.jpg",
+      "categoryslug": "samsung",
+      "price": "4150000",
+      "slug": "samsung-04",
+      "colors": [
+        "blue",
+        "orange",
+        "black"
+      ],
+      "version": [
+        "128GB"
+      ],
+      "description": "Sau Galaxy A12 thì Samsung lại tiếp tục chuẩn bị để cho ra mắt phiên bản kế nhiệm mang tên điện thoại Samsung A13. Điện thoại Samsung mới nhiều cải tiến từ cấu hình, camera cho đến viên pin, chiếc smartphone thế hệ mới này chắc chắn sẽ mang đến cho người dùng những trải nghiệm ấn tượng hơn bao giờ hết,Giống như trên phiên bản tiền nhiệm, điện thoại Samsung Galaxy A13 sở hữu diện mạo vô cùng chắc chắn mang ngôn ngữ thiết kế truyền thống của Samsung. Máy được thiết kế với khung viền và mặt lưng được làm bằng chất liệu nhựa cao cấp, mặt trước được bảo vệ bằng lớp kính Gorilla Glass 5 giúp bảo vệ máy tốt hơn và mang đến cảm giác cầm nắm chắc chắn.Các góc cạnh của Samsung Galaxy A13 được bo viền mềm mại và tinh tế. Màn hình tràn viền giọt nước giúp tăng diện tích hiển thị và tạo nên sự cân đối. Điện thoại có 4 phiên bản màu sắc: đen, trắng, xanh nước biển, cam mang đến lựa chọn phù hợp hơn cho người dùng.Samsung Galaxy A13 sở hữu màn hình có chất lượng khá ổn định với tấm nền TFT LCD. Bên cạnh đó, độ phân giải cao và khả năng hiển thị cao cho chất lượng hình ảnh rõ nét.Bên cạnh đó, kích thước 6.6 inch, Samsung A13 mang đến khung hình khá rộng giúp người dùng có được trải nghiệm cực đã khi lướt web hoặc giải trí.Để cung cấp sức mạnh cho máy, Samsung Galaxy A13 đã trang bị con chip MediaTek Octa core (2.2GHz + 2 GHz). Với con chip này, điện thoại có thể hoạt động một cách mạnh mẽ, xử lý các tác vụ đa nhiệm mượt mà cũng như chiến đẹp các game đồ hoạ một cách ổn định.Cùng với con chip MediaTek thì Samsung Galaxy A13 còn sở hữu RAM 4GB. Bộ nhớ trong của máy dung lượng 128GB. Đặc biệt là khả năng mở rộng bộ nhớ với thẻ nhớ microSD.Galaxy A13 chạy trên hệ điều hành Android 12 và giao diện One UI 4.1. Từ đó giúp cho việc truy cập trang web đọc báo hay tải ứng dụng, phim ảnh giải trí được trở nên dễ dàng và nhanh chóng hơn.Camera sau của Samsung Galaxy A13 được trang bị 4 ống kính với cảm biến chính, camera góc siêu rộng, camera cảm biến độ sâu và camera macro có độ phân giải lần lượt là 50MP, 5MP, 2MP và 2MP. Bên cạnh đó, khả năng quay video chất lượng cao cho bạn những thước phim vô cùng rõ nét.Cùng với đó là camera trước của Samsung A13 cũng được nâng cấp lên với độ phân giải 8MP. Bạn có thể dễ dàng lưu lại nhiều kiểu ảnh đặc sắc hơn mà không cần chỉnh sửa. Đặc biệt là tự tin hơn khi video call với bạn bè, người thân.Samsung Galaxy A13 sở hữu viên pin với dung lượng 5000mAh khá ấn tượng. Mức pin này thoải mái để bạn có thể trải nghiệm điện thoại liên tục trong cả ngày liền.Cùng với đó, hãng còn trang bị công nghệ sạc nhanh với công suất 25W. Galaxy A13 của bạn sẽ được bổ sung năng lượng nhanh hơn và tiết kiệm thời gian hơn.Theo những thông tin mới nhất, Samsung Galaxy A13 được bán với giá 229 USD, tương đương khoảng 5.2 triệu đồng. Samsung A13 nhanh chóng được tung ra thị trường để đáp ứng nhu cầu của người dùng.CellphoneS là địa chỉ cung cấp các sản phẩm chính hãng của Samsung cũng như rất nhiều các thương hiệu nổi tiếng khác. Để sở hữu điện thoại Samsung Galaxy A13 chính hãng, giá tốt với nhiều ưu đãi hấp dẫn, bạn hãy ghé các cửa hàng của CellphoneS trên toàn quốc nhé. Ngoài ra, bạn có thể mua hàng online, nhận hàng và thanh toán tại nhà trên các kênh bán hàng chính thức của hệ thống. Vô cùng tiện ích và linh động.",
+      "id": 14
+    },
+    {
+      "title": "Samsung Galaxy A53 (5G)",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-a536_galaxy_a53_5g_awesome_peach004.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-a536_galaxy_a53_5g_white-001_1.jpg",
+      "categoryslug": "samsung",
+      "price": "9290000",
+      "slug": "samsung-05",
+      "colors": [
+        "blue",
+        "orange",
+        "black",
+        "white"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "Tiếp nối sự thành công của dòng điện thoại tầm trung – giá rẻ, Samsung lại cho ra mắt tiếp thế hệ tiếp theo mang tên Galaxy A53. Sản phẩm mang hiệu suất tốt, sẵn sàng mang đến cho bạn những giây phút trải nghiệm chơi game, xem phim mượt mà.Mặt lưng của điện thoại Samsung A53 chỉ được hoàn thiện từ nhựa song lại mang đến cho điện thoại trọng lượng tối ưu giúp hỗ trợ cầm nắm thoải mái. Song vẻ ngoài không bị mất giá trị bởi thiết kế gradient chuyển màu nhẹ, kết hợp với những đường nét cắt bóng theo hiệu ứng ánh sáng sẵn sàng bắt mắt người dùng.Màn hình Super AMOLED Infinity-O 6.5 inch độ phân giải Full-HD+ cho hình ảnh chân thực, rõ nét, sống động, giúp người dùng dễ dàng quan sát nhiều nội dung hơn trước. . Thêm vào đó, tần số quét 120Hz hỗ trợ trải nghiệm chuyển động mượt mà, trơn tru trong quá trình chơi game, lướt web, lướt Facebook,…Mặt trước điện thoại là tấm nền được trang bị lớp kính cường lực Gorilla Glass 5 hạn chế tác động từ ngoại lực làm nứt vỡ, giúp bạn an tâm hơn trong quá trình sử dụng.Samsung Galaxy A53 có trọng lượng nhẹ nên dễ dàng để trong túi xách, ba lô, bỏ túi quần mang đi mà không cảm thấy nặng tay hay vướng víu.Bên cạnh đó, thiết bị còn được trang bị công nghệ chống bụi nước IP67. Đây là cấp bảo vệ chống bụi hoàn toàn và chống nước khi ngâm thiết bị ở độ sâu 1m trong vòng nửa tiếng đồng hồ. Như vậy trong những ngày trời ẩm ướt, mưa, bạn cũng không còn quá lo lắng việc thiết bị sẽ bị hư hỏng.Samsung A53 mang đến cho người dùng một hiệu năng mạnh mẽ. Sức mạnh được cung cấp bởi chip vi xử lý Exynos 1280, được sản xuất trên tiến trình tiên tiến, mang đến tốc độ cực nhanh. Bên cạnh đó, GPU đồ họa phù hợp để chơi game 3D, hoặc để chỉnh sửa hình ảnh hay là đồ họa.Bên cạnh đó, chiếc Galaxy A53 được trang bị RAM hỗ trợ hoạt động đa nhiệm, đảm bảo những ứng dụng không bị văng ra khi sử dụng. Và một bộ nhớ trong lên tới 128GB, mang đến không gian lưu trữ rộng lớn, không lo sợ bị hết dữ liệu giữa chừng khi đang quay video hay chụp ảnh.Samsung A53 được trang bị đến tận ba camera AI, bao gồm một camera chính độ phân giải là 64MP, camera góc rộng 12MP và một camera macro 5MP, camera đo chiều sâu 5MP, đi kèm với đó là chế độ chụp ảnh chuyên nghiệp với một loạt những tính năng thú vị.Ngoài ra, với Galaxy A53 bạn cũng có thể thực hiện chụp ảnh sắc nét trong điều kiện thiếu sáng hay chụp những bức ảnh chân dung xóa phông hoàn hảo và chụp cận cảnh những vật nhỏ. Samsung A53 khuyến khích bạn tạo nên những bức ảnh nghệ thuật sáng tạo từ chiếc máy của mình.Camera selfie vẫn là thế mạnh của chiếc máy Samsung Galaxy A53 khi sở hữu độ phân giải 32MP hỗ trợ chụp góc rộng giúp sẵn sàng có được những bức ảnh đẹp cùng bạn bè và hỗ trợ chụp ảnh với bộ lọc AR. Kết hợp thêm tính năng làm đẹp AI, với khả năng tối ưu hóa và làm đẹp tự nhiên với thuật toán đã được dựng sẵn.Samsung A53 được trang bị nền tảng bảo mật đa lớp cấp quốc phòng Samsung Knox. Nhờ vậy, dữ liệu của người dùng sẽ được bảo vệ tối đa, ngăn chặn nguy cơ rò rỉ dữ liệu, cuộc tấn công dữ liệu hay các phần mềm độc hại.Các thư mục, hình ảnh, tệp, ứng dụng hay dữ liệu cá nhân sẽ được bảo vệ an toàn. Bạn có thể thêm dấu vân tay hoặc mật khẩu để tăng độ bảo mật.Điểm mới ở Samsung Galaxy A53 là sản phẩm mở ra xu thế mới cho dòng Galaxy với tốc độ kết nối vượt trội. Như vậy việc chia sẻ video, phát trực tiếp mượt mà, tốc độ đáng kinh ngạc. Với bộ vi xử lý mạnh mẽ, chiếc smartphone này mang tới khả năng kết nối 5G và hiệu suất tốt hơn so với thế hệ A52 tiền nhiệm.Đồng thời, Samsung Galaxy A53 kết hợp công nghệ âm thanh Dolby Atmos mang đến cho người dùng phút giây đắm chìm trong thế giới âm thanh sống động, nâng cao trải nghiệm chơi game, xem phim, nghe nhạc chuẩn điện ảnh.Bên cạnh đó, chế độ Game Booster còn hỗ trợ điều hướng thân thiện, đem đến giao diện game chuyên dụng, tiết kiệm năng lượng, nhiệt độ cùng bộ nhớ.Ở bên trong một thiết kế mỏng gọn lại là viên pin dung lượng khủng 5000 mAh. Từ đó, Galaxy A53 giúp bạn thỏa sức sử dụng những tác vụ nặng kết hợp với cơ bản trọn vẹn có thể lên đến 2 ngày.Samsung A53 còn hỗ trợ cả sạc nhanh công suất lên đến 25W. Và khi đó, bạn chỉ cần tốn ít thời gian sạc để có thêm năng lượng dùng. Bên cạnh đó khi bạn kích hoạt chế độ siêu tiết kiệm pin, để bạn luôn có nhiều thời gian hơn để sử dụng khi bạn đi ra ngoài mà không mang theo dây sạc.Trong đầu năm 2022, Samsung đã tung ra hàng loạt sản phẩm từ phân khúc cao cấp đến tầm trung và giá rẻ. Không dừng lại ở đó, hãng công nghệ vẫn chưa dừng lại khi chuẩn bị ra mắt sản phẩm Galaxy A53.Dự kiến chiếc smartphone này có thể sẽ diễn ra vào cuối Quý 1. Giá bán sản phẩm sẽ có giá dự kiến rơi vào khoảng khoảng 9.990 triệu đồng)",
+      "id": 15
+    },
+    {
+      "title": "Samsung Galaxy Z Flip3 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/8/0/800x800_flip_3_black.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/8/0/800x800_flip_3_lavender.png",
+      "categoryslug": "samsung",
+      "price": "18790000",
+      "slug": "samsung-06",
+      "colors": [
+        "violet",
+        "black",
+        "blue"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "Bên cạnh các siêu phẩm của dòng S hay dòng Note thì Samsung còn trình làng một dòng điện thoại siêu đặc biệt. Và cho đến 2021 hãng đã phát triển đến thế hệ thứ ba, với tên gọi Galaxy Z Flip 3. Ngoài sở hữu thiết kế gập độc đáo thì nó còn sở hữu tính năng gì mới hãy cùng chúng tôi xem qua bài viết bên dưới đây nhé.Z Flip 3 5G đã được Samsung trình làng cùng với điện thoại Galaxy Z Fold 3 5G tại sự kiện ra mắt trực tuyến Unpacked diễn ra vào ngày 11/8.Samsung Galaxy Z Flip 3 sở hữu một phong cách thiết kế gập vỏ sò cùng khung nhôm aluminum chắc chắn. Khi gấp gọn, điện thoại chỉ có kích thước 4.2 inch vô cùng nhỏ gọn nhưng mở râ lại là một chiếc điện thoại thông minh màn hình lớn mang lại khả năng khám phá không giới hạn. Màn hình ngoài của thiết bị được trang bị mặt kính Gorilla Glass siêu bền bỉ.Bản lề trên Samsung Galaxy Z Flip 3 cũng được đánh giá bền bỉ khi vượt qua bài thử nghiệm lên đến 200000 lần, nhờ đó người dùng có thể thoải mái sử dụng lên đến hơn 5 năm.Về màu sắc, điện thoại Samsung Galaxy Z Flip 3 sẽ được bán ra với nhiều phiên bản màu như Kem Ivory, Đen Phantom, Xanh Phantom, Tím Lilac. Nhờ đó người dùng có nhiều sự lựa chọn màu sắc hơn theo sở thích. Máy cũng sẽ được trang bị chẩn kháng nước và bụi bẩn IPX8 tiện lợi.Như đã bật mí về phần màn hình và đây chính là bộ phận gây được sự ấn tượng đậm nhất. Màn hình Dynamic AMOLED 2X có khả năng gập mà vẫn cho khả năng hiển thị hoàn hảo. Khi bạn mở màn hình này ra thì nó lập tức hiện nay một kích thước 6.9 inch cho phép bạn thoải mái tùy chỉnh giao diện như góc gập của màn hình. Ngoài ra, bạn cực kỳ yên tâm với thiết kế lớp kính dẻo UTG (Ultra Thin Glass) thế hệ mới.Khi người dùng thực hiện gập màn hình lại, bạn sẽ thấy được một màn hình phụ có kích thước 1.9 inches. Với không gian hiển thị rộng hơn giúp người dùng dễ dàng theo dõi các thông báo quan trọng. Màn hình phụ trên Samsung Galaxy Z Flip 3 hỗ trợ hiển thị thông báo, ngày giờ, bài hát đang phát thâm chí làm xem nhanh tin nhắn, chụp ảnh. Rõ ràng hãng đã nâng cấp nhiều tính năng hơn trên chiếc màn hình phụ này. Đặc biệt tấm nền của màn hình Galaxy Z Flip 3 còn được hãng điện thoại Samsung trang bị tần số quét 120 Hz cho phép người dùng tự động điều chỉnh tần số quét dựa trên các nội dung mới đang được hiển thị.Không chỉ có dòng S và Note là được ưu ái với những con chip mới. Chiếc Galaxy Z Filp3 tiếp tục được ứng dụng con chip riêng biệt. Với con chip Snapdragon 888 mạnh mẽ giúp người dùng có thể chiến được tất cả những tựa game đồ họa nặng nhất.Chưa dừng lại ở đó, con chip này còn được trang bị modem 5G, được tích hợp sẵn nhằm hỗ trợ kết nối mạng 5G làm mưa làm gió trong thời điểm hiện tại. Máy cũng được trang bị bộ nhớ trong lớn, với 128GB bộ nhớ ở phiên bản tiêu chuẩn, người dùng có thể thoải mái sử dụng, cài đặt ứng dụng và lưu trữ dữ liệu quan trọng.Ở chế độ mở hoàn toàn, Samsung Z Flip 3 cho phép chia đôi màn hình tiện lợi giúp bạn có thể làm cùng lúc nhiều công việc như vừa xem video, vừa nhắn tin với bạn bè. Đặc biệt, máy còn được trang bị hệ thống loa cải tiến và công nghên âm thanh Dolby Atmos mang lại những phút giây giải trí đắm chìm.Điện thoại Galaxy Z Flip 3 được trang bị viên pin dung lượng 3300mAh. Qua đó, cho phép phục vụ rất tốt cho các tính năng mới của chiếc Galaxy Z Flip 3 trong thời gian lên đến một ngày trời. Ngoài ra, máy cũng được trang bị công nghệ sạc nhanh có dây và không dây, giúp rút ngắn thời gian sạc.Điện thoại Samsung Galaxy Z Flip 3 sẽ được chạy sẵn trên hệ điều hành Android 11 và giao diện One UI 3.1.1. Ngoài ra, máy sẽ được trang bị công nghệ vân tay cạnh bên, trên nút nguồn cùng chuẩn chống nước IPX8, GPS, Wi-Fi 6, NFC và Bluetooth 5.0. Máy vẫn được trang bị 2 sim tiện dụng.Camera là điều nâng cấp lớn nhất của chiếc Samsung Z Flip 3 với hệ thống module được thiết kế cực đẹp và cực kỳ sang trọng. Ngoài ra động thái này còn giúp bảo vệ được hệ thống camera bên trong. Trong đó là hai camera sau cực kỳ ấn tượng lần lượt cho phép chụp ảnh góc rộng và góc siêu rộng với ống kính 12MP.Hơn nữa, người dùng cần chú ý về chế độ Single Take được giới thiệu lần đầu ở S20. Qua đó, người dùng dễ dàng chụp ảnh chỉ với một cú chạm và tạo ra được nhiều sản phẩm hình ảnh, video ngắn đăng nhanh lên mạng xã hội.Cụ thể về thông số, điện thoại Samsung Galaxy Z Flip 3 được trang bị cụm camera kép phía sau với hai camera độ phân giải 12MP. Trong khi đó, camera selfie được nhúng bên trong màn hình đục lỗ với độ phân giải 10MP. Nhờ vậy Samsung Galaxy Z Flip 3 mang lại chất lượng hình ảnh không thua kém gì máy cơ chuyên nghiệm với chi tiết và độ sáng cao, màu sắc sống động.Một điểm mới vô cùng nổi bật trên chiếc Samsung Galaxy Z Flip 3 đó là khả năng selfie ngay cả khi gập máy. Bạn có thể theo dõi nhanh ảnh chụp ngay trên màn hình ngoài một cách tiện lợi và nhấn chụp nhanh thông qua nút âm lượng một cách dễ dàng.",
+      "id": 16
+    },
+    {
+      "title": "Samsung Galaxy S21 FE 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-g990_s21fe_backfront_lv_7.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/s/m/sm-g990_s21fe_backfront_za_5.png",
+      "categoryslug": "samsung",
+      "price": "12790000",
+      "slug": "samsung-07",
+      "colors": [
+        "black",
+        "violet"
+      ],
+      "version": [
+        "64GB",
+        "128GB",
+        "256GB"
+      ],
+      "description": "Tiếp nối sự thành công của Galaxy S20 FE, gã khổng lồ Hàn Quốc tiếp tục cho ra mắt Samsung S21 FE với định hướng tốt về giá – mạnh về hiệu năng của mình cho phân khúc cao cấp. Sản phẩm là sự kết hợp hoàn hảo của một thiết kế thời trang, cấu hình và hiệu năng mạnh mẽ đi kèm mức giá tốt cho người dùng.Điện thoại Galaxy S21 FE 5G tiếp nối sự thành công trong thiết kế từ người tiền nhiệm, cấu tạo 2 mặt kính cường lực cùng khung viền nhôm bóng bẩy giúp bắt trọn mọi ánh nhìn xung quanh dù ở bất kỳ góc độ nào.Hiểu rõ tính cách của bạn qua các gam màu được Samsung chắt lọc, người dùng có thể thỏa thích lựa chọn màu sắc trên máy yêu thích với 6 màu sắc thời thượng khác nhau như xanh khí chất, tím thanh lịch, cam nổi bật, trắng tối giản, đỏ xu thế.Choáng ngợp trong mỗi khung hình chuyển động trên Galaxy S21 FE với trang bị tấn nền Super AMOLED Infinity-O kích thước 6.4 inches, độ sáng trên máy được nâng lên tối đa 1200 nits cho phép hiển thị rõ nét dù ở bất kỳ điều kiện nào.Luôn đi đầu trong việc áp dụng các công nghệ màn hình, Samsung S21 FE sẽ không khiến bạn phải thất vọng với công nghệ hình ảnh HDR10+, Dolby Vision, tần số quét màn hình 120Hz, tốc độ lấy mẫu cảm ứng lên đến 240Hz.Sẵn sàng để ghi dấu ấn cho mọi khoảnh khắc quan trọng trong cuộc sống của bạn, Samsung Galaxy S21 FE 5G sở hữu bộ ba camera với camera chính góc rộng 48MP cho chất lượng hình ảnh sắc nét, hỗ trợ ống kính thu phóng Space Zoom lên đến 30X.Lấy trọng khung cảnh hùng vĩ hay chụp tập thể cùng bạn bè giờ đây vô cùng đơn giản với camera góc siêu rộng 12MP độ mở 123 độ hay làm nổi bật chủ thể với camera tele 12MP.Camera Selfie với độ phân giải lên đến 32MP giúp bạn cùng bạn bè có những bức ảnh chất lượng, hỗ trợ quay video lên đến 4K đi kèm khả năng chống rung điện từ EIS.Galaxy S21 FE mang trong mình vi xử lý mạnh mẽ thời điểm hiện tại với Exynos 2100 sản xuất trên tiến trình 5nm, sử dụng lõi Cortex-X1 thế hệ mới mang đến hiệu năng cao hơn 35% so với vi xử lý trước đó trên Galaxy S20 FE.Ba lõi Cortex-A78 và bốn lõi Cortex-A55 mới kết hợp xử lý các tác vụ nặng và nhẹ một cách mượt mà. Vi xử lý đồ họa Mali-G78 cao cấp mang đến khả năng xử lý mạnh hơn 25%, tiêu thụ điện ít hơn 10%, nâng cao khả năng xử lý máy học nhanh hơn 15%.Tăng tốc độ truy cập dữ liệu đến 50%, giúp xử lý đa tác vụ các ứng dụng giờ đây vô cùng dễ với bộ nhớ đệm 8GB sử dụng chuẩn bộ nhớ tiên tiến LPDDR5 dành cho thiết bị di động.Bộ nhớ truy suất hiệu năng cao UFS 3.1 có trên Samsung Galaxy S21 FE cho tốc độ đọc ghi lên đến 1,2GB /s, khả năng tiêu thụ điện thấp mang đến khả năng truy xuất ứng dụng siêu tốc.Samsung S21 FE tích hợp 5G Sub 6 giúp bạn tận hưởng gaming thời gian thật với ít độ trễ. Tốc độ tải xuống cho các nội dung nhanh chóng chỉ tính bằng giây.Hỗ trợ kết nối Wi-Fi 6 băng tần kép cho khả năng kết nối an toàn, tốc độ tải xuống nhanh hơn 25% so với Wi-Fi 6.Sở hữu viên pin lên đến 4500mAh, Galaxy S21 FE 5G cùng bạn trải nghiệm thế giới giải trí cả ngày dài. Đi kèm với đó là trình quản lý pin thông minh tự động đề xuất các tinh chỉnh để tối ưu thời gian sử dụng.Công nghệ sạc nhanh Samsung FastCharge nâng cấp công suất sạc lên đến 30W, giúp bạn sạc đầy viên pin trên Samsung Galaxy S21 FE chỉ với hơn 1 giờ đồng hồ. Tiếp tục trải nghiệm xuyên sốt mà không cần lo cắm sạc.Galaxy S21 FE được kiểm tra nghiêm ngặt qua nhiều bài test về độ bền tương tự như điều kiện thực tế, mang đến chất lượng tốt cho từng sản phẩm đến tay người dùng.Mang đến tiêu chuẩn IP68 dành cho chiếc điện thoại với mức giá dễ chịu, Samsung S21 FE được bảo vệ khỏi các tia nước từ bên ngoài khi người dùng trải nghiệm điện thoại.",
+      "id": 17
+    },
+    {
+      "title": "Samsung Galaxy S22 Plus",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/2/s22_2_1.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/s/2/s22_3_1.jpg",
+      "categoryslug": "samsung",
+      "price": "24490000",
+      "slug": "samsung-08",
+      "colors": [
+        "black",
+        "pink",
+        "blue",
+        "white"
+      ],
+      "version": [
+        "128GB",
+        "256GB"
+      ],
+      "description": "Tiếp nối sự thành công của Galaxy S21 Plus thì Samsung lại chuẩn bị ra mắt siêu phẩm mới trong năm 2022, đó chính là Samsung S22 Plus. Đây được coi là một kỳ quan mà người dùng có thể trải nghiệm thiết kế ấn tượng, hiệu năng mạnh mẽ với những công nghệ hàng đầu, cùng với đó là camera vô cùng độc đáo mà bạn chưa từng được chiêm ngưỡng.Galaxy S22 Plus sở hữu thiết kế vô cùng ấn tượng tương tự như trên phiên bản S21 Plus trước đó. Với thiết kế khung viền Armor Aluminum chất lượng cao, mặt kính Corning® Gorilla® Glass Victus®+ từng chi tiết được hoàn thiện một cách tỉ mỉ và tinh tế. Nó mang đến sự mềm mại và vô cùng khéo léo ở mọi góc cạnh, vừa tăng độ sang trọng, vừa bảo vệ máy được an toàn hơn.Trọng lượng siêu nhẹ chưa đến 200g vô cùng thuận tiện trong khi cầm nắm. Bên cạnh đó, phần cụm camera không chỉ tạo sự kết nối hài hòa, liền mạch mà còn mang đến sự độc đáo trong thiết kế.Samsung Galaxy S22 Plus được trang bị màn hình tràn viền vô cùng ấn tượng. Kích thước 6.6 inch cùng thiết kế đục lỗ giúp mang đến không gian hiển thị khá rộng để người dùng có thể đắm chìm trong quá trình sử dụng. Chế độ màn hình luôn hiển thị giúp dễ dàng trong việc quan sát giờ, thông báo mà không cần phải đánh thức máy.Màn hình được trang bị lớp kính Corning® Gorilla® Glass Victus®+cao cấp. Chúng có khả năng chống xước vượt trội và tự phục hồi những vết xước nhỏ. Đặc biệt, trang bị này giúp bảo vệ màn hình được an toàn hơn, bền bỉ hơn.Samsung S22 Plus sở hữu tấm nền Dynamic AMOLED 2X và độ phân giải cao. Tốc độ làm mới màn hình lên tới 120 Hz vừa mang đến chất lượng hiển thị độc đáo với màu sắc sống động vừa mang đến phản ứng mượt mà để bạn đắm chìm vào những bộ phim hoặc những game đồ họa đỉnh cao.Mang đến hiệu năng vô cùng mạnh mẽ cho Samsung Galaxy S22 Plus là chipset được sản xuất trên tiến trình 4nm mang đến hiệu suất CPU và GPU mạnh hơn Bên cạnh đó, công nghệ kết nối hiện đại mang đến tốc độ kết nối cực nhanh để nâng cao trải nghiệm người dùng.Đi kèm với chipset ấn tượng là RAM 8GB cực khủng và ROM 128GB thoải mái để thực hiện các tác vụ đa nhiệm một cách mượt mà cũng như lưu trữ tài liệu, tải ứng dụng cần thiết và các game giải trí.Galaxy S22 Plus được trang bị cụm 3 camera xếp dọc theo thân máy. Với cảm biến có độ phân giải lần lượt là 50MP cho cảm biến chính và 12MP cho cảm biến góc siêu rộng cùng công nghệ hiện đại tất cả sẽ mang đến cho bạn những bức ảnh không thể tuyệt vời hơn được nữa.Camera selfie của Samsung Galaxy S22 Plus có độ phân giải 10MP được trang bị tốc độ tự động lấy nét nhanh, chế độ làm đẹp giúp cho từng đường nét trên gương mặt trở nên hấp dẫn hơn, để mọi tấm ảnh sẽ là phiên bản hoàn hảo nhất của bạn.Bạn có thể quay video chất lượng cao với Galaxy S22 Plus. Công nghệ Super HDR mang đến màu sắc sống động gấp 64 lần, lúc này video bạn quay trở nên giàu chi tiết hơn, cho dù là cảnh ngược sáng. Bạn sẽ có ngay video chuẩn điện ảnh chỉ với một chiếc smartphone vô cùng nhỏ gọn.Không chỉ về thiết kế và hiệu năng mà Samsung S22 Plus còn ấn tượng không kém với pin cực khủng 4500mAh. Bên cạnh đó là công nghệ sạc nhanh 45W giúp bạn tiết kiệm tối đa thời gian sạc để gia tăng thêm thời gian trải nghiệm trên thiết bị.Hiện tại chưa có mức giá chính thức cho Galaxy S22 Plus. Tuy nhiên, theo các nguồn tin được rò rỉ thì siêu phẩm này sẽ được bán với giá trong khoảng từ 1000 USD - 1100 USD và được dự kiến ra mắt vào tháng 2 năm 2022 cùng với Samsung S22 Ultra và phiên bản S22 tiêu chuẩn.Bạn hãy theo dõi để cập nhật liên tục những thông tin mới nhất về siêu phẩm đình đám nhà Samsung này nhé.",
+      "id": 18
+    },
+    {
+      "title": "Samsung Galaxy M52 (5G)",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/0/9/09_galaxy_m52_5g_lightblue_back-001.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/7/_/7_15_14.jpg",
+      "categoryslug": "samsung",
+      "price": "7290000",
+      "slug": "samsung-09",
+      "colors": [
+        "black",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Gần đây, thị trường smartphone đang được làm “nóng” lên bởi những chiếc điện thoại tầm trung – giá rẻ đến từ Samsung. Và không thể khiến thị trường này nghỉ ngơi giây phút nào, Samsung đã bắt đầu cho ra mắt sản phẩm mới mang tên Samsung Galaxy M52. Thiết bị nổi bật với vẻ ngoài sang trọng và hệ thống camera vượt trội.Điện thoại Samsung M52 nổi bật trong mắt người dùng đến từ thiết kế sang trọng nhưng gói gọn trong phân khúc tầm trung – giá rẻ. Bên cạnh đó, các góc và các cạnh được làm bo cong nhẹ để giúp cầm tốt hơn, không bị trơn tuột như trên mặt kính hay nhựa.Samsung Galaxy M52 sử dụng màn hình kích thước 6.7 inches, cùng với tấm nền sAMOLED cho khả năng hiển thị rực rỡ hơn nhiều so với màn FullHD. Bên cạnh đó, màn hình đã vận dụng màn dạng đục lỗ, giúp mở rộng được kích thước không gian trải nghiệm. Và độ phân giải đạt chuẩn FullHD cho khả năng hiển thị sắc nét, góc nhìn tốt.Galaxy M52 mang trong mình cấu hình mạnh mẽ mang lại khả năng hoạt động ổn định. Cụ thể là chiếc máy sử dụng con chip Snapdragon 778G hoạt động trên tiến trình 6nm, cho ra hiệu suất xử lý dữ liệu nhanh hơn so với thế hệ trước. Bên cạnh đó, GPU Adreno 618 đi kèm đạt hiệu suất cao hơn 25% so với Adreno 616 trên Snapdragon 710. Điện thoại sẽ mang đến cho bạn một hiệu năng xử lý tốt, thực hiện mượt mà các tác vụ nặng.Chiếc máy còn được nâng cấp thêm về cấu hình, máy với bộ nhớ RAM lớn giúp cho máy hoạt động đa nhiệm cực tốt, tất cả những ứng dụng đều không bị khởi động lại, hay mở nhiều tab mà không văng. Người dùng còn có một không gian lưu trữ thoải mái đầy đủ bộ giải trí game, âm nhạc và bộ phim với mức dung lượng 128 GB.Phải nói là hãng đã cực kỳ ưu ái với Samsung M52 khi đã tích hợp đến tận ba camera sau cho sản phẩm tầm trung giá rẻ của mình. Cụ thể, ba camera sau được đặt vào chung một cụm hình chữ nhật với độ phân giải lần lượt là 64MP, camera phụ độ phân giải 12MP, f/2.2 hỗ trợ đo góc siêu rộng, camera 5MP chụp macro và cuối cùng là camera 5MP, F/2.2 để đo chiều sâu.Bên cạnh đó, Samsung M52 còn được trang bị thêm một camera trước độ phân giải khá khủng 32MP, f/2.0 và hỗ trợ luôn đo góc rộng giúp bạn có thể dễ dàng chụp chung với các bạn hoặc gia đình. Chất lượng của camera khá giúp bạn tự tin chia sẻ những bức ảnh selfie đẹp mắt lên mạng xã hội của mình.Samsung Galaxy M52 được cung cấp nguồn năng lượng dồi dào đến từ viên pin 5000 mAh. Đây là mức dung lượng khá cao trên mặt bằng chung smartphone giá rẻ tầm trung hiện nay. Qua đó, mang đến cho chiếc máy của bạn một ngày sử dụng thoải mái với các tác vụ thông thường, cả chơi game lẫn lướt web.Bên cạnh đó, nhằm giúp cho người dùng không phải chờ đợi lâu trong quá trình nạp năng lượng, hãng đã trang bị thêm củ sạc nhanh 25W.",
+      "id": 19
+    },
+    {
+      "title": "Samsung Galaxy A03",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/s/c/screenshot_2_39.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/4/0/4096-2731-max_7__1_5.jpg",
+      "categoryslug": "samsung",
+      "price": "2800000",
+      "slug": "samsung-10",
+      "colors": [
+        "black",
+        "red",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Để mang đến cho người dùng nhiều lựa chọn hơn trong phân khúc giá rẻ, gã khổng lồ Hàn Quốc tiếp tục cho ra mắt chiếc điện thoại mang tên Samsung A03 với mức giá hấp dẫn. Sản phẩm với thiết kế quen thuộc cùng nhiều nâng cấp mới, đây sẽ là chiếc smartphone độc đáo và tiện ích cho người dùng.Điện thoại Galaxy A03 sở hữu thiết kế như những phiên bản trước đó. Kiểu dáng xinh xắn với viền màn khá mỏng. Bên cạnh đó, mặt lưng được phủ một lớp nhám cao cấp mang đến khả năng hạn chế tối đa bám dấu vân tay khi sử dụng.Vỏ ngoài của điện thoại được hoàn thiện từ chất liệu nhựa không chỉ tạo độ nhẹ cho sản phẩm mà còn giúp quá trình cầm nắm thoải mái hơn cũng như tiết kiệm được tối đa giá thành. Galaxy A03 mang tới cho người dùng các tuỳ chọn màu sắc như: Đen, đỏ và xanh.Về khả năng hiển thị, Samsung A03 được trang bị màn hình kích thước khá lớn. Cùng với đó là tỉ lệ khung hình chuẩn giúp bạn có thể thoải mái xem phim hay học tập và giải trí với một màn hình lớn.Tuy là chiếc điện thoại giá rẻ nhưng Samsung đầu tư rất mạnh tay với tấm nền chất lượng cùng độ phân giải HD+. Đảm bảo người dùng sẽ có góc nhìn tốt, chất lượng hình ảnh vô cùng sắc nét và từ đó thoải mái trải nghiệm những video hay những game giải trí ấn tượng.Với Samsung Galaxy A03 người dùng sẽ có những bức ảnh lung linh được tạo bởi cụm camera với cảm biến chính 48MP. Bên cạnh đó, máy được hỗ trợ nhiều tính năng thông minh giúp xử lý các bức ảnh được trở nên đẹp hơn, đủ để bạn tha hồ “sống ảo”.Với những ai yêu thích sự sáng tạo và muốn trở thành tâm điểm trong mỗi bức hình thì ống kính chính 48MP và camera Bokeh 2MP sẽ cho bạn thỏa sức khám phá những điều thú vị trong cuộc sống một cách chi tiết và đầy thú vị. Cùng với đó là những bức ảnh chân dung chất lượng.Với nhu cầu học online trở nên phổ biến như hiện nay thì camera trước 5MP sẽ giúp người dùng có những khung ảnh sắc nét hơn, ổn định hơn qua ứng dụng Meet, Zoom hoặc là những cuộc gọi video thông thường tất cả đều mượt mà.Cung cấp sức mạnh cho Galaxy A03 là bộ vi xử lý Unisoc mang đến hiệu năng ổn định, đảm bảo các tác vụ hàng ngày được trở nên mượt mà và có thể chơi được các tựa game nhẹ nhàng.Điện thoại Galaxy A03 sẽ được trang bị kèm với 3GB RAM và chạy trên nền tảng hệ điều hành Android 11 với giao diện người dùng OneUI 3.1. Hơn nữa với ROM 64GB cho bạn thoải mái lưu trữ nhạc, tải các ứng dụng hay lưu trữ các video chất lượng cao. Nếu bạn có nhu cầu cao hơn thì máy còn có khả năng mở rộng dung lượng qua thẻ nhớ MicroSD.Được trang bị dung lượng pin lớn 5000mAh đây là mức dung lượng ấn tượng để người dùng có thể thoải mái giải trí và chơi game hoặc khi muốn theo đuổi một bộ phim nào đó cũng sẽ không hề lo bị gián đoạn giữa chừng.Bên cạnh đó là không thể thiếu công nghệ sạc nhanh giúp tối ưu thời gian sạc hơn và tăng thời gian trải nghiệm.Điện thoại Samsung A03 được chính thức giới thiệu đến người tiêu dùng vào những ngày đầu tháng 1 năm 2022. Khi ra mắt, máy sẽ có ba phiên bản màu sắc khác nhau cùng giá bán khoảng 3 -4 triệu đồng, tùy thuộc vào từng phiên bản cấu hình. ",
+      "id": 20
+    },
+    {
+      "title": "Xiaomi Redmi Note 11 Pro Plus 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/1/1/11-pro-plus-blue.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/1/1/11-pro-plus-green-1.jpg",
+      "categoryslug": "hangkhac",
+      "price": "8990000",
+      "slug": "hangkhac-01",
+      "colors": [
+        "blue",
+        "green",
+        "black"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Redmi Note 11 Pro Plus chính là mẫu smartphone tầm trung tiếp theo được Xiaomi cho ra mắt với giá hấp dẫn cùng với thiết kế mới tinh tế, cấu hình mạnh mẽ và cụm camera chất lượng cao cho trải nghiệm nhiếp ảnh đầy hứa hẹn.Điện thoại Redmi Note 11 Pro+ có thiết kế thanh lịch và vuông vắn hơn, mặt trước và sau được vát phẳng hơn mang đến kiểu dáng hiện đại, hợp xu hướng. Bốn góc của smartphone vẫn được bo cong để hài hòa với tổng thể, mềm mại cũng như cầm nắm thoải mái.Cụm camera sau được đặt gọn trong khung chữ nhật với camera chính được làm nổi bật thu hút từ cái nhìn đầu tiên. Bên cạnh đó Xiaomi Redmi Note 11 Pro Plus cũng được ra mắt với nhiều màu sắc độc đáo cho bạn thỏa sức lựa chọn.Xiaomi Redmi Note 11 Pro+ được trang bị màn hình có kích thước lớn và tấm nền AMOLED Full HD+ cho hình ảnh không chỉ mang độ nét cao mà còn có màu sắc đẹp, sống động, rực rỡ trên một không gian hiển thị rộng rãi.Bên cạnh đó, Xiaomi đã mang đến sự cải tiến khi mang đến cho màn hình Xiaomi Redmi Note 11 Pro Plus tần số quét 120Hz ấn tượng, cho trải nghiệm mượt mà, mọi thao tác vuốt chạm phản hồi nhanh hơn, hình ảnh được xử lý tốc độ cao, tránh tình trạng xé hình.Không chỉ mang đến trải nghiệm tốt về phần nhìn, Xiaomi còn mang đến những trải nghiệm ấn tượng về phần nghe để người dùng có thể tận hưởng những bộ phim hay, chơi game sống động, chân thật hơn.Mặc dù chỉ là smartphone thuộc phân khúc tầm trung nhưng sức mạnh của Xiaomi Redmi Note 11 Pro+ vẫn không hề thua kém các dòng cao cấp. Với chipset MediaTek Dimensity 920 được cải thiện cho hiệu suất tăng lên khoảng 9%, chơi game mượt mà, thao tác nhanh chóng mọi đa nhiệm mà không lo giật lag.Ngoài ra Xiaomi Redmi Note 11 Pro Plus còn được trang bị RAM có dung lượng lớn cho hiệu suất ổn định trong thời gian dài. Bộ nhớ trong cũng có dung lượng cao, thoải mái cài đặt ứng dụng, trò chơi cũng như lưu trữ hàng nghìn tập tin.Nếu bạn là một người yêu thích nhiếp ảnh, chắc chắn bạn sẽ không thể bỏ qua Xiaomi Redmi Note 11 Pro+. Smartphone được trang bị bộ 3 camera chất lượng cao với thông số cảm biến ấn tượng cho ảnh chụp sắc nét và hỗ trợ quay phim với chất lượng cao.Bên cạnh đó, camera Xiaomi Redmi Note 11 Pro Plus cũng hỗ trợ nhiều chế độ chụp ảnh như Panorama, HDR, xóa phông,…để bạn thỏa đam mê nhiếp ảnh.Để có thể vận hành mượt mà với thời lượng lâu dài thì một viên pin dung lượng khủng là không thể thiếu trên Xiaomi Redmi Note 11 Pro+. Viên pin này có thể cho thời lượng sử dụng liên tục lên đến một ngày hoặc hơn một ngày nếu bạn chỉ sử dụng các tác vụ cơ bản.Ngoài ra Xiaomi Redmi Note 11 Pro+ cũng được trang bị tính năng sạc nhanh qua cổng sạc USB Type-C, công suất sạc nhanh đến 120W, nạp pin nhanh chóng để bạn không mất quá nhiều thời gian sạc pin.Có thể nói, Redmi Note 11 Pro Plus mang đến những trải nghiệm không thua gì một chiếc smartphone cao cấp nhưng lại trong một mức giá hấp dẫn.Tại thị trường Việt Nam, Xiaomi Redmi Note 11 Pro+ hiện tại được ra mắt và mở bán. Đặc biệt sản phẩm được bán độc quyền, chính hãng tại CellphoneS với giá chỉ 9.990.000 đồng kèm theo nhiều ưu đãi khách hàng thành viên Smember, lên đời trợ giá.",
+      "id": 21
+    },
+    {
+      "title": "Xiaomi 11T",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/x/i/xiaomi-11t-001.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/x/i/xiaomi-mi-11t-1_1.jpg",
+      "categoryslug": "hangkhac",
+      "price": "9900000",
+      "slug": "hangkhac-02",
+      "colors": [
+        "white",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Một biến thể khác của siêu phẩm Xiaomi 11T vừa được hãng điện thoại Xiaomi ra mắt và người dùng sẽ trông chờ hơn vào sản phẩm này. Được biết đây là phiên bản giảm cấp về hiệu năng nhằm dễ tiếp cận hơn đến các phân khúc khách hàng thấp hơn, song về trải nghiệm bạn sẽ bất ngờ vì không có quá nhiều sự khác biệt.Người dùng hẳn không còn quá lạ lẫm với bất kỳ thiết kế điện thoại nào của Xiaomi nữa, tuy lần này không dùng thiết kế kính nhưng việc phủ kim loại nguyên khối lên toàn bộ máy cũng giúp cho Xiaomi Mi 11T trở nên sang trọng và bền bỉ hơn rất nhiều. Điểm khác biệt đáng chú ý chỉ nằm ở việc sắp xếp cụm camera sao cho hợp lý và bắt mắt hơn.Màn hình của Xiaomi Mi 11T vẫn thừa hưởng được ở người đàn anh ở khả năng hiển thị sống động và trải nghiệm những tựa game và bộ phim hoàn hảo. Điều đó được thể hiện ở kích thước máy ở kích thước 6.67 inhces, đi kèm là chất lượng hiển thị đạt FullHD+ và tấm nền Super AMOLED.Nhằm gia cố thêm cho màn hình để chống lại hoàn toàn các va đập thông thường ở bên ngoài, chiếc điện thoại Xiaomi 11T còn được tích hợp thêm một lớp kính cường lực Corning Gorilla Glass Victus. Theo các nhà sản xuất thì nó cho khả năng chống chọi được với lực va đập ở độ cao lên đến 1.6m mà vẫn còn nguyên vẹn màn hình.Máy với cụm camera chính với độ phân giải 108MP mang lại hình ảnh chất lượng. Bên cạnh đó, cụm camera còn những hai camera phụ nhằm phục vụ cho công tác chụp ảnh góc rộng lên đến 120 độ dành cho độ phân giải 8MP và một camera phụ còn lại dùng để chụp ảnh macro với độ phân giải lên đến 5 MP. Qua đó, bạn thỏa sức sáng tạo hình ảnh để đăng tải thành một cuốn album lên mạng xã hội.Để làm nên một cỗ máy chiến game thực thụ thì chiếc điện thoại đó cần phải được tích hợp bởi con chip cao cấp MediaTek Dimensity 1200-Ultra giúp khuấy đảo toàn bộ tựa game có trên CH Play. Được sản xuất trên tiến trình 6nm giúp các hoạt động xử lý CPU và GPU đều được gia tăng lên đáng kể, bạn cũng đừng quá ngạc nhiên khi một tựa game nặng chỉ được mở lên trong tích tắc trên chiếc Xiaomi Mi 11T này.Điều không thể thiếu đó là trên con chip này cũng được tích hợp thêm khả năng kết nối 5G mạnh mẽ, những tựa game đồ họa nặng và bộ phim 4K sẽ không còn phải load trong quá trình trải nghiệm nữa.Để gia tăng thêm sức mạnh của vi xử lý, chiếc Xiaomi Mi 11T còn trang bị thêm 8GB RAM để đảm nhận khả năng xử lý đa nhiệm. Giờ đây, việc mở cả chục tab trình duyệt đã trở nên vô cùng dễ dàng và không bị load lại ứng dụng như trước đây nữa. Bên cạnh đó là 256GB bộ nhớ trong cho bạn khả năng lưu trữ dữ liệu như nhạc, ảnh, phim, trò chơi lên đến không giới hạn.Điểm mạnh mẽ hơn người đàn anh duy nhất nằm ở viên pin dung lượng cực khỏe. Với dung lượng pin lên đến 5000 mAh, Xiaomi 11T cho khả năng hoạt động bền bỉ, thậm chí là hơn 1 ngày trong cường độ sử dụng phức tạp. Đây là sản phẩm phù hợp cho những người thường xuyên ở ngoài đường hoặc di chuyển công tác xa.Một viên pin dung lượng cao thì không thể thiếu đi được khả năng sạc nhanh phải không nào. Lại một điểm nữa đi trước phiên bản cao cấp nằm ở khả năng sạc nhanh cấp tốc với tốc độ lên đến 67W. Chỉ trong tích tắc bạn đã có ngay thời gian sử dụng trọn vẹn cả một ngày.",
       "id": 22
     },
     {
-      "id": 27,
-      "title": "Samsung Galaxy Note 20 Ultra 5Gdddddaaa",
-      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637170935875912528_ss-s20-ultra-den-1.png",
-      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg",
-      "categoryslug": "samsung",
-      "price": "1994425",
-      "slug": "samsung-010",
+      "title": "OPPO Reno7 Z (5G)",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/o/combo_product_-_rainbow_spectrum_-_reno7_z.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/o/combo_product_-_cosmic_black_-_reno7_z.png",
+      "categoryslug": "hangkhac",
+      "price": "10490000",
+      "slug": "hangkhac-03",
       "colors": [
-        "black",
-        "yellow"
+        "black"
       ],
       "version": [
-        "128GB",
-        "256GB"
+        "64GB"
       ],
-      "description": "afafafaf"
+      "description": "Thời gian qua giới công nghệ đang dần chú ý đến những chi tiết hé lộ của OPPO Reno7 Z chiếc smartphone 5G mới nhất của OPPO thuộc phân khúc tầm trung nhưng chứa đựng cấu hình không thua gì điện thoại phân khúc cao cấp sẽ khuấy động làng công nghệ trong năm 2022.Điện thoại OPPO Reno 7Z 5G được ra mắt thuộc dòng Reno7 series mới đây của hãng OPPO. Vì thuộc cùng họ hàng Reno7, nên máy có ngoại hình khá giống với Reno 7 (bản Trung Quốc) trước đó, với khung viền vuông dát phẳng cùng thân hình vừa tay cầm giúp làm nên chất lượng toàn bộ thân máy. Và chất liệu nguyên khối làm nên khung viền máy cũng góp phần gia tăng độ bền cho sản phẩm.Kiểu dáng của OPPO Reno7 Z 5G thể hiện nên tính linh hoạt cao. Dù được làm nên từ chất liệu bền bỉ, tổng thể thân máy lại có trọng lượng nhẹ tay giúp tạo độ thoải mái khi bạn cầm máy ngay trên tay. Độ mỏng gọn gàng của thân máy không chỉ tăng thêm độ sang trọng cho bề ngoài, mà còn giúp bạn cầm giữ máy trên tay cực kỳ chắc chắn, hạn chế rơi vỡ.Điện thoại OPPO Reno 7Z 5G được ra mắt với nhiều tùy chọn màu sắc hơn các mẫu Reno 7 trước đó. Chiếc máy có các tùy chọn màu sắc mới mẻ gồm màu Đen, màu Xanh Cầu vồng. Cả hai phiên bản màu sắc đều được tăng thêm vẻ đẹp nhờ sử dụng lớp phủ nano giúp tạo độ tương phản màu cực ấn tượng, cũng như hạn chế bám vân tay lên mặt lưng điện thoại. Qua đó giúp cho Reno7 Z là một trong những chiếc smartphone cực kỳ đẹp trong phân khúc trung cấp.Điện thoại OPPO Reno7 Z 5G mang đến cho bạn khung ảnh giải trí chất lượng cao với màn hình 6.43 inch công nghệ AMOLED. Màn hình có thiết kế gần như trọn mặt trước cùng nốt chấm ở góc trái màn hình, với vị trí chấm này là nơi hiện diện của camera selfie trên máy. Đáng chú ý là viền bezel và cằm màn hình đã được thu gọn hơn so với mẫu Reno 7 thường, qua đó giúp mở rộng tỷ lệ hiển thị và tạo hình ảnh thêm sống động.Độ phân giải của màn hình OPPO Reno7 Z là FullHD + cho hình ảnh cực kỳ sắc nét. Chuẩn màu HDR10+ hiện diện trên điện thoại sẽ giúp màn hình có độ tương phản màu tốt và chất lượng. Màn hình trên máy cũng được thiết kế nhằm đạt chuẩn chống tia xanh TUV Rheinland giúp bảo vệ mắt bạn trong trường hợp dùng lâu. Độ nhạy cảm ứng đạt mức 60Hz cho thấy màn hình được thiết kế hoàn hảo cho các tác vụ giải trí.OPPO Reno 7Z 5G cũng mang đến cho bạn giải pháp bảo mật hiện đại và tinh tế. Cạnh bên là nơi hiện diện của cảm biến bảo mật vân tay hiện đại, cho bạn thực hiện mở khóa màn hình cực nhanh và cực tiện.Tiếp tục duy trì chất lượng ảnh chụp hiện đại từ đời Reno7, điện thoại OPPO Reno7 Z 5G sở hữu hệ thống ba camera sau và một camera selfie độ phân giải cao đáp ứng mọi nhu cầu nhiếp ảnh và sáng tạo nội dung. Thực tế, hệ thống camera trên Reno 7Z nói riêng và cả dòng Reno 7 nói chung đều được đánh giá cao bởi chất lượng ảnh chụp mà chiếc máy mang đến.Nói về camera sau, một trong những điểm nhấn trên OPPO Reno 7Z 5G chính là camera 64 MP sử dụng lens IMX709 mắt mèo do Sony phát triển. Camera này có khả năng ghi lại ảnh môi trường với độ sáng tốt hơn 60% và giảm độ nhiễu đến 35% tốt hơn so với đời trước. Kết hợp với công nghệ màu RGBW do OPPO phát triển, ảnh chụp mà Reno7 Z cho ra sẽ vừa đầy đủ chi tiết, vừa có độ chân thực ấn tượng.",
+      "id": 23
+    },
+    {
+      "title": "OPPO Reno6 Z 5G",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/o/p/oppo_reno6.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/6/3/637613348978844164_oppo-reno6z-xanh-2.jpg",
+      "categoryslug": "hangkhac",
+      "price": "7690000",
+      "slug": "hangkhac-04",
+      "colors": [
+        "black"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Tiếp nối sự thành công của Reno5 Series, Oppo tiếp tục mang đến cho người dùng dòng sản phẩm mới mang tên Oppo Reno6 với nhiều nâng cấp đáng giá. Trong series lần này, người dùng sẽ thấy vô cùng ngạc nhiên khi xuất hiện tới 4 phiên bản. Sự có mặt của Oppo Reno6 Z 5G trong lần ra mắt này sẽ thu hút được đông đảo người chú ý bởi hiệu năng cực đỉnh để mang đến những trải nghiệm đỉnh cao.Ngoài ra, bạn cũng có thể tham khảo điện thoại OPPO Reno7 Z 5G với thiết kế cực đẹp cùng hệ thống camera chất lượng và cấu hình ấn tượng trong tầm giá.Điện thoại Reno6 Z 5G sở hữu thiết kế vô cùng thời thượng. Các đường nét, chi tiết trên máy được trau chuốt hoàn hảo và cực kỳ hấp dẫn. Các khung viền bo cong uyển chuyển, mềm mại mang đến cho người dùng cảm giác êm tay khi cầm nắm. Ngoài ra, kích thước tổng thể của máy rất nhỏ gọn và thuận tiện để người dùng mang theo bên mình mọi nơi.Mặt trước của điện thoại OPPO Reno6 Z 5G được thiết kế tràn viền và độ cong mềm mại 2.5D. Hai cạnh viền cực mỏng với camera đục lỗ từ đó giúp gia tăng diện tích hiển thị đến mức tối đa.Bên cạnh thiết kế nổi trội thì Reno6 Z 5G còn được trang bị màn hình lớn với tấm nền AMOLED chất lượng. Bên cạnh đó độ phân giải FHD+ mang đến chất lượng hình ảnh vô cùng chân thật và sắc nét.Đặc biệt, tốc độ làm mới màn hình cao giúp Oppo Reno6 Z 5G có độ phản hồi nhanh. Bạn có thể cảm nhận rõ ràng khi trải nghiệm những phim chất lượng cao hoặc là chơi những game đồ họa nặng. Từ đó, người dùng có thể tận hưởng trọn vẹn và không bỏ lỡ bất kỳ khoảnh khắc ấn tượng nào.Để mang đến hiệu năng cực đỉnh, Oppo đã trang bị cho Reno6 Z 5G con chip mạnh mẽ bậc nhất hiện nay. Với trang bị ấn tượng này, người dùng thoải mái thực hiện các tác vụ đa nhiệm cũng như tự tin chiếm mọi tựa game đồ hoạ hiện nay.Đi cùng với con chip hàng đầu là dung lượng RAM khá lớn giúp người dùng thoải mái trải nghiệm những ứng dụng giải trí mượt mà trên OPPO Reno6 Z 5G. Bên cạnh đó là bộ nhớ trong lớn đáp ứng được tối đa nhu cầu lưu trữ tài liệu hay tải những ứng dụng, trò chơi hấp dẫn mà không lo đầy bộ nhớ.Không chỉ gây ấn tượng với người dùng bởi hiệu năng mạnh mẽ mà Reno6 Z 5G còn giúp người dùng trở thành một nhiếp ảnh gia chuyên nghiệp với ống kính ấn tượng. Cụm 4 camera sau với độ phân giải cực lớn cùng với vô vàn các tính năng ưu việt, hỗ trợ người dùng có thể bắt trọn từng khoảnh khắc trong khung hình một cách độc đáo và ấn tượng.Camera selfie là điểm nổi bật của dòng smartphone đến từ Trung Quốc này. Điện thoại có camera trước độ phân giải cao nên hoàn toàn đáp ứng được nhu cầu selfie của người dùng. Bên cạnh đó là các tính năng mới bao gồm: chụp cận cảnh, chụp xoá phông hay chụp trong điều kiện thiếu sáng. Tất cả mang đến cho người dùng sự hài lòng nhất.Ngoài ra, Reno6 Z 5G còn hỗ trợ quay phim HDR, chế độ quay ngược sáng mà vẫn giữ được các chi tiết tổng thể tự nhiên và rõ nét. Bên cạnh đó, chế độ siêu chống rung cùng với quay đồng thời 2 camera giúp người dùng có thể thoải mái sáng tạo các video, tạo ra các vlog đẹp và đa dạng ở mọi góc nhìn.OPPO Reno6 Z 5G sở hữu viên pin có dung lượng lớn. Bạn có thể thoải mái trải nghiệm cả ngày dài mà không lo vấn đề bị gián đoạn do hết pin.Để tiết kiệm được tối đa thời gian sạc, hãng cũng trang bị cho máy công nghệ sạc nhanh với công suất lớn. Từ đó người dùng có thể rút ngắn thời gian sạc máy để nâng cao thời gian trải nghiệm trên điện thoại.",
+      "id": 24
+    },
+    {
+      "title": "Nokia G50 (5G)",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/n/o/nokia-g50-4_1.jpeg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/n/o/nokia-g50-1-600x600_2__1.jpg",
+      "categoryslug": "hangkhac",
+      "price": "4990000",
+      "slug": "hangkhac-05",
+      "colors": [
+        "yellow",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Hãng điện thoại lừng danh Nokia vẫn chưa ngừng cuộc chơi trong thị phần smartphone. Bằng chứng là việc hãng vừa tung ra thị trường sản phẩm mới mang tên Nokia G50 - hỗ trợ mạng 5G với mức giá phổ thông cho tất cả người yêu công nghệ.Điện thoại Nokia G50 5G tiếp tục đi theo ngôn ngữ thiết kế đã làm nên thành công của dòng smartphone Nokia G - phong cách độc đáo. Từng đường nét trên chiếc smartphone này mang hình dáng tối giản, tinh tế và thời thượng, với lựa chọn màu Ocean Blue và màu Midnight Sun bắt mắt. Đồng thời, điện thoại Nokia cũng có thân máy bền bỉ, mỏng gọn và nhẹ nhàng trên tay giúp người dùng sử dụng thoải mái.Nokia G50 sẽ mang đến trải nghiệm giải trí bắt mắt qua màn hình 6.82 inch, có độ phân giải HD+ (1560 x 720 pixels). Đặc biệt, Nokia luôn tối ưu khả năng hiển thị màn hình ở ngoài trời. Vì thế mà điện thoại Nokia này được tăng cường độ sáng để người dùng dễ dàng theo dõi chi tiết nội dung. Phần viền màn hình được thu hẹp tối đa giúp tăng tỷ lệ hiển thị hình ảnh.Nokia G50 5G còn mang đến cụm camera ba ống kính chuyên nghiệp cho mọi nhu cầu chụp ảnh của người dùng. Nổi bật nhất là camera chính 48 MP cho khả năng chụp đêm rõ nét, chụp góc rộng lấy trọn quang cảnh và chất lượng ảnh rõ nét. Cùng với đó là các camera phụ mang đến chức năng chụp góc siêu rộng, ảnh chiều sâu và thêm đèn flash nằm phía sau đặc sắc giúp người dùng bắt lấy mọi khoảnh khắc.Phía trước điện thoại Nokia G50 còn hiện diện camera selfie có độ phân giải 8 MP. Camera này còn đi kèm với tính năng chụp ảnh góc rộng, hỗ trợ quay video, đáp ứng trọn vẹn thao tác video call liên lạc người thân của rất nhiều người dùng hiện nay.Nokia G50 5G còn trở nên hấp dẫn nhờ mang đến công nghệ mạng 5G tiên tiến dành cho người dùng phổ thông. Trang bị bộ vi xử lý mạnh mẽ với RAM 6 GB và bộ nhớ lưu trữ 128 GB. Điện thoại không chỉ phục vụ nhu cầu đọc báo, lướt web, xem phim thường ngày, mà còn đáp ứng cả nhu cầu giải trí với mạng 5G tốc độ cao.Nokia G50 5G vận hành trên nền tảng Android 11 với tính tiện ích cao và hỗ trợ đến 2 năm cập nhật phần mềm.Điện thoại Nokia G50 còn chú trọng vào thời gian sử dụng của người dùng. Trang bị viên pin dung lượng 5000mAh cùng công nghệ sạc nhanh và chế độ Tiết kiệm pin tối ưu, chiếc smartphone này sẽ duy trì thời gian sử dụng máy cho người dùng lên đến cả ngày dài thoải mái.Ngoài ra, Nokia còn biết đến là nhà sản xuất điện thoại chú trọng vào việc bảo vệ dữ liệu người dùng. Vì thế mà dòng điện thoại G50 này còn được hỗ trợ cập nhật bảo mật lên đến 3 năm liền, giúp cho tất cả thông tin cá nhân, dữ liệu, hình ảnh, video luôn được bảo vệ an toàn khỏi các tấn công từ bên ngoài.Đây là một trong những dòng điện thoại mạnh, bền bỉ được mong đợi hàng đầu trong năm. Sản phẩm này đã được ra mắt vào cuối tháng 9 vừa qua. Dự kiến, smartphone sẽ được mở bán tại CellphoneS vào cuối tháng 10 hoặc đầu tháng 11 với nhiều ưu đãi hấp dẫn.Về giá bán, Nokia G50 5G có giá bán dự kiến từ 6.8 triệu đồng. Với mức giá này, điện thoại sẽ cạnh tranh trực tiếp với Samsung Galaxy A32, Redmi Note 10S, OPPO a74...Về màu sắc, máy sẽ có 2 tuỳ chọn màu sắc để người dùng lựa chọn là Xanh (Ocean Blue) và Hồng (Midnight Sun).",
+      "id": 25
+    },
+    {
+      "title": "Nokia G21",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/t/h/thumb_602966_default_big.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/t/h/thumb_602962_default_big_1.jpg",
+      "categoryslug": "hangkhac",
+      "price": "3990000",
+      "slug": "hangkhac-06",
+      "colors": [
+        "violet",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Dù nằm trong phân khúc phổ thông, Nokia G21 sở hữu loạt thông số ấn tượng như camera 50 MP, màn hình lớn sắc nét, vi xử lý tốt cùng pin trâu giúp cho đây là sản phẩm smartphone dễ tiếp cận và phù hợp cho tất cả người dùng công nghệ.Nokia G21 mang vẻ ngoài tinh tế với ngôn ngữ thiết kế đậm chất Bắc Âu đặc trưng của hãng. Lớp vỏ máy được chế tạo từ vật liệu vừa bền bỉ, vừa đạt trọng lượng nhẹ giúp cho máy linh hoạt khi cầm trên tay. Mặt lưng bo cong với nhiều tùy chọn màu sắc giúp điện thoại toát lên nét đẹp bắt mắt trên tay bạn.Điện thoại Nokia G21 giúp bạn giải trí với hình ảnh ấn tượng và sắc nét. Màn hình 6.5 inch độ phân giải 1600 x 720 (HD Plus) cùng nền LCD giúp gia tăng độ nét lẫn màu đa dạng cho hình ảnh. Tỷ lệ khung hình 20:9 hoàn toàn phù hợp để bạn giải trí xem phim và gaming thỏa thích trên chiếc G21.Nokia G21 nâng cấp khả năng chụp ảnh toàn diện so với các model tiền nhiệm. Camera chính của điện thoại có độ phân giải tận 50 MP cung cấp cho bạn tính năng chụp ảnh phong cảnh đầy chi tiết và rõ nét chân thực, ngay cả ở môi trường ban đêm hoặc thiếu sáng. Hỗ trợ cho camera 50 MP trên còn có hai ống kính phụ 2MP + 2MP cung cấp tính năng chụp chân dung và macro hiện đại.",
+      "id": 26
+    },
+    {
+      "title": "Vsmart Aris",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/1/1/11_2_1_1.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/1/1/11_3_1_1.png",
+      "categoryslug": "hangkhac",
+      "price": "4390000",
+      "slug": "hangkhac-07",
+      "colors": [
+        "black",
+        "green",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Bạn đang tìm cho mình một chiếc điện thoại có nằm phân khúc cận cao cấp có khả năng đa nhiệm cao để có thể hỗ trợ bạn trong công việc cũng như học tập. Chiếc điện thoại Vsmart Aris 8GB 128GB là thiết bị giúp bạn thực hiện điều đó bởi sở hữu bộ nhớ RAM 8GB.Với chip Snapdragon 730 8 nhân được trang bị trên điện thoại Vsmart Aris hỗ trợ xử lý các dữ liệu một cách nhanh chóng và mượt mà.Cùng với việc trang bị chip hiện đại, Vsmart còn mở rộng thêm bộ nhớ RAM lên đến 8GB. Cho phép người dùng có thể đa nhiệm trên mọi tác vụ một cách dễ dàng mà hầu như không có độ trễ hay giật lag.Điện thoại Vsmart Aris 8GB 128GB được thiết kế có kích thước cân đối và sang trọng. Hơn thế, toàn bộ điện thoại được gia công bằng khung kim loại giúp Vsmart Aris 8GB 128GB chắc chắn và tinh tế hơn.Có thể một những yêu cầu khi người dùng lựa chọn điện thoại đó là yếu tố màu sắc. Điện thoại Vsmart Aris 8GB 128GB được hãng thiết kế 3 gam xanh nền nã đó là: xanh dương, xanh lá, xanh đậm.",
+      "id": 27
+    },
+    {
+      "title": "Vsmart Joy 4",
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/v/s/vsmart-joy-4-trang-200x200_2.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/v/s/vsmart-joy4-11.jpg",
+      "categoryslug": "hangkhac",
+      "price": "3290000",
+      "slug": "hangkhac-08",
+      "colors": [
+        "black",
+        "white",
+        "blue"
+      ],
+      "version": [
+        "64GB"
+      ],
+      "description": "Vsmart là một thương hiệu sản xuất điện thoại hàng đầu tại Việt Nam với rất nhiều sản phẩm phủ khắp các phân khúc khác nhau. Và chiếc Vsmart Joy 4 là một sản phẩm khẳng định lại một lần nữa tên tuổi của Vsmart trong thị trường sản xuất smartphone. Với những tính năng hiện đại kèm hiệu năng cao cấp, đây sẽ là một chiếc điện thoại đáng được mua nhất vào thời điểm hiện tại so với các đối thủ cùng tầm giá.>>> Ngoài ra, bạn có thể tham khảo thêm thông tin điện thoại Vsmart Joy 5 sắp được ra mắt trong năm 2021.Thuộc phân khúc tầm trung, tuy nhiên Joy 4 lại mang đến một vẻ ngoài cực kỳ bắt mắt. Với việc sử dụng bộ khung nhựa đều dọc bao phủ hết thân máy. Vsmart Joy 4 mang đến một cái nhìn sang trọng và bắt mắt hơn phiên bản cũ.Ngoài ra, điện thoại Vsmart này còn có nhiều màu sắc nổi bật và phối màu hài hòa bắt mắt hơn phiên bản trước nhiều.Màn hình trên Vsmart Joy 4 đã có sự nâng cấp đáng kể với kích thước mạng hình rộng. Mọi hình ảnh đều được tái hiện sắc nét với công nghệ màn hình IPS LCD capacitive touchscreen hiển thị đầy đủ với 16 triệu màu.Với khoản không gian màn hình khá rộng kèm chất lượng hình ảnh sắc nét. Thiết bị sẽ mang đến một luồng gió mới về khả năng sử dụng trên màn hình.",
+      "id": 28
     }
   ],
   "versions": [
@@ -557,11 +696,106 @@
       "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/m/i/micro-thu-am-akg-c22-usb-2.jpg",
       "categoryslug": "mic",
       "colors": [
-        "white",
-        "pink"
+        "white"
       ],
       "slug": "mic-01",
       "description": "Micro thu âm AKG C22 USB hứa hẹn sẽ mang đến cho người dùng những trải nghiệm tuyệt vời khi sử dụng. Không chỉ có vẻ ngoài bắt mắt mà chất lượng sản phẩm của thiết bị phòng thu âm này cũng rất tốt, phù hợp với nhiều nhu cầu sử dụng khác nhau.Micro thu âm AKG C22 USB có thiết kế khá nhỏ gọn, đơn giản, thân thiện với đa số người dùng. Vì vậy bạn có thể dễ dàng đặt nó ở bất cứ nơi nào mà mình muốn và không phải lo lắng việc gặp phải quá nhiều khó khăn trong quá trình sử dụng loại micro thu âm này."
+    },
+    {
+      "id": 3,
+      "title": "Tai nghe Bluetooth Apple AirPods 2 VN/A",
+      "price": 2790000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/a/i/airpods-2_6.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/a/z/azaudio-tai-nghe-bluetooth-apple-airpod-2_2.jpg",
+      "categoryslug": "khac",
+      "colors": [
+        "white"
+      ],
+      "slug": "khac-01",
+      "description": "Vừa qua, Apple đã chính thức cho ra mắt chiếc tai nghe Airpods 2. Thế hệ thứ 2 lần này không có nhiều sự khác biệt so với thế hệ đầu về ngoại hình, trừ một số chi tiết về đèn báo hiệu cũng như ra mắt thêm phiên bản sạc không dây và sạc thường (sạc có dây). Ngoài ra, bạn có thể tham khảo thêm Apple Airpods Pro, sắp được ra mắt trong thời gian tới.Đầu tiên, AirPods 2 chính hãng VN/A là hàng chính hãng do Apple sản xuất theo tiêu chuẩn của thị trường Việt Nam. Thiết bị được phân phối chính hãng thông qua các đại lý ủy quyền của Apple. Vậy tai nghe bluetooth Apple AirPods 2 chính hãng VN/A có gì khác những mẫu tai nghe cũ, tai nghe xách tay?AirPods 2 chính hãng VN/A là hàng mới nên chất lượng hoàn toàn được đảm bảo. Ngoài ra, khi mua tai nghe bluetooth Apple AirPods 2 VN/A khách hàng sẽ được hưởng gói bảo hành ưu đãi, cụ thể được đổi mới trong vòng 30 ngày tại CellphoneS, bảo hành 1 năm tại các trung tâm bảo hành ủy quyền của Apple tại Việt Nam. Khi mua máy khách hàng cũng được cung cấp đầy đủ hóa đơn chứng minh nguồn gốc cũng như phụ kiện kèm theo.AirPods 2 chính hãng VN/A có dung lượng pin khá ấn tượng. Tai nghe cho 5 giờ chơi nhạc và 3 giờ đàm thoại. Ngoài ra, hộp sạc cũng sở hữu tính năng tính pin, cho thêm 24 giờ sử dụng.AirPods 2 có 2 phiên bản: sạc không dây và sạc có dây (sạc thường). Phiên bản chúng ta đang nói đến là phiên bản sạc thường. Tuy nhiên, tai nghe AirPods 2 sạc có dây ngoài cách thức sạc pin, tai nghe không có quá nhiều khác biệt so với phiên bản sạc không dây.Về cơ bản tai nghe bluetooth Apple AirPods 2 vẫn sở hữu thiết kế thời trang và nhỏ gọn, trọng lượng 4g cũng rất nhẹ không khác mấy so với tai nghe AirPods thế hệ đầu tiên. Nó cũng vẫn giữ nguyên thiết kế với màu trắng đặc trưng cho các dòng tai nghe. Đây là tai nghe wireless 100% và có khả năng tích hợp với mọi thiết bị Apple khác nhau nên bạn có thể linh hoạt sử dụng.Thêm vào đó, chúng còn được phủ lên thêm một lớp chất liệu mới ở đầu mỗi tai nghe để giúp tai nghe được bám hơn trên tai người đeo, tương tự như lớp phủ mặt kính mờ trên mặt lưng của chiếc Pixel 3 mà Google đã trang bị cho chiếc điện thoại của mình."
+    },
+    {
+      "id": 4,
+      "title": "Điều khiển thông minh GoPro Smart Remote",
+      "price": 750000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/d/i/dieu-khien-thong-minh-gopro-smart-remote-1.jpeg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/d/i/dieu-khien-thong-minh-gopro-smart-remote-2.jpeg",
+      "categoryslug": "khac",
+      "colors": [
+        "black"
+      ],
+      "slug": "khac-02",
+      "description": "GoPro là hãng chuyên dụng dành cho thiết bị máy quay. Bạn tự hỏi nó có tác dụng gì ư? Trong quá trình quay phim, đi phượt và thám hiểm, hẳn sẽ rất khó để điều chỉnh chiếc GoPro kia thì điều khiển thông minh GoPro Smart Remote chính xác là sản phẩm hữu dụng nhất.Smart Remote GoPro sở hữu thiết kế khá nhỏ gọn nhưng vô cùng chắc chắn nếu như ở bên trong lòng bàn tay của người dùng. Hơn hết là khả năng bám dính để tạo cảm giác, ngoài ra, bạn còn thể gắn nó trên tay cầm xe đạp hay các phương tiện khác.Nhà sản xuất cho biết rằng khoảng cách thực hiện tắt mở và các chức năng khác giữa thiết bị điều khiển thông minh GoPro Smart Remote là 180 m dù là đang đựng ở trong vỏ.Được tạo ra với ứng dụng trong môi trường nước, Smart Remote GoPro hỗ trợ tất cả các môn thể thao dưới nước như bơi lội, lặn sâu dưới đáy biển với độ sâu lên đến 10 m.Điều khiển thông minh Smart Remote GoPro được tích hợp sẵn một màn hình LCD nhằm giúp phản chiếu màn hình trạng thái của máy ảnh. Bên cạnh đó, bạn còn có thể điều khiển tối đa lên tới 50 camera cùng một lúc cực kỳ tiện lợi."
+    },
+    {
+      "id": 5,
+      "title": "Camera hành trình cảnh báo giao thông Vietmap R4a",
+      "price": 3320000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/p/p/pp4_1_.png",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/camera-hanh-trinh-vietmap-r4a-canh-bao-giao-thong_2.jpg",
+      "categoryslug": "khac",
+      "colors": [
+        "black"
+      ],
+      "slug": "khac-03",
+      "description": "Camera hành trình là phụ kiện quan trọng bắt buộc cho người dùng ô tô. Nếu bạn đang tìm kiếm phụ kiện này hãy tham khảo camera hành trình Vietmap R4a, camera với nhiều tính năng thông minh, hỗ trợ cảnh báo giao thông.Camera hành trình VIETMAP R4A sở hữu ống kính góc rộng với chất lượng hình ảnh cao lên đến Ultra HD 4K. Nhờ đó các thước phim ghi lại chân thực, chi tiết sắc nét.Camera Vietmap còn hỗ trợ công nghệ cảnh báo giao thông bằng giọng nói. Với công nghệ AI, camera sẽ nhận diện các biển báo tốc độ và đưa ra cảnh báo cho người điều khiển. Ngoài tốc độ, camera hành trình VIETMAP R4A có thể nhận diện nhiều loại biển báo giao thông khác như: cảnh báo ra – vào khu dân cư, khu vực có camera giao thông, cấm vượt – hết vượt,…Camera hành trình VIETMAP R4A được trang bị công nghệ kết nối không dây wifi giúp người dùng truy xuất dữ liệu nhanh chóng ngay trên điện thoại.Về khả năng ghi hình, tính năng ghi hình vòng lặp sẽ tự động ghi đè dữ liệu khi thẻ nhớ đầy. Đặc biệt cảm biến G-Sensor giúp thiết bị tự động khóa ghi hình khi có va chạm, rung lắc."
+    },
+    {
+      "id": 6,
+      "title": "Loa bluetooth JBL Charge 5",
+      "price": 3990000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/l/o/loa-bluetooth-jbl-charge-5-7_1.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/l/o/loa-bluetooth-jbl-charge-5-4_1.jpg",
+      "categoryslug": "khac",
+      "colors": [
+        "black",
+        "green",
+        "blue",
+        "red",
+        "pink"
+      ],
+      "slug": "khac-03",
+      "description": "Camera hành trình là phụ kiện quan trọng bắt buộc cho người dùng ô tô. Nếu bạn đang tìm kiếm phụ kiện này hãy tham khảo camera hành trình Vietmap R4a, camera với nhiều tính năng thông minh, hỗ trợ cảnh báo giao thông.Camera hành trình VIETMAP R4A sở hữu ống kính góc rộng với chất lượng hình ảnh cao lên đến Ultra HD 4K. Nhờ đó các thước phim ghi lại chân thực, chi tiết sắc nét.Camera Vietmap còn hỗ trợ công nghệ cảnh báo giao thông bằng giọng nói. Với công nghệ AI, camera sẽ nhận diện các biển báo tốc độ và đưa ra cảnh báo cho người điều khiển. Ngoài tốc độ, camera hành trình VIETMAP R4A có thể nhận diện nhiều loại biển báo giao thông khác như: cảnh báo ra – vào khu dân cư, khu vực có camera giao thông, cấm vượt – hết vượt,…Camera hành trình VIETMAP R4A được trang bị công nghệ kết nối không dây wifi giúp người dùng truy xuất dữ liệu nhanh chóng ngay trên điện thoại.Về khả năng ghi hình, tính năng ghi hình vòng lặp sẽ tự động ghi đè dữ liệu khi thẻ nhớ đầy. Đặc biệt cảm biến G-Sensor giúp thiết bị tự động khóa ghi hình khi có va chạm, rung lắc."
+    },
+    {
+      "id": 7,
+      "title": "Micro máy ảnh định hướng Sennheiser MKE 200",
+      "price": 2690000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/p/r/product_detail_x2_desktop_mke_20.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/p/r/product_detail_x2_desktop_mke_20_5_.jpg",
+      "categoryslug": "mic",
+      "colors": [
+        "black"
+      ],
+      "slug": "mic-02",
+      "description": "Khi xem những video trên youtube bạn tự hỏi tại sao âm thanh của họ được ghi lại một cách chân thực, không lẫn tạp âm bên ngoài hay đến như vậy. Tất cả đều nhờ vào chiếc micro chuyên dụng, CellphoneS xin giới thiệu micro máy ảnh định hướng Sennheiser MKE 200.Sennheiser MKE 200 sẽ phát huy hết vai trò và khả năng của nó khi ở ngoài trời nhờ vào chất liệu kim loại, mang đến khả năng chống chịu bền bỉ. Nó còn cho phép người dùng kết nối được với máy ảnh DSLR, mirroless và thiết bị di động thông qua một đế gắn máy ảnh được tích hợp sẵn.Trọng lượng của Sennheiser MKE 200 chỉ 48g giúp cho người dùng dễ dàng mang đến bất cứ đâu khi cần thiết, ngoài ra khi gắn lên trên máy ảnh sẽ không khiến nó nặng lên quá nhiều.Sennheiser MKE 200 hỗ trợ người dùng ghi lại đồng thời âm thanh trên máy ảnh và mang lại cho bạn âm thanh không mong muốn hơn từ các cạnh và phía sau của máy bằng phương pháp tăng cường định hướng.Bên cạnh đó, nó được trang bị màn chắn gió giúp mang đến ít tiếng ồn của gió hơn, mang lại bản ghi âm trong sạch nhất mà bạn chưa từng thấy."
+    },
+    {
+      "id": 8,
+      "title": "Cáp chuyển đổi Apple Lightning",
+      "price": 1490000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/a/cap-chuyen-doi-lightning-to-3-5mm-audio-mxk22zaa-1.jpg",
+      "categoryslug": "capchuyendoi",
+      "colors": [
+        "white"
+      ],
+      "slug": "capchuyendoi-02",
+      "description": "Một số dòng máy iPhone không sử dụng đầu cắm 3.5mm, do đó bạn cần đến cáp chuyển đổi Apple Lightning to 3.5mm Audio MXK22ZA. Đây là giải pháp được nhiều người sử dụng, rất tiện lợi mà không tốn kém nhiều chi phí.Cáp chuyển đổi Lightning to 3.5mm Audio (MXK22ZA/A) có kích thước hợp lý với chiều dài chỉ 7cm, thuận tiện để kết nối hai thiết bị. Với kích thước này, bạn có thể xếp gọn và mang theo trong túi quần đi mọi nơi mọi lúc.Lớp vỏ cáp làm từ nhựa cao cấp, dẻo dai và bền bỉ đạt tiêu chuẩn uốn cong không gãy gập. Màu trắng sứ hợp thời trang, bắt mắt, phù hợp sở thích của giới trẻ chuộng thời trang.Cáp chuyển đổi Apple Lightning to 3.5mm Audio MXK22ZA tương thích với tất cả các thiết bị có cổng lightning. Sử dụng được cho AirPods Max hoặc Beats Solo Pro.Cáp chuyển đổi có phần đầu làm từ kim loại đặc biệt, thiết kế tinh xảo khi gắn vào cổng của hai phụ kiện vừa khít và truyền thông tin ổn định. Nhờ vậy bạn có thể thưởng thức âm thanh chất lượng, không bị ảnh hưởng giật lag hay rè khi nghe nhạc."
+    },
+    {
+      "id": 9,
+      "title": "Cổng chuyển âm thanh thông minh",
+      "price": 800000,
+      "image01": "https://image.cellphones.com.vn/358x/media/catalog/product/c/o/cong-chuyen-doi-am-thanh-asus-type-c-sang-3-5-mm-chong-on.jpg",
+      "image02": "https://image.cellphones.com.vn/358x/media/catalog/product/c/o/cong-chuyen-doi-am-thanh-asus-type-c-sang-3-5-mm-chong-on.jpg",
+      "categoryslug": "capchuyendoi",
+      "colors": [
+        "black"
+      ],
+      "slug": "capchuyendoi-03",
+      "description": "Cổng chuyển âm thanh thông minh chống ồn từ USB-C sang cổng 3.5mm được tích hợp công nghệ khử tiếng hiện đại, nhằm hỗ trợ ồn hỗ trợ hiệu suất micro cùng thiết kế nhỏ, gọn, tiện dụng để luôn mang theo bên mình.Phụ kiện cổng chuyển âm thanh thông minh chống ồn từ USB-C sang cổng 3.5mm sử dụng sức mạnh của chipset AI để nhằm giảm bớt hơn 50 triệu loại tiếng ồn có trong môi trường xung quanh, để mang lại giọng nói hài hòa và việc giao tiếp cũng sẽ rõ ràng hơn.Chipset AI gắn trong này, sẽ có nhiệm vụ cung cấp năng lượng cho công nghệ khử tiếng ồn AI, do đó, người dùng sẽ không lo lắng việc cổng chuyển sẽ không ảnh hưởng đến gì hiệu suất hoạt động của thiết bị, mà ngược lại còn giúp bạn trong nhiều tình huống giao tiếp.Cổng chuyển âm thanh thông minh chống ồn từ USB-C sang cổng 3.5mm sở hữu thiết kế vô cùng nhỏ gọn, với trọng lượng chỉ đạt 8g, nên bạn có thể dễ dàng cho vào túi để sử dụng mọi lúc mọi nơi khi cần thiết.Bên cạnh đó, cổng chuyển còn được tích hợp bộ xử lý tích hợp 96 kHz / 24 bit cùng công nghệ ASUS Hyper-Grounding độc quyền, có khả năng ngăn sóng nhiễu điện từ, cho chất âm trong trẻo, thuần thiết.Đặc biệt, với đầu nối USB-C để, cổng chuyền có thể tương thích với hầu hết các dòng điện thoại di động và máy chơi game, nhằm mở rộng nhu cầu sử dụng, nó còn có thêm USB 2.0."
     }
+    
   ]
 }

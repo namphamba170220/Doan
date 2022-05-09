@@ -96,12 +96,11 @@ const Home = () => {
               </Link>
             </SectionBody>
           </Section>
-
           <Section>
             <SectionTitle>Top sản phẩm bán chạy trong tuần</SectionTitle>
             <SectionBody>
               <Grid col={4} mdCol={2} smCol={1} gap={20}>
-                {productData.slice(4, 8).map((item, index) => (
+                {productData.slice(0, 8).map((item, index) => (
                   <ProductCard
                     id={item.id}
                     key={index}
@@ -120,7 +119,7 @@ const Home = () => {
             <SectionTitle>sản phẩm mới</SectionTitle>
             <SectionBody>
               <Grid col={4} mdCol={2} smCol={1} gap={20}>
-                {productData.slice(0, 6).map((item, index) => (
+                {productData.slice(20, 28).map((item, index) => (
                   <ProductCard
                     id={item.id}
                     key={index}
@@ -147,7 +146,7 @@ const Home = () => {
             <SectionTitle>Phổ biến</SectionTitle>
             <SectionBody>
               <Grid col={4} mdCol={2} smCol={1} gap={20}>
-                {productData.slice(6, 14).map((item, index) => (
+                {productData.slice(10, 20).map((item, index) => (
                   <ProductCard
                     id={item.id}
                     key={index}

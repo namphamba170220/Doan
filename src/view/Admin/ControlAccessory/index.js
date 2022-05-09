@@ -12,6 +12,7 @@ function ControlAccessory() {
   const [isModalAddAccessory, setIsModalAddAccessory] = useState(false);
   const [accessoryDetail, setAccessoryDetail] = useState(null);
   const [done, setDone] = useState(undefined);
+  const [totalProducts, setTotalProducts] = useState(0);
   const closeModal = () => {
     setIsModalAddAccessory(false);
     setAccessoryDetail(null);
@@ -19,11 +20,20 @@ function ControlAccessory() {
   const showModalAddNew = () => {
     setIsModalAddAccessory(true);
   };
+
+  const onModalSuccess = () => {
+    accessoryApi.getAll().then((res) => {
+      setAccessoryData(res?.data);
+      setTotalProducts(res?.data.length);
+    });
+  };
+
   useEffect(() => {
     setTimeout(() => {
       accessoryApi.getAll().then((res) => {
         if (res.statusText === "OK") {
           setAccessoryData(res?.data);
+          setTotalProducts(res?.data.length);
         }
       });
       setDone(true);
@@ -42,6 +52,7 @@ function ControlAccessory() {
       ) : (
         <>
           <Button onClick={showModalAddNew}>Thêm mới</Button>
+          <div>Tổng số sản phẩm còn trong kho : {totalProducts}</div>
           <Section>
             <SectionBody>
               <Grid col={4} mdCol={1} smCol={1} gap={1}>
@@ -58,6 +69,7 @@ function ControlAccessory() {
                     color={item.colors}
                     description={item.description}
                     setAccessoryData={setAccessoryData}
+                    onSuccess={onModalSuccess}
                     item={item}
                   ></AdminAccessoryCard>
                 ))}
@@ -70,6 +82,7 @@ function ControlAccessory() {
               onClose={closeModal}
               accessoryDetail={accessoryDetail}
               setAccessoryData={setAccessoryData}
+              onSuccess={onModalSuccess}
               setDone={setDone}
             />
           )}
